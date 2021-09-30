@@ -208,7 +208,6 @@
         .blob
             position: absolute
             opacity: 0.5
-            z-index: 1
             img
                 -webkit-user-drag: none
                 -khtml-user-drag: none
@@ -234,7 +233,6 @@
             opacity: 0.2
             width: 700px
             transform: translateX(100px) translateY(86px) rotate(-10deg)
-            z-index: 2
             img
                 width: 100%
                 border-radius: 100%
@@ -253,6 +251,7 @@
             overflow: hidden
             line-height: 0
             transform: rotate(180deg)
+            z-index: 1
             svg
                 position: relative
                 display: block
