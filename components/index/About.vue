@@ -9,5 +9,4 @@
 <style scoped lang="sass">
     .about
         height: 400px
-        background-color: $teal
 </style>

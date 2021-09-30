@@ -48,6 +48,7 @@
         color: $teal
         font-family: Montserrat
         min-height: 100vh
+        background-color: $blue
 
     *, *:before, *:after
         box-sizing: inherit
