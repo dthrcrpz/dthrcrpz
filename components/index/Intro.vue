@@ -2,7 +2,7 @@
     <section class="intro">
         <div class="container">
             <div class="header">
-                <p class="subtle">SUP?</p>
+                <p class="subtle">HEHE!</p>
                 <div class="typa-texts">
                     <h1 class="headers-container">
                         <p :class="`header-1 ${(header1Typing) ? 'typing' : ''}`">
@@ -17,6 +17,26 @@
                 </div>
             </div>
         </div>
+
+        <div class="blob blob-1">
+            <img src="/images/backgrounds/blob-1.svg">
+        </div>
+        <div class="blob blob-2">
+            <img src="/images/backgrounds/blob-3.svg">
+        </div>
+        <div class="blob blob-3">
+            <img src="/images/backgrounds/blob-3.svg">
+        </div>
+        <div class="blob blob-4">
+            <img src="/images/backgrounds/blob-4.svg">
+        </div>
+        <div class="blob blob-5">
+            <img src="/images/backgrounds/blob-4.svg">
+        </div>
+        <div class="doge-typing">
+            <img src="/images/backgrounds/doge-typing.webp" alt="doge-typing">
+        </div>
+
         <div class="wave-divider">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
@@ -126,24 +146,23 @@
 <style scoped lang="sass">
     .intro
         position: relative
+        overflow: hidden
         height: 100vh
-        background-image: url('images/backgrounds/blob-1.svg'), url('images/backgrounds/blob-2.svg'), url('images/backgrounds/blob-3.svg'), url('images/backgrounds/blob-4.svg')
-        background-position: -100px calc(100% - 50px), calc(100% + 150px) -31px
-        background-size: 320px, 600px
         .container
             display: flex
             height: 100%
             align-items: center
             .header
                 user-select: none
+                transform: translateY(-80px)
                 .subtle
-                    font-size: 100px
+                    font-size: 150px
                     font-family: Montserrat
                     font-weight: 700
-                    opacity: 0.1
+                    opacity: 0.03
                 .typa-texts
                     padding-left: 20px
-                    margin-top: -36px
+                    margin-top: -56px
                     .headers-container
                         font-family: Fira Code
                         .header-1, .header-2
@@ -186,6 +205,46 @@
                                     bottom: 0
                                     background-color: $teal
                                     animation: blink .5s alternate infinite
+        .blob
+            position: absolute
+            opacity: 0.5
+            z-index: 1
+            img
+                -webkit-user-drag: none
+                -khtml-user-drag: none
+                -moz-user-drag: none
+                -o-user-drag: none
+                user-drag: none
+                user-select: none
+            &.blob-1, &.blob-2
+                left: -100px
+                bottom: 22px
+            &.blob-3, &.blob-4
+                transform: scale(1.3)
+                right: -20px
+                top: 0px
+            &.blob-5
+                transform: scale(0.5)
+                top: 40%
+                left: 10%
+        .doge-typing
+            position: absolute
+            bottom: 0
+            right: 0
+            opacity: 0.2
+            width: 700px
+            transform: translateX(100px) translateY(86px) rotate(-10deg)
+            z-index: 2
+            img
+                width: 100%
+                border-radius: 100%
+                user-select: none
+                -webkit-user-drag: none
+                -khtml-user-drag: none
+                -moz-user-drag: none
+                -o-user-drag: none
+                user-drag: none
+                user-select: none
         .wave-divider
             position: absolute
             bottom: 0
