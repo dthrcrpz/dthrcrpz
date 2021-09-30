@@ -52,7 +52,7 @@
                 `Hi! `,
                 `I am`
             ],
-            header2: `Deither Corpuz`,
+            header2: `Deither Corpuz.`,
             header3: `I'm a Web Developer`,
             header1Typing: true,
             header2Typing: false,
