@@ -226,28 +226,28 @@
         text-align: center
         margin: 0 auto 30px
         font-size: 48px
-        text-transform: uppercase
         position: relative
         display: table
         transition: .4s
-        opacity: 1
-        font-family: Lato
+        font-family: Fira Code
         font-weight: 600
+        &::before
+            position: absolute
+            content: ''
+            width: 5px
+            left: -15px
+            bottom: 0
+            height: 60%
+            background-color: $teal
         &:after
             position: absolute
             content: ''
-            background-color: $blue
+            background-color: $teal
             height: 5px
-            width: 0%
+            width: 40%
             top: 100%
             transition: .5s
-            left: 0
-            right: 0
-            margin: auto
-        &.ov
-            opacity: 1
-            &:after
-                width: 60%
+            left: -15px
 
     .section-subtitle
         color: $blue

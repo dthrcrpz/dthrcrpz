@@ -232,7 +232,7 @@
             right: 0
             opacity: 0.2
             width: 700px
-            transform: translateX(100px) translateY(86px) rotate(-10deg)
+            transform: translateX(100px) translateY(86px) rotate(-21deg)
             img
                 width: 100%
                 border-radius: 100%
@@ -258,5 +258,5 @@
                 width: calc(117% + 1.3px)
                 height: 45px
                 .shape-fill
-                    fill: #123B45
+                    fill: #22b4ab
 </style>

@@ -1,7 +1,7 @@
 <template>
     <section class="about">
         <div class="container">
-            asdasdsad
+            <h2 class="section-title">about me</h2>
         </div>
     </section>
 </template>
@@ -10,13 +10,12 @@
     .about
         height: 400px
         position: relative
-        &::before
-            content: ''
-            position: absolute
-            background-color: $teal
-            opacity: 0.2
-            width: 100%
-            height: 100%
-            top: 0
-            left: 0
+        padding-top: 50px
+        background-color: darken($teal, 20)
+        .container
+            .section-title
+                color: $blue
+                &::before, &::after
+                    background-color: $blue
+                    
 </style>
