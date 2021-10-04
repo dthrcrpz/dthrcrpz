@@ -1,7 +1,10 @@
 <template>
     <section class="about">
         <div class="container">
-            <h2 class="section-title">about me</h2>
+            <h2 class="section-title">
+                <img src="/images/about/icon.svg" alt="about-dthrcrpz">
+                <span>about me</span>
+            </h2>
         </div>
         <div class="columns-container">
             <div class="container">
@@ -16,10 +19,10 @@
                             Solid experience on developing user-centered websites using the stacks mentioned <a href="javascript:void(0)">HERE</a>
                         </p>
                         <p class="desc has-bash">
-                            Developed responsive, optimized, and SEO-friendly websites for over 4 years, using the best practices and latest UX trends for best user experience.
+                            Developed responsive, optimized, and SEO-friendly websites for more than 4 years, using the best practices and latest UX trends for best user experience.
                         </p>
                         <p class="desc has-bash">
-                            Extensive knowledge in developing web applications for multiple APIs, third-party integrations, and databases.
+                            Extensive knowledge in developing web applications with multiple APIs and third-party integrations.
                         </p>
                     </div>
                 </div>
@@ -53,7 +56,7 @@
                             <ul>
                                 <li>Ubuntu, CentOS</li>
                                 <li>NginX, Apache</li>
-                                <li>AWS</li>
+                                <li>AWS (Favorite)</li>
                             </ul>
                         </div>
                         <div class="stack">
@@ -73,15 +76,12 @@
 
 <style scoped lang="sass">
     .about
-        height: 400px
         position: relative
         padding-top: 50px
         background-color: darken($teal, 20)
         .container
             .section-title
                 color: $blue
-                &::before, &::after
-                    background-color: $blue
         .columns-container
             position: relative
             width: 100%
@@ -145,7 +145,7 @@
                             left: 100%
                             width: 100px
                             height: 100%
-                            top: -1px
+                            top: 0px
                     &.right
                         flex: 0 0 55%
                         background-color: $blue

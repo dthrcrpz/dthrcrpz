@@ -31,7 +31,7 @@
                 &.logo-wrapper
                     .logo
                         color: $teal
-                        font-family: Montserrat
+                        font-family: Fira Code
                         font-size: 25px
                         font-weight: 600
                 &.links-wrapper

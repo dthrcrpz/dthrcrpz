@@ -225,29 +225,19 @@
         color: $blue
         text-align: center
         margin: 0 auto 30px
-        font-size: 48px
         position: relative
-        display: table
+        display: flex
         transition: .4s
-        font-family: Fira Code
-        font-weight: 600
-        &::before
-            position: absolute
-            content: ''
-            width: 5px
-            left: -15px
-            bottom: 0
-            height: 60%
-            background-color: $teal
-        &:after
-            position: absolute
-            content: ''
-            background-color: $teal
-            height: 5px
-            width: 40%
-            top: 100%
-            transition: .5s
-            left: -15px
+        width: 100%
+        align-items: center
+        justify-content: center
+        img
+            max-width: 80px
+            width: 100%
+        span
+            font-family: Fira Code
+            font-weight: 600
+            font-size: 48px
 
     .section-subtitle
         color: $blue
