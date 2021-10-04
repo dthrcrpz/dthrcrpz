@@ -13,16 +13,16 @@
                     <div class="texts">
                         <p class="title">Who's this guy?</p>
                         <p class="desc has-bash">
-                            A <i>self-proclaimed</i> highly skilled and creative Full Stack Web Developer.
+                            A <i>self-proclaimed</i> highly skilled and creative Full Stack Web Developer
                         </p>
                         <p class="desc has-bash">
                             Solid experience on developing user-centered websites using the stacks mentioned <a href="javascript:void(0)">HERE</a>
                         </p>
                         <p class="desc has-bash">
-                            Developed responsive, optimized, and SEO-friendly websites for more than 4 years, using the best practices and latest UX trends for best user experience.
+                            Developed responsive, optimized, and SEO-friendly websites for more than 4 years, using the best practices and latest UX trends for best user experience
                         </p>
                         <p class="desc has-bash">
-                            Extensive knowledge in developing web applications with multiple APIs and third-party integrations.
+                            Extensive knowledge in developing web applications with multiple APIs and third-party integrations
                         </p>
                     </div>
                     <div class="triangle">

@@ -47,7 +47,7 @@
                     id: 'ride-revolution',
                     name: 'Ride Revolution',
                     url: 'https://www.riderevolution.ph/',
-                    description: `A platform where you can buy can buy packages and book your classes from this very nice indoor cycling studio. Achieve fitness!`,
+                    description: `A platform where you can buy packages and book your classes from this very nice indoor cycling studio. Achieve fitness!`,
                     agency: {
                         logo: 'designblue.svg',
                         url: 'https://designbluemanila.com/'
