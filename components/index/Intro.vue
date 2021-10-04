@@ -208,13 +208,6 @@
         .blob
             position: absolute
             opacity: 0.5
-            img
-                -webkit-user-drag: none
-                -khtml-user-drag: none
-                -moz-user-drag: none
-                -o-user-drag: none
-                user-drag: none
-                user-select: none
             &.blob-1, &.blob-2
                 left: -100px
                 bottom: 22px
@@ -236,13 +229,6 @@
             img
                 width: 100%
                 border-radius: 100%
-                user-select: none
-                -webkit-user-drag: none
-                -khtml-user-drag: none
-                -moz-user-drag: none
-                -o-user-drag: none
-                user-drag: none
-                user-select: none
         .wave-divider
             position: absolute
             bottom: 0

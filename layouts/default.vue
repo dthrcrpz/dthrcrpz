@@ -124,7 +124,7 @@
         opacity: 0 
 
     .container 
-        max-width: 1024px
+        max-width: 1280px
         width: 100%
         margin: 0 auto
         padding: 0 20px
@@ -363,4 +363,16 @@
         opacity: 0
         visibility: hidden
         pointer-events: none
+
+    img
+        -webkit-user-drag: none
+        -khtml-user-drag: none
+        -moz-user-drag: none
+        -o-user-drag: none
+        user-drag: none
+        user-select: none
+        -webkit-user-select: none
+        -khtml-user-select: none
+        -moz-user-select: none
+        -o-user-select: none
 </style>
