@@ -25,6 +25,11 @@
                             Extensive knowledge in developing web applications with multiple APIs and third-party integrations.
                         </p>
                     </div>
+                    <div class="triangle">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+                        </svg>
+                    </div>
                 </div>
                 <div class="col right">
                     <div class="texts">
@@ -135,6 +140,21 @@
                                 font-family: Fira Code
                                 a
                                     color: lighten($blue, 25)
+                        .triangle
+                            position: absolute
+                            bottom: 0
+                            left: 0
+                            width: 100%
+                            overflow: hidden
+                            line-height: 0
+                            transform: rotate(180deg)
+                            svg
+                                position: relative
+                                display: block
+                                width: calc(100% + 1.3px)
+                                height: 28px
+                                .shape-fill
+                                    fill: $blue
                         &::after
                             content: ''
                             position: absolute
@@ -166,15 +186,17 @@
                                     animation: dimming_shadow .4s infinite alternate
                                     box-shadow: 0 0 11px rgb(92 224 216)
                             .title
-                                color: $teal
+                                color: $yellow
                             .stack
                                 margin-bottom: 18px
                                 font-family: Fira Code
                                 .category
                                     font-size: 24px
+                                    color: $yellow
                                     &::before
                                         top: unset
                                         bottom: 5px
+                                        color: $yellow
                                 ul
                                     column-count: 2
                                     list-style-type: disclosure-closed

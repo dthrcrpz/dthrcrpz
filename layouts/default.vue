@@ -307,11 +307,6 @@
         margin: auto
         z-index: 1
 
-    section
-        .mini-title
-            font-size: 30px
-            color: $blue
-
     .to-top
         position: fixed
         width: 50px
