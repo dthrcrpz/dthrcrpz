@@ -73,10 +73,10 @@
         font-size: 20px
         padding: 10px
         color: $blue
-        font-family: Lato
+        font-family: Fira Code
         border: 1px solid $yellow
         user-select: none
-        font-weight: 900
+        font-weight: 700
         width: 100%
         transition: .4s
         &:hover
@@ -248,6 +248,22 @@
 
     .form-group
         position: relative
+        width: 100%
+        margin-bottom: 10px
+        input, textarea
+            width: 100%
+            font-size: 18px
+            padding: 10px
+            font-family: Fira Code
+            background-color: $blue
+            color: $teal
+            border: 1px solid $blue
+            box-shadow: 0px 0px 4px rgba(92, 224, 216, 0.6)
+            resize: none
+            transition: .4s
+            &:focus
+                box-shadow: 0px 0px 6px rgba(255, 207, 67, 0.8)
+                
 
     .validation-errors
         position: absolute
