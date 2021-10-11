@@ -7,7 +7,7 @@
             <div class="col links-wrapper">
                 <a href="javascript:void(0)">about me</a>
                 <a href="javascript:void(0)">projects</a>
-                <a href="javascript:void(0)">connect</a>
+                <a href="javascript:void(0)">contact</a>
             </div>
         </div>
     </nav>
