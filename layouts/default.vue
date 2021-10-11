@@ -2,6 +2,7 @@
     <div>
         <Navbar/>
         <Nuxt/>
+        <Foot/>
         
         <transition name="fade">
             <ModalBackground v-if="showModal"/>
@@ -16,6 +17,7 @@
         components: {
             Navbar: () => import('~/components/globals/Navbar'),
             ModalBackground: () => import('~/components/globals/ModalBackground'),
+            Foot: () => import('~/components/globals/Foot'),
         },
         computed: {
             ...mapGetters({
