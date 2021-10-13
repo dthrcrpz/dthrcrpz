@@ -23,16 +23,6 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
-  vite: {
-    css: {
-      preprocessorOptions: {
-        sass: {
-          additionalData: '@import "@/assets/globals.sass"',
-        },
-      },
-    },
-  },
-
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '@/plugins/mixins' },
@@ -45,7 +35,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    'nuxt-vite',
     '@nuxtjs/style-resources',
   ],
 
@@ -55,6 +44,13 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://image.nuxtjs.org/
+    '@nuxt/image',
+    // https://www.npmjs.com/package/nuxt-lazy-load
+    ['nuxt-lazy-load', {
+      directiveOnly: true,
+      defaultImage: '/lazy-loader.svg'
+    }],
   ],
 
   // Style Resources

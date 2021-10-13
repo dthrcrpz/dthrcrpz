@@ -2,6 +2,29 @@ import Vue from 'vue'
 
 Vue.mixin({
     methods: {
+		animateElements (targets) {
+            /**
+             * Observer (IntersectionObserver)
+             * @param {[array]} items [target elements] */
+            let observer = new IntersectionObserver((items) => {
+                items.forEach((item, key) => {
+                    if (item.isIntersecting) {
+                        item.target.classList.add('ov')
+						console.log(item)
+                        observer.unobserve(item.target)
+                    }
+                })
+            })
+
+            /**
+             * Listing all the elements in order to observe */
+            targets.forEach((target, key) => {
+                let elements = document.querySelectorAll(target)
+                elements.forEach((element, k) => {
+                    observer.observe(element)
+                })
+            })
+        },
 		properFormat (value) {
 			let newValue = value.split('The ')[1].split(' field')[0].split('.')
 			if (newValue.length > 1) {

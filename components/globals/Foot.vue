@@ -32,6 +32,9 @@
                     max-width: 100px
                     width: 100%
                     margin: 0 10px
+                    transition: .4s
+                    &:hover
+                        transform: scale(1.1)
                     &.netlify
                         max-width: 80px
                     img

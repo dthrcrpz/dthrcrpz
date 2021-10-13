@@ -6,7 +6,7 @@
                     <img src="/images/contact/icon.svg" alt="">
                     <span>contact</span>
                 </h2>
-                <p class="mini-title">Idk what to put here</p>
+                <p class="mini-title">Wanna talk about something? Leave a message and I'll do my best to get back to you</p>
             </div>
         </div>
         <div class="bottom">
@@ -104,11 +104,15 @@
                     max-width: 600px
                     width: 100%
                     margin: 20px auto 0
+                    .form-group
+                        input, textarea
+                            background-color: darken($blue, 1)
                     .buttons-group
                         display: flex
                         flex-flow: row wrap
                         justify-content: flex-end
                         .button
+                            font-size: 16px
                             flex: 0 0 100px
                             margin-left: 10px
 </style>
