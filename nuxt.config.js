@@ -51,6 +51,7 @@ export default {
       directiveOnly: true,
       defaultImage: '/lazy-loader.svg'
     }],
+    '@layer0/nuxt/module'
   ],
 
   // Style Resources

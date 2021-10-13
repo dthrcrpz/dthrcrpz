@@ -91,4 +91,5 @@ sw.*
 
 sanity.json
 
-dthrcrpz
+dthrcrpz# Layer0 generated build directory
+.layer0
