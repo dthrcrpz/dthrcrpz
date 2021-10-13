@@ -79,6 +79,19 @@
     </section>
 </template>
 
+<script>
+    export default {
+        mounted () {
+            let targets = [
+                `.section-title`,
+                `section.about > div.columns-container > div > div.col.left .texts p`
+            ]
+
+            this.animateElements(targets)
+        }
+    }
+</script>
+
 <style scoped lang="sass">
     .about
         position: relative
@@ -87,6 +100,12 @@
         .container
             .section-title
                 color: $blue
+                transition: 1s
+                opacity: 0
+                transform: translateY(-10px)
+                &.ov
+                    opacity: 1
+                    transform: translateY(0px)
         .columns-container
             position: relative
             width: 100%
@@ -132,6 +151,13 @@
                             animation: shaking_weak .3s infinite alternate
                             transition: .5s
                         .texts
+                            p
+                                transition: 1s
+                                opacity: 0
+                                transform: translateX(-30px)
+                                &.ov
+                                    opacity: 1
+                                    transform: translateX(0px)
                             .desc
                                 color: $blue
                                 font-size: 18px
