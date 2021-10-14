@@ -9,8 +9,11 @@ Vue.mixin({
             let observer = new IntersectionObserver((items) => {
                 items.forEach((item, key) => {
                     if (item.isIntersecting) {
-                        item.target.classList.add('ov')
-						console.log(item)
+						let delay = (!item.target.hasAttribute('delay')) ? 0 : parseInt(item.target.getAttribute('delay'))
+						console.log(delay)
+						setTimeout (() => {
+							item.target.classList.add('ov')
+						}, delay)
                         observer.unobserve(item.target)
                     }
                 })

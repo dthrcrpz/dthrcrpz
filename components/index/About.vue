@@ -37,39 +37,10 @@
                             <img src="/images/about/code.svg" alt="">
                         </div>
                         <p class="title">Tech Stacks</p>
-                        <div class="stack">
-                            <p class="category has-bash">Front-end</p>
+                        <div class="stack" v-for="(stack, key) in stacks" :key="key">
+                            <p class="category has-bash">{{ stack.category }}</p>
                             <ul>
-                                <li>Nuxt</li>
-                                <li>Vue</li>
-                                <li>Javascript</li>
-                                <li>HTML</li>
-                                <li>SASS/LESS/Stylus</li>
-                            </ul>
-                        </div>
-                        <div class="stack">
-                            <p class="category has-bash">Back-end</p>
-                            <ul>
-                                <li>Laravel</li>
-                                <li>PHP</li>
-                                <li>MySQL</li>
-                                <li>Redis</li>
-                            </ul>
-                        </div>
-                        <div class="stack">
-                            <p class="category has-bash">Server</p>
-                            <ul>
-                                <li>Ubuntu, CentOS</li>
-                                <li>NginX, Apache</li>
-                                <li>AWS (Favorite)</li>
-                            </ul>
-                        </div>
-                        <div class="stack">
-                            <p class="category has-bash">Tools</p>
-                            <ul>
-                                <li>Git</li>
-                                <li>WSL</li>
-                                <li>VSCode</li>
+                                <li delay="200" v-for="(item, key) in stack.items" :key="key">{{ item }}</li>
                             </ul>
                         </div>
                     </div>
@@ -81,10 +52,35 @@
 
 <script>
     export default {
+        data: () => ({
+            stacks: [
+                {
+                    category: 'Front-end',
+                    items: ['Nuxt', 'Vue', 'Javascript', 'HTML', 'SASS/LESS/Stylus']
+                },
+                {
+                    category: 'Back-end',
+                    items: ['Laravel', 'PHP', 'MySQL', 'Redis']
+                },
+                {
+                    category: 'Server',
+                    items: ['Ubuntu, Centos', 'NginX, Apache', 'AWS (Preferred)']
+                },
+                {
+                    category: 'Tools',
+                    items: ['Git', 'WSL', 'VSCode']
+                }
+                
+            ],
+        }),
         mounted () {
             let targets = [
                 `.section-title`,
-                `section.about > div.columns-container > div > div.col.left .texts p`
+                `section.about > div.columns-container > div > div.col.left .texts p`,
+                `section.about > div.columns-container > div > div.col.left > div.egg`,
+                `section.about > div.columns-container > div > div.col.right > div > div.code`,
+                `section.about > div.columns-container > div > div.col.right > div > div ul li`,
+                `section.about > div.columns-container > div > div.col.right > div > div > p`
             ]
 
             this.animateElements(targets)
@@ -150,6 +146,9 @@
                             -webkit-animation: shaking_weak .3s infinite alternate
                             animation: shaking_weak .3s infinite alternate
                             transition: .5s
+                            opacity: 0
+                            &.ov
+                                opacity: 1
                         .texts
                             p
                                 transition: 1s
@@ -206,6 +205,10 @@
                             .code
                                 margin: 0 auto 20px
                                 max-width: 250px
+                                transition: 1s
+                                opacity: 0
+                                &.ov
+                                    opacity: 1
                                 img
                                     width: 100%
                                     border-radius: 100%
@@ -219,6 +222,12 @@
                                 .category
                                     font-size: 24px
                                     color: $yellow
+                                    transition: .8s
+                                    opacity: 0
+                                    transform: translateY(-30px)
+                                    &.ov
+                                        opacity: 1
+                                        transform: translateY(0px)
                                     &::before
                                         top: unset
                                         bottom: 5px
@@ -228,6 +237,12 @@
                                     list-style-type: disclosure-closed
                                     li
                                         margin-left: 20px
+                                        transition: .8s
+                                        opacity: 0
+                                        transform: translateX(-30px)
+                                        &.ov
+                                            opacity: 1
+                                            transform: translateX(0px)
             &::after
                 content: ''
                 background-color: $blue
