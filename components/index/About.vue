@@ -1,7 +1,7 @@
 <template>
     <section class="about">
         <div class="container">
-            <h2 class="section-title">
+            <h2 delay="500" class="section-title">
                 <img src="/images/about/icon.svg" alt="about-dthrcrpz">
                 <span>about me</span>
             </h2>
@@ -11,17 +11,17 @@
                 <div class="col left">
                     <div class="egg"></div>
                     <div class="texts">
-                        <p class="title">Who's this guy?</p>
-                        <p class="desc has-bash">
+                        <p delay="1000" class="title">Who's this guy?</p>
+                        <p delay="1000" class="desc has-bash">
                             A <i>self-proclaimed</i> highly skilled and creative Full Stack Web Developer
                         </p>
-                        <p class="desc has-bash">
+                        <p delay="1000" class="desc has-bash">
                             Solid experience on developing user-centered websites using the stacks mentioned <a href="javascript:void(0)">HERE</a>
                         </p>
-                        <p class="desc has-bash">
+                        <p delay="1000" class="desc has-bash">
                             Developed responsive, optimized, and SEO-friendly websites for more than 4 years, using the best practices and latest UX trends for best user experience
                         </p>
-                        <p class="desc has-bash">
+                        <p delay="1000" class="desc has-bash">
                             Extensive knowledge in developing web applications with multiple APIs and third-party integrations
                         </p>
                     </div>
@@ -75,11 +75,11 @@
         }),
         mounted () {
             let targets = [
-                `.section-title`,
-                `section.about > div.columns-container > div > div.col.left .texts p`,
+                `.about .section-title`,
+                `.about .columns-container .container .col.left .texts p`,
                 `section.about > div.columns-container > div > div.col.left > div.egg`,
                 `section.about > div.columns-container > div > div.col.right > div > div.code`,
-                `section.about > div.columns-container > div > div.col.right > div > div ul li`,
+                `section.about > div.columns-container > div > div.col.right ul li`,
                 `section.about > div.columns-container > div > div.col.right > div > div > p`
             ]
 

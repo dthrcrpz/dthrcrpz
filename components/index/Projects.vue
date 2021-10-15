@@ -1,7 +1,7 @@
 <template>
     <section class="projects">
         <div class="container">
-            <h2 class="section-title">
+            <h2 class="section-title" delay="1000">
                 <img src="/images/projects/icon.svg" alt="">
                 <span>projects</span>
             </h2>
@@ -91,7 +91,16 @@
                     }
                 },
             ]
-        })
+        }),
+        mounted () {
+            let targets = [
+                `section.projects > div.container > h2`,
+                `section.projects > div.container > .mini-title`,
+                `section.projects > div.container > div .box`
+            ]
+
+            this.animateElements(targets)
+        }
     }
 </script>
 
@@ -120,6 +129,10 @@
         .container
             .section-title
                 color: $teal
+                opacity: 0
+                transition: .8s
+                &.ov
+                    opacity: 1
                 img
                     max-width: 50px
                     margin-right: 15px
@@ -131,6 +144,10 @@
                 max-width: 500px
                 width: 100%
                 margin: 0 auto
+                opacity: 0
+                transition: .8s
+                &.ov
+                    opacity: 1
             .projects-wrapper
                 display: flex
                 justify-content: space-between
@@ -139,6 +156,12 @@
                 .box
                     flex: 0 0 50%
                     padding: 15px
+                    transition: 1s
+                    opacity: 0
+                    transform: translateY(30px)
+                    &.ov
+                        opacity: 1
+                        transform: translateY(0px)
                     .real-box
                         width: 100%
                         display: flex

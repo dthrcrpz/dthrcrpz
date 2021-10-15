@@ -49,6 +49,15 @@
             submit () {
 
             }
+        },
+        mounted () {
+            let targets = [
+                `section.contact > div.top > div > h2`,
+                `.contact .top .container .mini-title`,
+                `section.contact > div.bottom > div.container.box`
+            ]
+
+            this.animateElements(targets)
         }
     }
 </script>
@@ -60,6 +69,10 @@
             background-color: #22b4ab
             .container
                 .section-title
+                    transition: .8s
+                    opacity: 0
+                    &.ov
+                        opacity: 1
                     img
                         margin-right: 10px
                         max-width: 60px
@@ -74,6 +87,10 @@
                     max-width: 500px
                     width: 100%
                     margin: 0 auto
+                    transition: .8s
+                    opacity: 0
+                    &.ov
+                        opacity: 1
         .bottom
             position: relative
             .curve
@@ -98,8 +115,13 @@
                 z-index: 2
                 position: relative
                 background-color: rgba(0, 18, 32, 0.9)
-                transform: translateY(-100px)
                 box-shadow: 0px 0px 4px rgba(92, 224, 216, 0.6)
+                opacity: 0
+                transition: .8s
+                transform: translateY(-70px)
+                &.ov
+                    opacity: 1
+                    transform: translateY(-100px)
                 .forms-container
                     max-width: 600px
                     width: 100%
