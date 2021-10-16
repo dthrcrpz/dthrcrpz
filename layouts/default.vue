@@ -7,26 +7,24 @@
         <transition name="fade">
             <ModalBackground v-if="showModal"/>
         </transition>
+        <SideNav/>
     </div>
 </template>
 
 <script>
-	import { mapGetters, mapMutations } from 'vuex'
+	import { mapGetters } from 'vuex'
 
     export default {
         components: {
             Navbar: () => import('~/components/globals/Navbar'),
+            SideNav: () => import('~/components/globals/SideNav'),
             ModalBackground: () => import('~/components/globals/ModalBackground'),
             Foot: () => import('~/components/globals/Foot'),
         },
         computed: {
             ...mapGetters({
-                showModal: 'globals/getShowModal'
-            })
-        },
-        methods: {
-            ...mapMutations({
-                setShowModal: 'globals/setShowModal'
+                showModal: 'globals/getShowModal',
+                showSideNav: 'globals/getShowSideNav',
             })
         }
     }

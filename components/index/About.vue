@@ -105,7 +105,6 @@
         .columns-container
             position: relative
             width: 100%
-            display: table
             background-color: darken($teal, 20)
             overflow: hidden
             .container
@@ -206,6 +205,7 @@
                             .code
                                 margin: 0 auto 20px
                                 max-width: 250px
+                                width: 100%
                                 transition: 1s
                                 opacity: 0
                                 &.ov

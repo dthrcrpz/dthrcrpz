@@ -1,3 +1,4 @@
 export default () => ({
-    showModal: false
+    showModal: false,
+    showSideNav: false
 })

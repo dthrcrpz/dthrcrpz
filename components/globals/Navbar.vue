@@ -10,7 +10,7 @@
                 <a href="javascript:void(0)">contact</a>
             </div>
             <div class="col burger">
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" @click="toggleSideNav()">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -19,6 +19,26 @@
         </div>
     </nav>
 </template>
+
+<script>
+	import { mapGetters, mapMutations } from 'vuex'
+
+    export default {
+        computed: {
+            ...mapGetters({
+                showSideNav: 'globals/getShowSideNav',
+            })
+        },
+        methods: {
+            ...mapMutations({
+                setShowSideNav: 'globals/setShowSideNav'
+            }),
+            toggleSideNav () {
+                this.setShowSideNav(!this.showSideNav)
+            }
+        }
+    }
+</script>
 
 <style lang="sass">
     nav
