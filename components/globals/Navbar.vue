@@ -9,7 +9,7 @@
                 <a href="javascript:void(0)">projects</a>
                 <a href="javascript:void(0)">contact</a>
             </div>
-            <div class="col burger">
+            <div :class="{ 'col': true, 'burger': true, 'active': showSideNav }">
                 <a href="javascript:void(0)" @click="toggleSideNav()">
                     <div></div>
                     <div></div>
@@ -88,6 +88,25 @@
                     width: 35px
                     height: 26px
                     display: none
+                    border: 1px solid transparent
+                    &.active
+                        &:hover
+                            a
+                                div
+                                    width: 118% !important
+                        a
+                            div
+                                &:nth-child(2)
+                                    opacity: 0
+                                &:nth-child(1),
+                                &:nth-child(3)
+                                    width: 100%
+                                &:nth-child(1)
+                                    transform: translateX(-3px) translateY(10px) rotate(35deg)
+                                    width: 118%
+                                &:nth-child(3)
+                                    transform: translateX(3px) translateY(-11px) rotate(-35deg)
+                                    width: 118%
                     a
                         display: block
                         height: 100%
