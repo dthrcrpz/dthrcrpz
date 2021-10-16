@@ -111,6 +111,7 @@
             .container
                 display: flex
                 justify-content: space-between
+                flex-flow: row wrap
                 .has-bash
                     padding-left: 25px
                     position: relative
@@ -251,5 +252,20 @@
                 position: absolute
                 top: 0px
                 left: calc(50% + 300px)
-
+    @media (max-width: 1024px)
+        .about
+            .columns-container
+                &::after
+                    display: none
+                .container
+                    .col
+                        &.left, &.right
+                            flex: 0 0 100%
+                        &.left
+                            &::after
+                                display: none
+                        &.right
+                            padding-left: 0px
+                            .texts
+                                padding: 0 20px
 </style>

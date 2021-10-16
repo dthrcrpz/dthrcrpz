@@ -24,7 +24,7 @@
     nav
         user-select: none
         padding: 15px 0
-        background-color: rgba(0, 18,32, 0.8)
+        background-color: rgba(0, 18,32, 0.9)
         position: fixed
         top: 0
         left: 0
@@ -67,6 +67,7 @@
                     position: relative
                     width: 35px
                     height: 26px
+                    display: none
                     a
                         display: block
                         height: 100%
@@ -95,4 +96,12 @@
                                     width: 100%
                                 &:nth-child(2)
                                     width: 80%
+    @media (max-width: 768px)
+        nav
+            .container
+                .col
+                    &.links-wrapper
+                        display: none
+                    &.burger
+                        display: block
 </style>

@@ -110,7 +110,7 @@
         position: relative
         .waves
             position: absolute
-            bottom: 0
+            bottom: -1px
             left: 0
             width: 100%
             overflow: hidden
@@ -213,8 +213,10 @@
                                     font-size: 25px
                                     margin-bottom: 5px
                                     color: $yellow
+                                    flex: 0 0 100%
                                 .description
                                     font-size: 14px
+                                    flex: 0 0 100%
                             .button
                                 margin-top: 10px
                                 color: $teal
@@ -225,4 +227,15 @@
                                 &:hover
                                     color: $blue
                                     background-color: $teal
+    @media (max-width: 1024px)
+        .projects
+            .container
+                .projects-wrapper
+                    .box
+                        flex: 0 0 100%
+                        padding: 15px 0
+                        margin-bottom: 20px
+                        .real-box
+                            .agency
+                                opacity: 1
 </style>
