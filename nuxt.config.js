@@ -104,6 +104,17 @@ export default {
     transpile: ["vee-validate/dist/rules"],
   },
 
+  serverMiddleware: [
+    (req, res, next) => {
+      if (/\/{2,}/.test(req.url)) {
+        const url = req.url.replace(/\/{2,}/g, '/')
+        res.writeHead(301, { 'Location': url })
+        return res.end()
+      }
+      next()
+    }
+  ],
+
   env: {
     emailJsUserId: process.env.EMAILJS_USER_ID,
     emailJsServiceId: process.env.EMAILJS_SERVICE_ID,
