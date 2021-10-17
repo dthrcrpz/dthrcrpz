@@ -24,7 +24,6 @@
     "@layer0/nuxt": "^3.16.11",
     "@layer0/prefetch": "^3.16.11",
     "@layer0/vue": "^3.16.11",
-    "@nuxt/image": "^0.6.0",
     "@nuxtjs/style-resources": "^1.2.1",
     "core-js": "^3.15.1",
     "fibers": "^5.0.0",

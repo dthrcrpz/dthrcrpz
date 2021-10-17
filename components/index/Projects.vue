@@ -13,7 +13,7 @@
                             <img :src="`/images/projects/agencies/${project.agency.logo}`" alt="">
                         </a>
                         <div class="top">
-                            <nuxt-img provider="static" format="webp" :src="`/images/projects/websites/${project.id}.png`" :alt="project.name" v-lazy-load/>
+                            <img :src="`/images/projects/websites/${project.id}.png`" :alt="project.name" v-lazy-load/>
                         </div>
                         <div class="bottom">
                             <div class="texts">

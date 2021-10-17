@@ -45,8 +45,6 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // https://image.nuxtjs.org/
-    '@nuxt/image',
     // https://www.npmjs.com/package/nuxt-lazy-load
     ['nuxt-lazy-load', {
       directiveOnly: true,
