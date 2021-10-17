@@ -13,7 +13,10 @@
                             <img :src="`/images/projects/agencies/${project.agency.logo}`" alt="">
                         </a>
                         <div class="top">
-                            <img :src="`/images/projects/websites/${project.id}.png`" :alt="project.name" v-lazy-load/>
+                            <picture v-lazy-load>
+                                <source :srcset="`/images/projects/websites/${project.id}.webp`" type="image/webp">
+                                <img width="100%" height="100%" :src="`/images/projects/websites/${project.id}.png`" :alt="project.name" v-lazy-load/>
+                            </picture>
                         </div>
                         <div class="bottom">
                             <div class="texts">
