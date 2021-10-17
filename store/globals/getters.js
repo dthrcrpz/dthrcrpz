@@ -4,5 +4,8 @@ export default {
     },
     getShowSideNav: (state) => {
         return state.showSideNav
+    },
+    getShowLoading: (state) => {
+        return state.showLoading
     }
 }

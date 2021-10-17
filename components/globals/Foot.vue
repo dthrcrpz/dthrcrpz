@@ -5,8 +5,8 @@
                 <a href="https://nuxtjs.org/" target="_blank">
                     <img src="/images/footer/plugs/nuxt.svg" alt="">
                 </a>
-                <a class="netlify" href="https://www.netlify.com/" target="_blank">
-                    <img src="/images/footer/plugs/netlify.svg" alt="">
+                <a class="layer0" href="https://www.layer0.co/" target="_blank">
+                    <img src="/images/footer/plugs/layer0.svg" alt="">
                 </a>
             </div>
             <div class="copyright">
@@ -35,8 +35,6 @@
                     transition: .4s
                     &:hover
                         transform: scale(1.1)
-                    &.netlify
-                        max-width: 80px
                     img
                         width: 100%
             .copyright

@@ -3,11 +3,15 @@
         <Navbar/>
         <Nuxt/>
         <Foot/>
+        <SideNav/>
         
         <transition name="fade">
             <ModalBackground v-if="showModal"/>
         </transition>
-        <SideNav/>
+
+        <transition name="fade">
+            <div class="loading" v-if="showLoading"></div>
+        </transition>
     </div>
 </template>
 
@@ -25,6 +29,7 @@
             ...mapGetters({
                 showModal: 'globals/getShowModal',
                 showSideNav: 'globals/getShowSideNav',
+                showLoading: 'globals/getShowLoading',
             })
         }
     }
@@ -302,7 +307,7 @@
         right: 0
         left: 0
         bottom: 0
-        background-color: $blue
+        background-color: rgba(0, 18, 32, 0.7)
         max-height: 100vh
         overflow-y: auto
         background-image: url('/loading.svg')

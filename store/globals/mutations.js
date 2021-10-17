@@ -5,4 +5,7 @@ export default {
     setShowSideNav (state, payload) {
         state.showSideNav = payload
     },
+    setShowLoading (state, payload) {
+        state.showLoading = payload
+    },
 }

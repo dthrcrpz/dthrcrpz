@@ -16,7 +16,7 @@
                 </svg>
             </div>
             <div class="box-wrapper">
-                <ValidationObserver class="container box" tag="div" ref="form" v-slot="{ valid, handleSubmit }">
+                <ValidationObserver class="container box" tag="div" ref="contactForm" v-slot="{ valid, handleSubmit }">
                     <form class="forms-container" @submit.prevent="handleSubmit(submit(valid))">
                         <ValidationProvider name="name" tag="div" class="form-group" v-slot="{ errors }" :rules="{ required: true }">
                             <input type="text" placeholder="Your Name" v-model="form.name">
@@ -31,36 +31,61 @@
                             <transition name="fade"><span class="validation-errors" v-if="errors.length > 0">{{ properFormat(errors[0]) }}</span></transition>
                         </ValidationProvider>
                         <div class="buttons-group">
-                            <button type="button" class="button red">Clear</button>
+                            <button type="button" class="button red" @click="resetForm()">Reset</button>
                             <button type="submit" class="button yellow">Submit</button>
                         </div>
                     </form>
                 </ValidationObserver>
             </div>
         </div>
+        <transition name="fade">
+            <InquiryFeedbackModal v-if="showInquiryFeedbackModal"/>
+        </transition>
     </section>
 </template>
 
 <script>
+    import { mapMutations } from 'vuex'
+
     export default {
+        components: {
+            InquiryFeedbackModal: () => import('@/components/globals/InquiryFeedbackModal')
+        },
         data: () => ({
             form: {
                 name: '',
                 email: '',
                 message: '',
-            }
+            },
+            showInquiryFeedbackModal: false
         }),
         methods: {
+            ...mapMutations({
+                setShowLoading: 'globals/setShowLoading',
+                setShowModal: 'globals/setShowModal'
+            }),
+            resetForm () {
+                this.form.name = this.form.email = this.form.message = ''
+                this.$refs.contactForm.reset()
+            },
             submit (valid) {
                 if (valid) {
+                    this.setShowLoading(true)
+                    
                     this.$axios.post(`https://api.emailjs.com/api/v1.0/email/send`, {
                         user_id: process.env.emailJsUserId,
                         service_id: process.env.emailJsServiceId,
                         template_id: process.env.emailJsTemplateId,
                     }).then(res => {
                         console.log(res)
+                        this.setShowLoading(false)
+                        this.setShowModal(true)
+                        this.showInquiryFeedbackModal = true
+                        this.resetForm()
                     }).catch(err => {
                         console.log(err)
+                    }).then(() => {
+                        this.setShowLoading(false)
                     })
                 }
             }
