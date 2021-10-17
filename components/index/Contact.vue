@@ -16,23 +16,26 @@
                 </svg>
             </div>
             <div class="box-wrapper">
-                <div class="container box">
-                    <form class="forms-container" @submit.prevent="submit()">
-                        <div class="form-group">
+                <ValidationObserver class="container box" tag="div" ref="form" v-slot="{ valid, handleSubmit }">
+                    <form class="forms-container" @submit.prevent="handleSubmit(submit(valid))">
+                        <ValidationProvider name="name" tag="div" class="form-group" v-slot="{ errors }" :rules="{ required: true }">
                             <input type="text" placeholder="Your Name" v-model="form.name">
-                        </div>
-                        <div class="form-group">
+                            <transition name="fade"><span class="validation-errors" v-if="errors.length > 0">{{ properFormat(errors[0]) }}</span></transition>
+                        </ValidationProvider>
+                        <ValidationProvider name="email" tag="div" class="form-group" v-slot="{ errors }" :rules="{ required: true, email: true }">
                             <input type="text" placeholder="Your Email" v-model="form.email">
-                        </div>
-                        <div class="form-group">
+                            <transition name="fade"><span class="validation-errors" v-if="errors.length > 0">{{ properFormat(errors[0]) }}</span></transition>
+                        </ValidationProvider>
+                        <ValidationProvider name="message" tag="div" class="form-group" v-slot="{ errors }" :rules="{ required: true }">
                             <textarea name="message" id="" rows="7" placeholder="Your Message" v-model="form.message"></textarea>
-                        </div>
+                            <transition name="fade"><span class="validation-errors" v-if="errors.length > 0">{{ properFormat(errors[0]) }}</span></transition>
+                        </ValidationProvider>
                         <div class="buttons-group">
                             <button type="button" class="button red">Clear</button>
                             <button type="submit" class="button yellow">Submit</button>
                         </div>
                     </form>
-                </div>
+                </ValidationObserver>
             </div>
         </div>
     </section>
@@ -48,8 +51,10 @@
             }
         }),
         methods: {
-            submit () {
-
+            submit (valid) {
+                if (valid) {
+                    
+                }
             }
         },
         mounted () {
