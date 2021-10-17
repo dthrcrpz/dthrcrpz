@@ -56,7 +56,7 @@
             stacks: [
                 {
                     category: 'Front-end',
-                    items: ['Nuxt', 'Vue', 'Javascript', 'HTML', 'SASS/LESS/Stylus']
+                    items: ['Nuxt', 'Vue', 'Javascript', 'HTML', 'SASS, LESS, Stylus']
                 },
                 {
                     category: 'Back-end',

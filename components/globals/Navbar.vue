@@ -5,9 +5,7 @@
                 <nuxt-link class="logo" to="/">dthrcrpz</nuxt-link>
             </div>
             <div class="col links-wrapper">
-                <a href="javascript:void(0)">about me</a>
-                <a href="javascript:void(0)">projects</a>
-                <a href="javascript:void(0)">contact</a>
+                <a :class="{ 'active': link.class == activeAnchor }" href="javascript:void(0)" v-for="(link, key) in navLinks" :key="key" @click="scrollTo(link)">{{ link.label }}</a>
             </div>
             <div :class="{ 'col': true, 'burger': true, 'active': showSideNav }">
                 <a href="javascript:void(0)" @click="toggleSideNav()">
@@ -29,13 +27,85 @@
                 showSideNav: 'globals/getShowSideNav',
             })
         },
+        data: () => ({
+            navLinks: [
+                { label: 'about me', class: '.about' },
+                { label: 'projects', class: '.projects' },
+                { label: 'contact', class: '.contact' },
+            ],
+            activeAnchor: null,
+            scrolling: false
+        }),
         methods: {
             ...mapMutations({
                 setShowSideNav: 'globals/setShowSideNav'
             }),
+            scrollTo (link) {
+                this.$scrollTo(link.class, 500, {
+                    onStart: () => {
+                        this.scrolling = true
+                        this.activeAnchor = link.class
+                    },
+                    onDone: () => {
+                        this.scrolling = false
+                    },
+                    onCancel: () => {
+                        this.scrolling = false
+                    }
+                })
+            },
             toggleSideNav () {
                 this.setShowSideNav(!this.showSideNav)
+            },
+            setScrollObserver () {
+                const me = this
+                let current_scroll = window.pageYOffset | document.body.scrollTop
+
+                me.scrolled = (current_scroll > 10) ? true : false
+
+                let targets = [
+                    `section.intro`,
+                    `section.about`,
+                    `section.projects`,
+                    `section.contact`,
+                ]
+
+                /**
+                * Observer (IntersectionObserver)
+                * @param {[array]} items [target elements] */
+                let observer = new IntersectionObserver((items) => {
+                    items.forEach((item, key) => {
+                        let bounding = item.target.getBoundingClientRect()
+                        if (bounding.bottom > 0 &&
+                            bounding.right > 0 &&
+                            bounding.left < (window.innerWidth || document.documentElement.clientWidth) &&
+                            bounding.top < (window.innerHeight || document.documentElement.clientHeight)) {
+                            me.activeAnchor = (!me.scrolling) ? `.${item.target.classList.item(0)}` : me.activeAnchor
+                        }
+                    })
+                })
+
+                /**
+                * Listing all the elements in order to observe */
+                targets.forEach((target, key) => {
+                    let element = document.querySelector(target)
+                    if (element) {
+                        observer.observe(element)
+                    }
+                })
             }
+        },
+        mounted () {
+            window.addEventListener('scroll', this.setScrollObserver)
+            window.addEventListener('load', this.setScrollObserver)
+
+            setTimeout(() => {
+                this.setScrollObserver()
+            }, 200)
+        },
+        destroyed () {
+            window.removeEventListener('scroll', this.setScrollObserver)
+            window.removeEventListener('load', this.setScrollObserver)
         }
     }
 </script>
@@ -68,7 +138,7 @@
                     a
                         margin-right: 20px
                         position: relative
-                        &:hover
+                        &:hover, &.active
                             &:before, &:after
                                 width: 50%
                         &:before, &:after
