@@ -2,10 +2,10 @@
     <footer>
         <div class="container">
             <div class="plugs">
-                <a href="https://nuxtjs.org/" target="_blank">
+                <a rel="noopener" href="https://nuxtjs.org/" target="_blank">
                     <img src="/images/footer/plugs/nuxt.svg" alt="">
                 </a>
-                <a class="layer0" href="https://www.layer0.co/" target="_blank">
+                <a rel="noopener" class="layer0" href="https://www.layer0.co/" target="_blank">
                     <img src="/images/footer/plugs/layer0.svg" alt="">
                 </a>
             </div>

@@ -19,22 +19,22 @@
         </div>
 
         <div class="blob blob-1">
-            <img src="/images/backgrounds/blob-1.svg">
+            <img width="100%" height="100%" v-lazy-load src="/images/backgrounds/blob-1.svg">
         </div>
         <div class="blob blob-2">
-            <img src="/images/backgrounds/blob-3.svg">
+            <img width="100%" height="100%" v-lazy-load src="/images/backgrounds/blob-3.svg">
         </div>
         <div class="blob blob-3">
-            <img src="/images/backgrounds/blob-3.svg">
+            <img width="100%" height="100%" v-lazy-load src="/images/backgrounds/blob-3.svg">
         </div>
         <div class="blob blob-4">
-            <img src="/images/backgrounds/blob-4.svg">
+            <img width="100%" height="100%" v-lazy-load src="/images/backgrounds/blob-4.svg">
         </div>
         <div class="blob blob-5">
-            <img src="/images/backgrounds/blob-4.svg">
+            <img width="100%" height="100%" v-lazy-load src="/images/backgrounds/blob-4.svg">
         </div>
         <div class="doge-typing">
-            <img src="/images/backgrounds/doge-typing.webp" alt="doge-typing">
+            <img width="100%" height="100%" v-lazy-load src="/images/backgrounds/doge-typing.webp" alt="doge-typing">
         </div>
 
         <div class="wave-divider">

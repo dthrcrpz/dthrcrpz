@@ -9,7 +9,7 @@
             <div class="projects-wrapper">
                 <div class="box" v-for="(project, key) in projects" :key="key">
                     <div class="real-box">
-                        <a class="agency" :href="project.agency.url" target="_blank">
+                        <a rel="noopener" class="agency" :href="project.agency.url" target="_blank">
                             <img :src="`/images/projects/agencies/${project.agency.logo}`" alt="">
                         </a>
                         <div class="top">
@@ -23,7 +23,7 @@
                                 <p class="name">{{ project.name }}</p>
                                 <p class="description">{{ project.description }}</p>
                             </div>
-                            <a :href="project.url" target="_blank" class="button teal">VISIT SITE ➹</a>
+                            <a rel="noopener" :href="project.url" target="_blank" class="button teal">VISIT SITE ➹</a>
                         </div>
                     </div>
                 </div>
