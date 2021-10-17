@@ -2,9 +2,7 @@
     <div :class="{ 'sidenav': true, 'show': showSideNav }">
         <div class="container">
             <div class="links-wrapper">
-                <a href="javascript:void(0)">about me</a>
-                <a href="javascript:void(0)">projects</a>
-                <a href="javascript:void(0)">contact</a>
+                <a :class="{ 'active': link.class == activeAnchor }" href="javascript:void(0)" v-for="(link, key) in navLinks" :key="key" @click="scrollTo(link)">{{ link.label }}</a>
             </div>
         </div>
     </div>
@@ -19,11 +17,27 @@
                 showSideNav: 'globals/getShowSideNav',
             })
         },
+        data: () => ({
+            navLinks: [
+                { label: 'about me', class: '.about' },
+                { label: 'projects', class: '.projects' },
+                { label: 'contact', class: '.contact' },
+            ],
+            activeAnchor: null,
+        }),
         methods: {
             ...mapMutations({
                 setShowSideNav: 'globals/setShowSideNav'
-            })
-        }
+            }),
+            scrollTo (link) {
+                this.$scrollTo(link.class, 500, {
+                    onStart: () => {
+                        this.setShowSideNav(false)
+                        this.activeAnchor = link.class
+                    }
+                })
+            },
+        },
     }
 </script>
 
@@ -55,7 +69,7 @@
                     text-align: center
                     position: relative
                     display: table
-                    &:hover
+                    &:hover, &.active
                         &:before, &:after
                             width: 50%
                     &:before, &:after

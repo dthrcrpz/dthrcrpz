@@ -34,7 +34,8 @@
                 { label: 'contact', class: '.contact' },
             ],
             activeAnchor: null,
-            scrolling: false
+            scrolling: false,
+            scrolled: false
         }),
         methods: {
             ...mapMutations({
@@ -97,7 +98,6 @@
         },
         mounted () {
             window.addEventListener('scroll', this.setScrollObserver)
-            window.addEventListener('load', this.setScrollObserver)
 
             setTimeout(() => {
                 this.setScrollObserver()
@@ -105,7 +105,6 @@
         },
         destroyed () {
             window.removeEventListener('scroll', this.setScrollObserver)
-            window.removeEventListener('load', this.setScrollObserver)
         }
     }
 </script>
