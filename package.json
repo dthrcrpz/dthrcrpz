@@ -12,9 +12,10 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@nuxt/core": "^2.15.7",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
-    "@nuxt/core": "^2.15.7"
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@layer0/cli": "^3.16.11",
@@ -24,16 +25,16 @@
     "@layer0/prefetch": "^3.16.11",
     "@layer0/vue": "^3.16.11",
     "@nuxt/image": "^0.6.0",
-    "fibers": "^5.0.0",
-    "node-sass": "^6.0.1",
-    "sass": "^1.39.2",
-    "sass-loader": "^10.2.0",
-    "webpack": "^4.46.0",
     "@nuxtjs/style-resources": "^1.2.1",
     "core-js": "^3.15.1",
+    "fibers": "^5.0.0",
+    "node-sass": "^6.0.1",
     "nuxt": "^2.15.7",
     "nuxt-lazy-load": "^1.2.7",
+    "sass": "^1.39.2",
+    "sass-loader": "^10.2.0",
     "v-click-outside": "^3.1.2",
-    "vee-validate": "^3.4.13"
+    "vee-validate": "^3.4.13",
+    "webpack": "^4.46.0"
   }
 }
