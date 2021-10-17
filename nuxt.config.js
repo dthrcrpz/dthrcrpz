@@ -88,6 +88,12 @@ export default {
     transpile: ["vee-validate/dist/rules"],
   },
 
+  env: {
+    emailJsUserId: process.env.EMAILJS_USER_ID,
+    emailJsServiceId: process.env.EMAILJS_SERVICE_ID,
+    emailJsTemplateId: process.env.EMAILJS_TEMPLATE_ID,
+  },
+
   server: {
     port: process.env.PORT
   }

@@ -53,7 +53,15 @@
         methods: {
             submit (valid) {
                 if (valid) {
-                    
+                    this.$axios.post(`https://api.emailjs.com/api/v1.0/email/send`, {
+                        user_id: process.env.emailJsUserId,
+                        service_id: process.env.emailJsServiceId,
+                        template_id: process.env.emailJsTemplateId,
+                    }).then(res => {
+                        console.log(res)
+                    }).catch(err => {
+                        console.log(err)
+                    })
                 }
             }
         },
