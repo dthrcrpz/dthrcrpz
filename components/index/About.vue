@@ -16,7 +16,7 @@
                             A <i>self-proclaimed</i> highly skilled and creative Full Stack Web Developer
                         </p>
                         <p delay="1000" class="desc has-bash">
-                            Solid experience on developing user-centered websites using the stacks mentioned <a href="javascript:void(0)">HERE</a>
+                            Solid experience on developing user-centered websites using my preferred stacks.
                         </p>
                         <p delay="1000" class="desc has-bash">
                             Developed responsive, optimized, and SEO-friendly websites for more than 4 years, using the best practices and latest UX trends for best user experience
@@ -31,7 +31,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="col right">
+                <div class="col right" id="stacks">
                     <div class="texts">
                         <div class="code">
                             <img src="/images/about/code.svg" alt="">
@@ -70,7 +70,6 @@
                     category: 'Tools',
                     items: ['Git', 'WSL', 'VSCode']
                 }
-                
             ],
         }),
         mounted () {
