@@ -6,6 +6,8 @@
             </div>
             <div class="col links-wrapper">
                 <a :class="{ 'active': link.class == activeAnchor }" href="javascript:void(0)" v-for="(link, key) in navLinks" :key="key" @click="scrollTo(link)">{{ link.label }}</a>
+                <div class="separator"></div>
+                <nuxt-link to="/blogs">blogs</nuxt-link>
             </div>
             <div :class="{ 'col': true, 'burger': true, 'active': showSideNav }">
                 <a href="javascript:void(0)" @click="toggleSideNav()">
@@ -152,6 +154,12 @@
                             left: 50%
                         &:after
                             right: 50%
+                    .separator
+                        height: 20px
+                        width: 2px
+                        margin-right: 20px
+                        background-color: $teal
+                        display: block
                 &.burger
                     position: relative
                     width: 35px

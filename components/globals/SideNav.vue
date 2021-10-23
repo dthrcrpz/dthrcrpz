@@ -3,6 +3,8 @@
         <div class="container">
             <div class="links-wrapper">
                 <a :class="{ 'active': link.class == activeAnchor }" href="javascript:void(0)" v-for="(link, key) in navLinks" :key="key" @click="scrollTo(link)">{{ link.label }}</a>
+                <div class="separator"></div>
+                <nuxt-link to="/blogs">blogs</nuxt-link>
             </div>
         </div>
     </div>
@@ -84,4 +86,11 @@
                         left: 50%
                     &:after
                         right: 50%
+                .separator
+                    width: 100%
+                    max-width: 100px
+                    height: 2px
+                    background-color: $teal
+                    display: block
+                    margin: 0 auto 20px
 </style>
