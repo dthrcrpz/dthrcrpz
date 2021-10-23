@@ -71,7 +71,7 @@
                     text-align: center
                     position: relative
                     display: table
-                    &:hover, &.active
+                    &:hover, &.active, &.nuxt-link-active
                         &:before, &:after
                             width: 50%
                     &:before, &:after

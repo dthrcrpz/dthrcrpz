@@ -139,7 +139,7 @@
                     a
                         margin-right: 20px
                         position: relative
-                        &:hover, &.active
+                        &:hover, &.active, &.nuxt-link-active
                             &:before, &:after
                                 width: 50%
                         &:before, &:after
