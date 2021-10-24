@@ -52,7 +52,7 @@
             return Promise.all([
                 client.getEntries({
                     'content_type': 'blog',
-                    'order': '-sys.createdAt'
+                    'order': '-fields.sequence'
                 })
             ]).then(([blogs]) => {
                 return {
