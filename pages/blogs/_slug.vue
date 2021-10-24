@@ -7,17 +7,25 @@
                 </div>
                 <h1>{{ blog.fields.title }}</h1>
             </div>
-            {{ blog.fields }}
+        </section>
+        <section class="content">
+            <div class="container">
+                <RichTextRenderer :document="blog.fields.body"/>
+            </div>
         </section>
     </div>
 </template>
 
 <script>
     import { createClient } from "~/plugins/contentful"
+    import RichTextRenderer from 'contentful-rich-text-vue-renderer'
 
     const client = createClient()
 
     export default {
+        components: {
+            RichTextRenderer
+        },
         data: () => ({
             blog: null
         }),
@@ -39,6 +47,7 @@
 <style scoped lang="sass">
     .page-blog-slug
         padding-top: calc(30px + #{$navHeight})
+        min-height: 90vh
         .header
             .container
                 .banner
