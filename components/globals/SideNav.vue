@@ -2,8 +2,10 @@
     <div :class="{ 'sidenav': true, 'show': showSideNav }">
         <div class="container">
             <div class="links-wrapper">
-                <a :class="{ 'active': link.class == activeAnchor }" href="javascript:void(0)" v-for="(link, key) in navLinks" :key="key" @click="scrollTo(link)">{{ link.label }}</a>
-                <div class="separator"></div>
+                <template v-if="showIndexItems">
+                    <a :class="{ 'active': link.class == activeAnchor }" href="javascript:void(0)" v-for="(link, key) in navLinks" :key="key" @click="scrollTo(link)">{{ link.label }}</a>
+                    <div class="separator"></div>
+                </template>
                 <nuxt-link to="/blogs">blogs</nuxt-link>
             </div>
         </div>
@@ -17,7 +19,10 @@
         computed: {
             ...mapGetters({
                 showSideNav: 'globals/getShowSideNav',
-            })
+            }),
+            showIndexItems () {
+                return this.$route.path == '/'
+            }
         },
         data: () => ({
             navLinks: [
