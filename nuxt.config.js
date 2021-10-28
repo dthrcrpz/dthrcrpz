@@ -33,7 +33,8 @@ export default {
   buildModules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/moment'
   ],
 
   googleAnalytics: {

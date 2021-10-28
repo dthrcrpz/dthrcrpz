@@ -81,9 +81,12 @@
                     font-size: 35px
                     font-family: Fira Code
                     font-weight: 600
+                    color: $yellow
         .content
             margin: 30px auto 100px
             .container
+                h1, h2, h3, h4, h5, h6
+                    color: $yellow
                 p, h1, h2, h3, h4, h5, h6, hr
                     margin-bottom: 20px
                 hr

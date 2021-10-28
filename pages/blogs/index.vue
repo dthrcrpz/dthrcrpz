@@ -21,6 +21,7 @@
                         </div>
                         <div class="bottom">
                             <div class="texts">
+                                <p class="date">{{ properDate(blog.sys.createdAt) }}</p>
                                 <p class="title">{{ blog.fields.title }}</p>
                             </div>
                         </div>
@@ -41,6 +42,9 @@
             blogs: []
         }),
         methods: {
+            properDate (date) {
+                return this.$moment(date).format('MMM Do, YYYY')
+            },
             removeNavLinks () {
                 let navLinks = document.querySelectorAll(`nav .container .col.links-wrapper a`)
                 navLinks.forEach(link => {
@@ -55,6 +59,7 @@
                     'order': '-fields.sequence'
                 })
             ]).then(([blogs]) => {
+                console.log(blogs.items)
                 return {
                     blogs: blogs
                 }
@@ -167,7 +172,12 @@
                             z-index: 2
                             background-color: $blue
                             .texts
+                                .date
+                                    font-size: 14px
+                                    font-family: Montserrat
+                                    opacity: 0.7
                                 .title
+                                    font-size: 18px
                                     font-family: Fira Code
                                     font-weight: 600
 </style>
