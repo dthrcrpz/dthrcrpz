@@ -5,6 +5,7 @@
                 <div class="banner" v-if="blog.fields.hasOwnProperty('banner')">
                     <img :src="`https:${blog.fields.banner.fields.file.url}`" alt="">
                 </div>
+                <p class="date">{{ properDate(blog.sys.createdAt) }}</p>
                 <h1>{{ blog.fields.title }}</h1>
             </div>
         </section>
@@ -31,6 +32,9 @@
             blog: null
         }),
         methods: {
+            properDate (date) {
+                return this.$moment(date).format('MMM Do, YYYY')
+            },
             renderNodes () {
                 return {
                     [BLOCKS.EMBEDDED_ASSET]: (node, key, h, next) => {
@@ -77,6 +81,11 @@
                     margin-bottom: 20px
                     img
                         max-width: 100%
+                .date
+                    font-size: 16px
+                    color: $yellow
+                    opacity: 0.7
+                    font-family: Montserrat
                 h1
                     font-size: 35px
                     font-family: Fira Code
