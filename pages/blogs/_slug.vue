@@ -10,7 +10,7 @@
         </section>
         <section class="content">
             <div class="container">
-                <RichTextRenderer :document="blog.fields.body"/>
+                <RichTextRenderer :document="blog.fields.body" :nodeRenderers="renderNodes()"/>
             </div>
         </section>
     </div>
@@ -19,6 +19,7 @@
 <script>
     import { createClient } from "~/plugins/contentful"
     import RichTextRenderer from 'contentful-rich-text-vue-renderer'
+    import { BLOCKS } from '@contentful/rich-text-types'
 
     const client = createClient()
 
@@ -29,6 +30,28 @@
         data: () => ({
             blog: null
         }),
+        methods: {
+            renderNodes () {
+                return {
+                    [BLOCKS.EMBEDDED_ASSET]: (node, key, h, next) => {
+                        let imageWidth = node.data.target.fields.file.details.image.width
+
+                        return h('img', {
+                            key: key,
+                            attrs: {
+                                src: `https:${node.data.target.fields.file.url}`,
+                                title: node.data.target.fields.file.fileName,
+                                alt: node.data.target.fields.file.fileName,
+                            },
+                            style: {
+                                maxWidth: '100%',
+                                width: `${imageWidth}px`
+                            }
+                        })
+                    }
+                }
+            }
+        },
         asyncData ({ env, params }) {
             return Promise.all([
                 client.getEntries({
@@ -58,4 +81,13 @@
                     font-size: 35px
                     font-family: Fira Code
                     font-weight: 600
+        .content
+            margin: 30px auto 100px
+            .container
+                p, h1, h2, h3, h4, h5, h6, hr
+                    margin-bottom: 20px
+                hr
+                    width: 90%
+                    margin: 40px auto
+                    border: 1px solid $teal
 </style>
