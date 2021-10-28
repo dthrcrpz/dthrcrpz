@@ -108,6 +108,8 @@
                 .box
                     flex: 0 0 50%
                     padding: 20px
+                    @media (max-width: 768px)
+                        flex: 0 0 100%
                     .real-box
                         transition: .4s
                         width: 100%
