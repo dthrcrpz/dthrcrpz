@@ -68,7 +68,7 @@
                 },
                 {
                     category: 'Tools',
-                    items: ['Git', 'WSL', 'VSCode']
+                    items: ['Git', 'WSL', 'VSCode', 'Postman']
                 }
             ],
         }),
