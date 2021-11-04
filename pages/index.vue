@@ -17,6 +17,7 @@
         },
         head () {
 			return {
+                title: `dthrcrpz`,
 				meta: [
                     { hid: 'title', property: 'title', content: `dthrcrpz` },
                     { hid: 'og:title', property: 'og:title', content: `dthrcrpz` },
@@ -25,7 +26,7 @@
                     { hid: 'og:image:alt', property: 'og:image:alt', content: 'dthrcrpz' },
 				],
 				link: [
-                    { rel: 'canonical', href: `https://dthrcrpz.me` }
+                    { rel: 'canonical', href: `${process.env.websiteUrl}` }
                 ],
 			}
 		}

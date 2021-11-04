@@ -68,6 +68,27 @@
                 }
             })
         },
+        mounted () {
+            console.log(this.blog.fields.thumbnail.fields.title)
+        },
+        head () {
+			return {
+                title: `${this.blog.fields.title} | dthrcrpz`,
+				meta: [
+                    { hid: 'title', property: 'title', content: `${this.blog.fields.title} | dthrcrpz` },
+                    { hid: 'og:title', property: 'og:title', content: `${this.blog.fields.title} | dthrcrpz` },
+                    { hid: 'og:url', property: 'og:url', content: `${process.env.websiteUrl}/blogs/${this.blog.fields.slug}` },
+                    { hid: 'og:image', property: 'og:image', content: `https:${this.blog.fields.thumbnail.fields.file.url}` },
+                    { hid: 'og:image:alt', property: 'og:image:alt', content: `${this.blog.fields.thumbnail.fields.title}` },
+
+                    { hid: 'description', property: 'description', content: `${this.blog.fields.metaDescription}` },
+                    { hid: 'og:description', property: 'og:description', content: `${this.blog.fields.metaDescription}` },
+				],
+				link: [
+                    { rel: 'canonical', href: `${process.env.websiteUrl}/blogs/${this.blog.fields.slug}` }
+                ],
+			}
+		}
     }
 </script>
 

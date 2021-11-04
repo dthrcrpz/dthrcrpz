@@ -7,7 +7,7 @@
                 </div>
                 <div class="texts">
                     <h1>blogs</h1>
-                    <h2>Just some stories I would like to share</h2>
+                    <h2>Just some stories & thoughts I'd like to share</h2>
                 </div>
             </div>
             <img class="divider" src="/images/blogs/banner-divider.svg" alt="banner-divider">
@@ -17,7 +17,7 @@
                 <div class="box" v-for="(blog, key) in blogs.items" :key="key">
                     <nuxt-link :to="`/blogs/${blog.fields.slug}`" class="real-box">
                         <div class="top">
-                            <img :src="`https:${blog.fields.thumbnail.fields.file.url}`" alt="">
+                            <img :src="`https:${blog.fields.thumbnail.fields.file.url}`" :alt="blog.fields.thumbnail.fields.title">
                         </div>
                         <div class="bottom">
                             <div class="texts">
@@ -70,15 +70,19 @@
         },
         head () {
 			return {
+                title: `blogs | dthrcrpz`,
 				meta: [
                     { hid: 'title', property: 'title', content: `blogs | dthrcrpz` },
                     { hid: 'og:title', property: 'og:title', content: `blogs | dthrcrpz` },
                     { hid: 'og:url', property: 'og:url', content: `${process.env.websiteUrl}/blogs` },
                     { hid: 'og:image', property: 'og:image', content: `${process.env.websiteUrl}/shibe.png` },
                     { hid: 'og:image:alt', property: 'og:image:alt', content: 'dthrcrpz' },
+
+                    { hid: 'description', property: 'description', content: `Just some stories & thoughts I'd like to share` },
+                    { hid: 'og:description', property: 'og:description', content: `Just some stories & thoughts I'd like to share` },
 				],
 				link: [
-                    { rel: 'canonical', href: `https://dthrcrpz.me` }
+                    { rel: 'canonical', href: `${process.env.websiteUrl}/blogs` }
                 ],
 			}
 		}
