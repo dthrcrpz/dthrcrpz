@@ -67,7 +67,21 @@
         },
         mounted () {
             this.removeNavLinks()
-        }
+        },
+        head () {
+			return {
+				meta: [
+                    { hid: 'title', property: 'title', content: `blogs | dthrcrpz` },
+                    { hid: 'og:title', property: 'og:title', content: `blogs | dthrcrpz` },
+                    { hid: 'og:url', property: 'og:url', content: `${process.env.websiteUrl}/blogs` },
+                    { hid: 'og:image', property: 'og:image', content: `${process.env.websiteUrl}/shibe.png` },
+                    { hid: 'og:image:alt', property: 'og:image:alt', content: 'dthrcrpz' },
+				],
+				link: [
+                    { rel: 'canonical', href: `https://dthrcrpz.me` }
+                ],
+			}
+		}
     }
 </script>
 

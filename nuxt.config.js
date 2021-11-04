@@ -8,7 +8,11 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: description },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'og:description', name: 'og:description', content: description },
+      { hid: 'og:type', name: 'og:type', content: 'website' },
+      { hid: 'og:site_name', name: 'og:site_name', content: 'dthrcrpz' },
+      { hid: 'keywords', name: 'keywords', content: 'deither, corpuz, deither corpuz, deither corpuz portfolio, deither portfolio, corpuz portfolio, web developer, laravel developer, vue developer, laravel, vue, fullstack web developer, full-stack, full stack developer' },
+      { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -121,7 +125,8 @@ export default {
     emailJsServiceId: process.env.EMAILJS_SERVICE_ID,
     emailJsTemplateId: process.env.EMAILJS_TEMPLATE_ID,
     CTF_SPACE_ID: process.env.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
+    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
+    websiteUrl: process.env.WEBSITE_URL
   },
 
   server: {
