@@ -60,7 +60,7 @@
                 },
                 {
                     category: 'Back-end',
-                    items: ['Laravel', 'PHP', 'MySQL', 'Redis']
+                    items: ['Laravel', 'PHP', 'MySQL', 'Redis', 'NodeJS']
                 },
                 {
                     category: 'Server',
