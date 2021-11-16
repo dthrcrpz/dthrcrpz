@@ -227,6 +227,7 @@
                                 background-color: $blue
                                 text-align: center
                                 align-self: flex-end
+                                font-size: 16px
                                 &:hover
                                     color: $blue
                                     background-color: $teal
