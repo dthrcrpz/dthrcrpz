@@ -67,8 +67,13 @@ export default {
       directiveOnly: true,
       defaultImage: '/lazy-loader.svg'
     }],
-    '@layer0/nuxt/module'
+    '@layer0/nuxt/module',
+    '@nuxtjs/gtm'
   ],
+
+  gtm: {
+    id: process.env.GTM_ID
+  },
 
   // Style Resources
   styleResources: {
