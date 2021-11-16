@@ -168,9 +168,14 @@
                     opacity: 0
                     &.ov
                         opacity: 0.03
+                        @media (max-width: 768px)
+                            opacity: 0.07
+                            font-size: 100px
                 .typa-texts
                     padding-left: 20px
                     margin-top: -56px
+                    @media (max-width: 768px)
+                        padding-left: 0px
                     .headers-container
                         font-family: Fira Code
                         .header-1, .header-2
@@ -183,6 +188,8 @@
                             .name
                                 font-size: 40px
                                 color: $yellow
+                                @media (max-width: 768px)
+                                    font-size: 30px
                             &.typing
                                 &:after
                                     content: ''
