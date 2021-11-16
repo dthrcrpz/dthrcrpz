@@ -7,12 +7,12 @@
                     <h1 class="headers-container">
                         <p :class="`header-1 ${(header1Typing) ? 'typing' : ''}`">
                             <span class="normal">Hi! </span>
-                            <span class="im">I am</span>
+                            <span class="im"></span>
                         </p>
                         <p :class="`header-2 ${(header2Typing) ? 'typing' : ''}`">
-                            <span class="name">Deither Corpuz</span>
+                            <span class="name"></span>
                         </p>
-                        <p :class="`header-3 ${(header3Typing) ? 'typing' : ''}`">I'm a Web Developer</p>
+                        <p :class="`header-3 ${(header3Typing) ? 'typing' : ''}`"></p>
                     </h1>
                 </div>
             </div>
@@ -135,7 +135,9 @@
 			}
         },
         mounted () {
-			this.typeHeaders()
+            setTimeout(() => {
+                this.typeHeaders()
+            }, 600)
 		},
         updated () {
             let targets = [
