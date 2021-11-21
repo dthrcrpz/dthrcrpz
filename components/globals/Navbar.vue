@@ -49,11 +49,6 @@
                 setShowSideNav: 'globals/setShowSideNav'
             }),
             scrollTo (link) {
-                this.$gtm.push({
-                    event: 'clickedNavbarLink',
-                    navbarLinkLabel: link.label
-                })
-
                 this.$scrollTo(link.class, 500, {
                     onStart: () => {
                         this.scrolling = true

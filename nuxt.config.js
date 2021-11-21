@@ -68,11 +68,20 @@ export default {
       defaultImage: '/lazy-loader.svg'
     }],
     '@layer0/nuxt/module',
-    '@nuxtjs/gtm'
+    '@nuxtjs/google-gtag'
   ],
 
-  gtm: {
-    id: process.env.GTM_ID
+  'google-gtag':{
+    id: process.env.GOOGLE_ANALYTICS_ID,
+    config:{
+      // this are the config options for `gtag
+      // check out official docs: https://developers.google.com/analytics/devguides/collection/gtagjs/
+      anonymize_ip: true, // anonymize IP 
+      send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+    },
+    debug: true, // enable to track in dev mode
+    disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...)
+    // optional you can add more configuration like [AdWords](https://developers.google.com/adwords-remarketing-tag/#configuring_the_global_site_tag_for_multiple_accounts)
   },
 
   // Style Resources
