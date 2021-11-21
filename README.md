@@ -1,18 +1,9 @@
-# portfolio
+# Deither Corpuz
 
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
+## _A Full Stack Web Developer_
+- A `self-proclaimed`  highly skilled and creative Full Stack Web Developer
+- Solid experience on developing user-centered websites using my preferred stacks.
+- Developed responsive, optimized, and SEO-friendly websites for more than 4 years, using the best practices and latest UX trends for best user experience
+- Extensive knowledge in developing web applications with multiple APIs and third-party integrations
+- 
+> Check out my portfolio at [dthrcrpz.me](https://dthrcrpz.me) for more information
