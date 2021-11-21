@@ -16,7 +16,7 @@
 </template>
 
 <script>
-	import { mapGetters } from 'vuex'
+	import { mapGetters, mapMutations } from 'vuex'
 
     export default {
         components: {
@@ -24,6 +24,18 @@
             SideNav: () => import('~/components/globals/SideNav'),
             ModalBackground: () => import('~/components/globals/ModalBackground'),
             Foot: () => import('~/components/globals/Foot'),
+        },
+        watch: {
+            '$route': {
+                handler: function (newVal, oldVal) {
+                    this.setShowSideNav(false)
+                }
+            }
+        },
+        methods: {
+            ...mapMutations({
+                setShowSideNav: 'globals/setShowSideNav'
+            }),
         },
         computed: {
             ...mapGetters({

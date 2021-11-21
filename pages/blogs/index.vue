@@ -59,7 +59,6 @@
                     'order': '-fields.sequence'
                 })
             ]).then(([blogs]) => {
-                console.log(blogs.items)
                 return {
                     blogs: blogs
                 }
