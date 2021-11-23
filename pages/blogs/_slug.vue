@@ -20,7 +20,7 @@
 <script>
     import { createClient } from "~/plugins/contentful"
     import RichTextRenderer from 'contentful-rich-text-vue-renderer'
-    import { BLOCKS } from '@contentful/rich-text-types'
+    import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 
     const client = createClient()
 
@@ -52,6 +52,15 @@
                                 width: `${imageWidth}px`
                             }
                         })
+                    },
+                    [INLINES.HYPERLINK]: (node, key, h, next) => {
+                        return h('a', {
+                            key: key,
+                            attrs: {
+                                href: node.data.uri,
+                                target: '_blank'
+                            }
+                        }, node.content[0].value)
                     }
                 }
             }
@@ -67,9 +76,6 @@
                     blog: blog.items[0]
                 }
             })
-        },
-        mounted () {
-            console.log(this.blog.fields.thumbnail.fields.title)
         },
         head () {
 			return {
