@@ -163,6 +163,7 @@
                         margin-bottom: 10px
                     .button
                         max-width: 300px
+                        margin-bottom: 10px
                         &.reset
                             max-width: 100px
                     .logs-container
