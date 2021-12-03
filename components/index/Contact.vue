@@ -76,6 +76,7 @@
                         user_id: process.env.emailJsUserId,
                         service_id: process.env.emailJsServiceId,
                         template_id: process.env.emailJsTemplateId,
+                        template_params: this.form
                     }).then(res => {
                         console.log(res)
                         this.setShowLoading(false)
