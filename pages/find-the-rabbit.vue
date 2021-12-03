@@ -58,16 +58,27 @@
                     this.log(`You picked hole ${hole}. It's a WRONG hole.`)
                     this.success = false
 
-                    let randomStep = Math.floor(Math.random() * (2 - 1 + 1) + 1)
-                    let oldPosition = this.rabbitPosition
-                    this.rabbitPosition = (randomStep == 2) ? this.rabbitPosition + 1 : this.rabbitPosition - 1
-                    this.log(`The rabbit moved from ${oldPosition} to ${this.rabbitPosition}`)
+                    this.moveRabbitPosition()
                 }
             },
             log (message) {
                 this.logs.unshift(message)
             },
-            setRabbitPosition () {
+            moveRabbitPosition () {
+                let randomStep = Math.floor(Math.random() * (2 - 1 + 1) + 1)
+                let oldPosition = this.rabbitPosition
+
+                if (this.rabbitPosition == 1) {
+                    this.rabbitPosition = 2
+                } else if (this.rabbitPosition == 20) {
+                    this.rabbitPosition = 19
+                } else {
+                    this.rabbitPosition = (randomStep == 2) ? this.rabbitPosition + 1 : this.rabbitPosition - 1
+                }
+
+                this.log(`The rabbit moved from ${oldPosition} to ${this.rabbitPosition}`)
+            },
+            setInitialRabbitPosition () {
                 this.rabbitPosition = Math.floor(Math.random() * (20 - 1 + 1) + 1)
                 this.log(`Rabbit is in hole ${this.rabbitPosition}`)
             },
@@ -75,11 +86,11 @@
                 this.logs = []
                 this.log(`Puzle has been reset`)
                 this.counter = 0
-                this.setRabbitPosition()
+                this.setInitialRabbitPosition()
             }
         },
         mounted () {
-            this.setRabbitPosition()
+            this.setInitialRabbitPosition()
         },
         head () {
 			return {
