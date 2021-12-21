@@ -1,4 +1,5 @@
 const description = `Deither Corpuz's website portfolio`
+import cspPolicies from './csp-policies.json'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -98,45 +99,7 @@ export default {
     },
     csp: {
       hashAlgorithm: 'sha256',
-      policies: {
-        'default-src': [
-          "'self'"
-        ],
-        'script-src': [
-          "'self'",
-          "'unsafe-inline'",
-          '*.googletagmanager.com',
-          '*.google-analytics.com'
-        ],
-        'style-src': [
-          "'self'",
-          "'unsafe-inline'",
-          'fonts.gstatic.com',
-          'fonts.googleapis.com'
-        ],
-        'connect-src': [
-          "'self'",
-          "'unsafe-inline'",
-          '*.google-analytics.com',
-          'cdn.contentful.com',
-          'api.emailjs.com'
-        ],
-        'font-src': [
-          'fonts.gstatic.com',
-          'fonts.googleapis.com'
-        ],
-        'img-src': [
-          "'self'",
-          "'unsafe-inline'",
-          '*.ctfassets.net'
-        ],
-        'script-src-elem': [
-          "'self'",
-          "'unsafe-inline'",
-          '*.googletagmanager.com',
-          '*.google-analytics.com'
-        ]
-      }
+      policies: cspPolicies
     }
   },
 
