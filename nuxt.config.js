@@ -68,7 +68,8 @@ export default {
       defaultImage: '/lazy-loader.svg'
     }],
     '@layer0/nuxt/module',
-    '@nuxtjs/google-gtag'
+    '@nuxtjs/google-gtag',
+    'nuxt-helmet'
   ],
 
   'google-gtag':{
@@ -94,6 +95,9 @@ export default {
   render: {
     static: {
       maxAge: 1000 * 60 * 60 * 24 * 7
+    },
+    csp: {
+      addMeta: true
     }
   },
 
