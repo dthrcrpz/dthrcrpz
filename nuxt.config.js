@@ -95,7 +95,11 @@ export default {
 
   sitemap: {
     hostname: 'https://dthrcrpz.dev',
-    gzip: true
+    gzip: true,
+    routes: [
+      '/blogs/i-developed-my-first-laravel-package',
+      '/blogs/i-revamped-my-portfolio-website',
+    ]
   },
 
   render: {
