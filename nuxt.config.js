@@ -97,7 +97,39 @@ export default {
       maxAge: 1000 * 60 * 60 * 24 * 7
     },
     csp: {
-      addMeta: true
+      hashAlgorithm: 'sha256',
+      policies: {
+        'default-src': [
+          "'self'"
+        ],
+        'script-src': [
+          "'self'",
+          "'unsafe-inline'",
+          '*.googletagmanager.com',
+          '*.google-analytics.com'
+        ],
+        'style-src': [
+          "'self'",
+          "'unsafe-inline'",
+          'fonts.gstatic.com',
+          'fonts.googleapis.com'
+        ],
+        'connect-src': [
+          "'self'",
+          "'unsafe-inline'",
+          '*.google-analytics.com',
+          'cdn.contentful.com'
+        ],
+        'font-src': [
+          'fonts.gstatic.com',
+          'fonts.googleapis.com'
+        ],
+        'img-src': [
+          "'self'",
+          "'unsafe-inline'",
+          '*.ctfassets.net'
+        ]
+      }
     }
   },
 
