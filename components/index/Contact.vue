@@ -78,7 +78,6 @@
                         template_id: process.env.emailJsTemplateId,
                         template_params: this.form
                     }).then(res => {
-                        console.log(res)
                         this.setShowLoading(false)
                         this.setShowModal(true)
                         this.showInquiryFeedbackModal = true

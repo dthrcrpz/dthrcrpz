@@ -118,7 +118,8 @@ export default {
           "'self'",
           "'unsafe-inline'",
           '*.google-analytics.com',
-          'cdn.contentful.com'
+          'cdn.contentful.com',
+          'api.emailjs.com'
         ],
         'font-src': [
           'fonts.gstatic.com',
@@ -128,6 +129,12 @@ export default {
           "'self'",
           "'unsafe-inline'",
           '*.ctfassets.net'
+        ],
+        'script-src-elem': [
+          "'self'",
+          "'unsafe-inline'",
+          '*.googletagmanager.com',
+          '*.google-analytics.com'
         ]
       }
     }
