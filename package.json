@@ -12,11 +12,12 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@nuxt/core": "^2.15.7",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/pwa": "^3.3.5",
-    "nuxt-helmet": "^2.0.1",
-    "@nuxt/core": "^2.15.7"
+    "@nuxtjs/sitemap": "^2.4.0",
+    "nuxt-helmet": "^2.0.1"
   },
   "devDependencies": {
     "@layer0/cli": "^4.8.0",

@@ -69,7 +69,8 @@ export default {
     }],
     '@layer0/nuxt/module',
     '@nuxtjs/google-gtag',
-    'nuxt-helmet'
+    'nuxt-helmet',
+    '@nuxtjs/sitemap'
   ],
 
   'google-gtag':{
@@ -90,6 +91,11 @@ export default {
     sass: [
       '@/assets/globals.sass',
     ]
+  },
+
+  sitemap: {
+    hostname: 'https://dthrcrpz.dev',
+    gzip: true
   },
 
   render: {
