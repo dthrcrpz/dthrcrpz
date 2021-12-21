@@ -27,6 +27,19 @@
                         </div>
                     </nuxt-link>
                 </div>
+                <div class="box" key="ftr420">
+                    <nuxt-link :to="`/blogs/find-the-rabbit`" class="real-box">
+                        <div class="top">
+                            <img src="/images/blogs/rabbit.jpg" alt="find-the-rabbit">
+                        </div>
+                        <div class="bottom">
+                            <div class="texts">
+                                <p class="date">Dec 03rd, 2021</p>
+                                <p class="title">Find the Rabbit</p>
+                            </div>
+                        </div>
+                    </nuxt-link>
+                </div>
             </div>
         </div>
     </div>
