@@ -6,7 +6,7 @@
                     <img src="/images/contact/icon.svg" alt="">
                     <span>contact</span>
                 </h2>
-                <p class="mini-title">Wanna talk about something? Leave a message and I'll do my best to get back to you</p>
+                <p class="mini-title">Wanna talk? Leave a message and I'll do my best to get back to you</p>
             </div>
         </div>
         <div class="bottom">

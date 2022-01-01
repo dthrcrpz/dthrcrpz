@@ -6,9 +6,6 @@
                 <a rel="noopener" href="https://nuxtjs.org/" target="_blank">
                     <img src="/images/footer/plugs/nuxt.svg" alt="">
                 </a>
-                <a rel="noopener" class="layer0" href="https://www.layer0.co/" target="_blank">
-                    <img src="/images/footer/plugs/layer0.svg" alt="">
-                </a>
             </div>
             <div class="copyright">
                 © 2021 Deither Corpuz. All rights reserved.
