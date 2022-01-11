@@ -25,6 +25,13 @@
             ModalBackground: () => import('~/components/globals/ModalBackground'),
             Foot: () => import('~/components/globals/Foot'),
         },
+        computed: {
+            ...mapGetters({
+                showModal: 'globals/getShowModal',
+                showSideNav: 'globals/getShowSideNav',
+                showLoading: 'globals/getShowLoading',
+            })
+        },
         watch: {
             '$route': {
                 handler: function (newVal, oldVal) {
@@ -34,15 +41,19 @@
         },
         methods: {
             ...mapMutations({
-                setShowSideNav: 'globals/setShowSideNav'
+                setShowSideNav: 'globals/setShowSideNav',
+                setTheme: 'globals/setTheme',
             }),
+            setSiteTheme () {
+                if (localStorage.theme === 'dark') {
+                    this.setTheme('dark')
+                } else {
+                    this.setTheme('light')
+                }
+            }
         },
-        computed: {
-            ...mapGetters({
-                showModal: 'globals/getShowModal',
-                showSideNav: 'globals/getShowSideNav',
-                showLoading: 'globals/getShowLoading',
-            })
+        mounted () {
+            this.setSiteTheme()
         }
     }
 </script>

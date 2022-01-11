@@ -1,7 +1,7 @@
 <template>
     <nav class="select-none py-[15px] px-0 bg-gray-200 bg-opacity-90 fixed top-0 left-0 right-0 w-full z-10 shadow-md">
         <div class="cntnr flex justify-between items-center">
-            <div>Dark</div>
+            <div @click="toggleTheme()">Dark</div>
             <div class="col logo-wrapper">
                 <nuxt-link class="logo text-dark-blue font-fira-code text-2xl font-semibold" to="/">dthrcrpz</nuxt-link>
             </div>
@@ -30,7 +30,8 @@
     export default {
         computed: {
             ...mapGetters({
-                showSideNav: 'globals/getShowSideNav',
+                showSideNav: 'globals/showSideNav',
+                theme: 'globals/theme',
             }),
             showIndexItems () {
                 return this.$route.path == '/'
@@ -48,7 +49,8 @@
         }),
         methods: {
             ...mapMutations({
-                setShowSideNav: 'globals/setShowSideNav'
+                setShowSideNav: 'globals/setShowSideNav',
+                setTheme: 'globals/setTheme',
             }),
             scrollTo (link) {
                 this.$ga.event({
@@ -110,6 +112,9 @@
                         observer.observe(element)
                     }
                 })
+            },
+            toggleTheme () {
+                this.setTheme((this.theme == 'dark') ? 'light' : 'dark')
             }
         },
         mounted () {

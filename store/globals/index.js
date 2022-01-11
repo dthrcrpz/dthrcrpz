@@ -14,12 +14,21 @@ export const getters = {
     },
     showLoading: (state) => {
         return state.showLoading
+    },
+    theme: (state) => {
+        return state.theme
     }
 }
 
 export const mutations = {
-    setWebsiteTheme (state, value) {
+    setTheme (state, value) {
         state.theme = value
+        localStorage.theme = value
+        if (value == 'dark') {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
     },
     setShowModal (state, value = null) {
         if (value == null) {
