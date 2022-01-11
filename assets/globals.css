@@ -15,15 +15,6 @@
     }
 }
 
-@keyframes shaking_weak {
-    from: {
-        transform: rotate(-1deg);
-    }
-    to: {
-        transform: rotate(1deg);
-    }
-}
-
 @keyframes dimming_shadow {
     from {
         box-shadow: 0 0 20px rgba(92, 224, 216, 0.8);
@@ -51,4 +42,17 @@ img {
     -khtml-user-select: none;
     -moz-user-select: none;
     -o-user-select: none;
+}
+
+.section-title {
+    @apply flex text-center mt-0 mx-auto mb-8 relative duration-500 w-full items-center justify-center
+}
+.section-title img {
+    max-width: 80px;
+    width: 100%;
+}
+.section-title span {
+    font-family: Fira Code;
+    font-weight: 600;
+    font-size: 48px;
 }
