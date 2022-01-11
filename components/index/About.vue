@@ -1,13 +1,13 @@
 <template>
-    <section class="about" id="about">
-        <div class="container">
-            <h2 delay="500" class="section-title">
+    <section id="about" class="about relative pt-14 bg-gray-200 dark:bg-dark-blue">
+        <div class="cntnr">
+            <h2 delay="500" class="text-dark-blue dark:text-teal duration-500">
                 <img src="/images/about/icon.svg" alt="about-dthrcrpz">
                 <span>about me</span>
             </h2>
         </div>
         <div class="columns-container">
-            <div class="container">
+            <div class="cntnr">
                 <div class="col left">
                     <div class="egg"></div>
                     <div class="texts">

@@ -1,5 +1,5 @@
 <template>
-    <nav class="select-none py-[15px] px-0 bg-gray-200 bg-opacity-90 fixed top-0 left-0 right-0 w-full z-10 duration-500 dark:bg-dark-blue">
+    <nav class="select-none py-[15px] px-0 bg-gray-300 bg-opacity-90 fixed top-0 left-0 right-0 w-full z-10 duration-500 dark:bg-dark-blue shadow-md">
         <div class="cntnr flex justify-between items-center">
             <div class="col logo-wrapper">
                 <nuxt-link class="logo text-dark-blue font-fira-code text-2xl font-semibold duration-500 dark:text-teal" to="/">dthrcrpz</nuxt-link>
@@ -9,7 +9,7 @@
                     <font-awesome-icon icon="sun" v-show="theme == 'dark'"/>
                     <font-awesome-icon icon="moon" v-show="theme == 'light'"/>
                 </div>
-                <div class="user text-purple cursor-pointer text-3xl leading-none mr-3 text-dark-blue hover:text-red focus:text-red duration-500 dark:text-teal dark:hover:text-yellow">
+                <div @click="toggleSideNav()" class="user text-purple cursor-pointer text-3xl leading-none mr-3 text-dark-blue hover:text-red focus:text-red duration-500 dark:text-teal dark:hover:text-yellow">
                     <font-awesome-icon icon="bars"/>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <template>
-    <div :class="{ 'sidenav': true, 'show': showSideNav }">
+    <div :class="`fixed top-[62px] max-w-[300px] w-full h-screen pt-[62px] bg-gray-200 dark:bg-dark-blue select-none z-[9] duration-500 ${(showSideNav) ? 'right-0 opacity-1' : 'right-[-300px] opacity-0' } shadow-md`">
         <div class="container">
             <div class="links-wrapper">
                 <template v-if="showIndexItems">
