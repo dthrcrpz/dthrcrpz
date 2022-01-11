@@ -35,10 +35,10 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/style-resources',
     '@nuxtjs/google-fonts',
     '@nuxtjs/google-analytics',
-    '@nuxtjs/moment'
+    '@nuxtjs/moment',
+    '@nuxtjs/tailwindcss'
   ],
 
   googleAnalytics: {
@@ -50,8 +50,14 @@ export default {
     prefetch: true,
     families: {
       'Fira+Code': [300, 400, 600],
-      'Montserrat': [400, 700],
-      'Lato': [400, 900]
+      'Fira+Code': {
+        wght: [300, 400, 600],
+        ital: [300]
+      },
+      'Montserrat': {
+        wght: [400, 700],
+        ital: [300]
+      }
     },
     display: 'swap',
   },
@@ -84,13 +90,6 @@ export default {
     debug: true, // enable to track in dev mode
     disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...)
     // optional you can add more configuration like [AdWords](https://developers.google.com/adwords-remarketing-tag/#configuring_the_global_site_tag_for_multiple_accounts)
-  },
-
-  // Style Resources
-  styleResources: {
-    sass: [
-      '@/assets/globals.sass',
-    ]
   },
 
   sitemap: {
