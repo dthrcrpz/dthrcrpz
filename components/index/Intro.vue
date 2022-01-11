@@ -12,7 +12,7 @@
                         <p :class="`header-2 duration-500 mb-3 relative table ${(header2Typing) ? 'typing' : ''} after:bg-red dark:after:bg-yellow`">
                             <span class="block name text-3xl md:text-[40px] text-red dark:text-yellow"></span>
                         </p>
-                        <p :class="`header-3 duration-500 relative table text-dark-blue dark:text-teal text-xl ${(header3Typing) ? 'typing' : ''} after:bg-dark-blue dark:after:bg-teal`"></p>
+                        <p :class="`header-3 duration-500 relative table text-dark-blue dark:text-teal text-2xl ${(header3Typing) ? 'typing' : ''} after:bg-dark-blue dark:after:bg-teal`"></p>
                     </h1>
                 </div>
             </div>
@@ -38,7 +38,7 @@
             <img class="duration-500 opacity-1 dark:opacity-0" width="100%" height="100%" v-lazy-load src="/images/backgrounds/dark-blob-4.svg">
 			<img class="duration-500 opacity-0 dark:opacity-100" width="100%" height="100%" v-lazy-load src="/images/backgrounds/blob-4.svg">
         </div>
-        <div class="doge-typing absolute bottom-0 right-0 opacity-20 w-[700px] translate-x-[100px] translate-y-[86px] rotate-[-21deg]">
+        <div class="doge-typing absolute bottom-0 right-0 opacity-20 w-[700px] translate-x-[200px] md:translate-x-[100px] translate-y-[86px] rotate-[-21deg]">
             <img width="100%" height="100%" v-lazy-load src="/images/backgrounds/doge-typing.webp" alt="doge-typing" class="w-full rounded-[100%]">
         </div>
 
