@@ -18,7 +18,7 @@
     export default {
         computed: {
             ...mapGetters({
-                showSideNav: 'globals/getShowSideNav',
+                showSideNav: 'globals/showSideNav',
             }),
             showIndexItems () {
                 return this.$route.path == '/'

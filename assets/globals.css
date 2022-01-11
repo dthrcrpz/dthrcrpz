@@ -3,7 +3,7 @@
 @tailwind utilities;
     
 /** variables */
-// $navHeight: 62.8px
+/* $navHeight: 62.8px */
 
 /** animations */
 @keyframes blink {
@@ -34,9 +34,9 @@
 }
 
 body {
-    @apply text-dark-blue dark:text-teal font-montserrat min-h-screen bg-gray-200 dark:bg-dark-blue
+    @apply text-dark-blue dark:text-teal font-montserrat min-h-screen bg-gray-200 dark:bg-dark-blue duration-500
 }
 
 .cntnr {
-    @apply max-w-7xl w-full mx-auto
+    @apply max-w-7xl w-full mx-auto px-5
 }

@@ -21,12 +21,14 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/globals'
+    '@/assets/globals',
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '@/plugins/global-mixins' },
+    { src: '@/plugins/fontawesome' },
     { src: '@/plugins/vee-validate' },
     { src: '@/plugins/v-click-outside', ssr: false },
     { src: '@/plugins/vue-scrollto', ssr: false },
@@ -171,6 +173,10 @@ export default {
       description: description,
       theme_color: '#001220'
     }
+  },
+
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

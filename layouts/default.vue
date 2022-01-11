@@ -27,9 +27,9 @@
         },
         computed: {
             ...mapGetters({
-                showModal: 'globals/getShowModal',
-                showSideNav: 'globals/getShowSideNav',
-                showLoading: 'globals/getShowLoading',
+                showModal: 'globals/showModal',
+                showSideNav: 'globals/showSideNav',
+                showLoading: 'globals/showLoading',
             })
         },
         watch: {
