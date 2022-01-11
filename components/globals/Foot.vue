@@ -1,47 +1,15 @@
 <template>
-    <footer>
+    <footer class="pb-8">
         <div class="container">
-            <p class="powered-by">This website is powered by:</p>
-            <div class="plugs">
-                <a rel="noopener" href="https://nuxtjs.org/" target="_blank">
-                    <img src="/images/footer/plugs/nuxt.svg" alt="">
+            <p class="powered-by mt-0 mx-auto mb-3 text-center text-sm font-fira-code">This website is powered by:</p>
+            <div class="plugs flex w-full justify-center mb-5 items-center">
+                <a rel="noopener" href="https://nuxtjs.org/" target="_blank" class="min-w-full w-full my-0 mx-3 duration-500 hover:scale-[1.1]">
+                    <img src="/images/footer/plugs/nuxt.svg" alt="" class="w-full">
                 </a>
             </div>
-            <div class="copyright">
+            <div class="copyright font-fira-code text-center text-sm">
                 © 2021 Deither Corpuz. All rights reserved.
             </div>
         </div>
     </footer>
 </template>
-
-<style lang="sass" scoped>
-    footer
-        padding-bottom: 30px
-        .land
-            width: 100%
-        .container
-            .powered-by
-                margin: 0 auto 10px
-                text-align: center
-                font-size: 14px
-                font-family: Fira Code
-            .plugs
-                display: flex
-                width: 100%
-                justify-content: center
-                margin-bottom: 20px
-                align-items: center
-                a
-                    max-width: 100px
-                    width: 100%
-                    margin: 0 10px
-                    transition: .4s
-                    &:hover
-                        transform: scale(1.1)
-                    img
-                        width: 100%
-            .copyright
-                font-family: Fira Code
-                text-align: center
-                font-size: 14px
-</style>

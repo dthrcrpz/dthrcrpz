@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+    
+/** variables */
+// $navHeight: 62.8px
+
+/** animations */
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shaking_weak {
+    from: {
+        transform: rotate(-1deg);
+    }
+    to: {
+        transform: rotate(1deg);
+    }
+}
+
+@keyframes dimming_shadow {
+    from {
+        box-shadow: 0 0 20px rgba(92, 224, 216, 0.8);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(92, 224, 216, 0.8);
+    }
+}
+
+body {
+    @apply text-dark-blue dark:text-teal font-montserrat min-h-screen bg-gray-200 dark:bg-dark-blue
+}
+
+.cntnr {
+    @apply max-w-7xl w-full mx-auto
+}

@@ -10,8 +10,8 @@ module.exports = {
         'red': '#ff5757'
       },
       fontFamily: {
-        saira: ['Fira Code', 'sans-serif'],
-        roboto: ['Montserrat', 'sans-serif']
+        'fira-code': ['Fira Code', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif']
       }
     },
   },
