@@ -7,11 +7,11 @@
                 </span>
                 <span>projects</span>
             </h2>
-            <p class="mini-title">Browse through the latest websites I developed which I consider "highlights"</p>
+            <p class="mini-title dark:text-teal">Browse through the latest websites I developed which I consider "highlights"</p>
             <div class="projects-wrapper flex justify-between flex-row flex-wrap mt-8 duration-500">
                 <div v-for="(project, key) in projects" :key="key" class="box flex-shrink-0 flex-grow-0 w-full md:w-1/2 py-4 px-0 md:px-4 duration-500">
-                    <div class="real-box w-full flex flex-col py-5 px-5 h-full relative duration-500 shadow-teal hover:shadow-teal-glow group">
-                        <a rel="noopener" :href="project.agency.url" target="_blank" class="agency absolute max-w-[120px] w-full duration-500  opacity-1 md:opacity-0 group-hover:opacity-100">
+                    <div class="real-box w-full flex flex-col py-5 px-5 h-full relative duration-500 shadow-teal hover:shadow-teal-glow group border border-dark-blue">
+                        <a rel="noopener" :href="project.agency.url" target="_blank" class="agency absolute max-w-[120px] w-full duration-500  opacity-1 md:opacity-0 group-hover:opacity-100 bg-dark-blue px-3 py-2 rounded-xl">
                             <img :src="`/images/projects/agencies/${project.agency.logo}`" alt="" class="w-full">
                         </a>
                         <div class="top w-full pt-[55%] relative overflow-hidden">

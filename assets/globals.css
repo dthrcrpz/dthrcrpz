@@ -5,6 +5,25 @@
 /** variables */
 /* $navHeight: 62.8px */
 
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1A2238;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5CE0D8;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5CE0D8;
+}
+
 /** animations */
 @keyframes blink {
     from {
@@ -22,6 +41,21 @@
     to {
         box-shadow: 0 0 30px rgba(92, 224, 216, 0.8);
     }
+}
+
+.fade-enter-active, .fade-leave-active {
+    @apply transition-opacity duration-300
+}
+.fade-enter, .fade-leave-to {
+    @apply opacity-0
+}
+
+.page-enter-active, .page-leave-active {
+    @apply transition-all duration-500
+}
+
+.page-enter, .page-leave-to {
+    @apply opacity-0
 }
 
 body {
@@ -58,9 +92,38 @@ img {
 }
 
 .mini-title {
-    @apply text-dark-blue dark:text-teal text-lg text-center font-fira-code max-w-[500px] w-full my-0 mx-auto duration-500
+    @apply text-dark-blue text-lg text-center font-fira-code max-w-[500px] w-full my-0 mx-auto duration-500
 }
 
 .button {
     @apply w-full duration-500 pt-3 py-3 font-fira-code select-none font-bold
+}
+
+.form-group {
+    @apply relative w-full mb-3
+}
+
+.form-input {
+    box-shadow: 0px 0px 4px rgba(92, 224, 216, 0.6);
+    @apply w-full text-lg px-[10px] py-[10px] font-fira-code text-teal bg-gray-600 dark:bg-[#000f1b] duration-500 border dark:border-transparent outline-none resize-none
+}
+.form-input:focus {
+    box-shadow: 0px 0px 6px rgba(255, 207, 67, 0.8);
+}
+
+.validation-errors {
+    top: calc(100% + -4px);
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.4);
+    @apply absolute bg-red text-white text-sm z-[3] py-1 px-4 rounded-sm select-none left-[10px] duration-500
+}
+.validation-errors.with-textarea {
+    top: 100%;
+}
+.validation-errors::before {
+    content: "";
+    bottom: calc(100% - 1px);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ff5757;
+    @apply absolute w-0 h-0 left-[17px] z-[1]
 }
