@@ -45,7 +45,7 @@
                 setTheme: 'globals/setTheme',
             }),
             setSiteTheme () {
-                if (localStorage.theme === 'dark') {
+                if (localStorage.theme === 'dark' || localStorage.theme == undefined) {
                     this.setTheme('dark')
                 } else {
                     this.setTheme('light')
