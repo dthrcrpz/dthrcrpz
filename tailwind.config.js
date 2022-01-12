@@ -13,6 +13,10 @@ module.exports = {
       fontFamily: {
         'fira-code': ['Fira Code', 'sans-serif'],
         'montserrat': ['Montserrat', 'sans-serif']
+      },
+      boxShadow: {
+        'teal': '0px 0px 7px rgba(92, 224, 216, 0.3)',
+        'teal-glow': '0px 0px 10px rgba(92, 224, 216, 0.6)' 
       }
     },
   },

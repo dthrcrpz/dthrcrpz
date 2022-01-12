@@ -45,7 +45,7 @@ img {
 }
 
 .section-title {
-    @apply flex text-center mt-0 mx-auto mb-8 relative duration-500 w-full items-center justify-center
+    @apply flex text-center mt-0 mx-auto mb-8 relative w-full items-center justify-center
 }
 .section-title img {
     max-width: 80px;
@@ -55,4 +55,12 @@ img {
     font-family: Fira Code;
     font-weight: 600;
     font-size: 48px;
+}
+
+.mini-title {
+    @apply text-dark-blue dark:text-teal text-lg text-center font-fira-code max-w-[500px] w-full my-0 mx-auto duration-500
+}
+
+.button {
+    @apply w-full duration-500 pt-3 py-3 font-fira-code select-none font-bold
 }
