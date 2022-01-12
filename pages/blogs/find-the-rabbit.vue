@@ -48,7 +48,8 @@
             rabbitPosition: null,
             logs: [],
             viewLogs: true,
-            counter: 0
+            counter: 0,
+            resetCount: 0
         }),
         methods: {
             pickHole (hole) {
@@ -88,8 +89,9 @@
                 this.log(`Rabbit is in hole ${this.rabbitPosition}`)
             },
             resetPuzzle () {
+                this.resetCount += 1
                 this.logs = []
-                this.log(`Puzle has been reset`)
+                this.log(`Puzle has been reset [${this.resetCount}]`)
                 this.counter = 0
                 this.setInitialRabbitPosition()
             }
