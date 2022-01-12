@@ -47,6 +47,12 @@
                     date: 'Nov 23, 2021',
                     url: '/blogs/i-developed-my-first-laravel-package',
                     image: 'laravel-package.png'
+                },
+                {
+                    title: 'I Revamped My Portfolio Website',
+                    date: 'Oct 20, 2021',
+                    url: '/blogs/i-revamped-my-portfolio-website',
+                    image: 'smart-doge.jpg'
                 }
             ]
         }),
