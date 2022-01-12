@@ -97,36 +97,3 @@
 		}
     }
 </script>
-
-<style scoped lang="sass">
-    .page-blog-slug
-        padding-top: calc(30px + #{$navHeight})
-        min-height: 90vh
-        .header
-            .container
-                .banner
-                    margin-bottom: 20px
-                    img
-                        max-width: 100%
-                .date
-                    font-size: 16px
-                    color: $yellow
-                    opacity: 0.7
-                    font-family: Montserrat
-                h1
-                    font-size: 35px
-                    font-family: Fira Code
-                    font-weight: 600
-                    color: $yellow
-        .content
-            margin: 30px auto 100px
-            .container
-                h1, h2, h3, h4, h5, h6
-                    color: $yellow
-                p, h1, h2, h3, h4, h5, h6, hr
-                    margin-bottom: 20px
-                hr
-                    width: 90%
-                    margin: 40px auto
-                    border: 1px solid $teal
-</style>
