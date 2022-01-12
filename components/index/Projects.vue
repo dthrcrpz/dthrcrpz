@@ -2,7 +2,9 @@
     <section class="projects pt-[70px] px-0 pb-[130px] relative">
         <div class="cntnr">
             <h2 class="section-title" delay="1000">
-                <img src="/images/projects/icon.svg" alt="" class="max-w-[50px] mr-4">
+                <span class="mr-4">
+                    <font-awesome-icon icon="globe"/>
+                </span>
                 <span>projects</span>
             </h2>
             <p class="mini-title">Browse through the latest websites I developed which I consider "highlights"</p>
