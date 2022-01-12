@@ -15,14 +15,14 @@
         <div class="boxes-wrapper min-h-[50vh] mb-8 mt-9">
             <div class="cntnr flex flex-wrap justify-start">
                 <div class="box flex-grow-0 flex0 w-full md:w-1/2" key="ftr420">
-                    <nuxt-link :to="`/blogs/find-the-rabbit`" class="real-box duration-500 w-full flex flex-col h-full relative translate-x-[-3px] translate-y-[-3px] hover:translate-y-0 hover:translate-x-0 hover:after:translate-x-0 hover:after:translate-y-0 after:translate-y-[3px] after:translate-x-[3px] after:bg-red dark:after:bg-teal">
+                    <nuxt-link v-for="(blog, key) in blogs" :key="key" :to="blog.url" class="real-box duration-500 w-full flex flex-col h-full relative translate-x-[-3px] translate-y-[-3px] hover:translate-y-0 hover:translate-x-0 hover:after:translate-x-0 hover:after:translate-y-0 after:translate-y-[3px] after:translate-x-[3px] after:bg-red dark:after:bg-teal">
                         <div class="top w-full pt-[55%] relative overflow-hidden z-[2]">
-                            <img src="/images/blogs/rabbit.jpg" alt="find-the-rabbit" class="absolute w-full h-full object-cover top-0 left-0 bottom-0 right-0">
+                            <img :src="`/images/blogs/${blog.image}`" alt="find-the-rabbit" class="absolute w-full h-full object-cover top-0 left-0 bottom-0 right-0">
                         </div>
                         <div class="bottom px-5 py-5 relative z-[2] bg-dark-blue">
                             <div class="texts">
-                                <p class="date text-sm font-montserrat opacity-70 text-yellow">Dec 03rd, 2021</p>
-                                <p class="title text-lg font-fira-code font-semibold text-yellow">Find the Rabbit</p>
+                                <p class="date text-sm font-montserrat opacity-70 text-yellow">{{ blog.date }}</p>
+                                <p class="title text-lg font-fira-code font-semibold text-yellow">{{ blog.title }}</p>
                             </div>
                         </div>
                     </nuxt-link>
@@ -35,7 +35,14 @@
 <script>
     export default {
         data: () => ({
-            blogs: []
+            blogs: [
+                {
+                    title: 'Find the Rabbit',
+                    date: 'Dec 03, 2021',
+                    url: '/blogs/find-the-rabbit',
+                    image: 'rabbit.jpg'
+                }
+            ]
         }),
         methods: {
             properDate (date) {
