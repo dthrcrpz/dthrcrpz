@@ -7,7 +7,7 @@
 <script>
     export default {
         asyncData ({ redirect }) {
-            redirect(302, 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+            redirect(302, 'https://youtu.be/dQw4w9WgXcQ')
         },
         head () {
 			return {
