@@ -6,7 +6,9 @@
                     <img src="/images/contact/icon.svg" alt="">
                     <span>contact</span>
                 </h2>
-                <p class="mini-title">Wanna talk? Leave a message and I'll do my best to get back to you</p>
+                <p class="mini-title">
+                    Wanna talk? Leave a message and I'll do my best to get back to you. And oh, I'm open for freelance projects at <a href="https://www.twine.net/dthrcrpz" class="twine" target="_blank">https://www.twine.net/dthrcrpz</a>
+                </p>
             </div>
         </div>
         <div class="bottom">
@@ -129,6 +131,8 @@
                     margin: 0 auto
                     transition: .8s
                     opacity: 0
+                    .twine
+                        color: #fff
                     &.ov
                         opacity: 1
         .bottom
