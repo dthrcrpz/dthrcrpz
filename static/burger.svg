@@ -1,0 +1,5 @@
+<svg class="header_hamb_icon" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
+<path class="header_hamb_line header_hamb_line--top" d="M4.5 5H16.5201C16.9449 5 17.3804 5.01099 17.76 5.20153C18.2974 5.47127 19 6.08664 19 7.46051C19 8.69046 18.4369 9.33665 17.9333 9.6686C17.4619 9.9794 16.874 10 16.3093 10H10.5" stroke-linecap="round"></path>
+<path class="header_hamb_line header_hamb_line--middle" d="M4.5 10H16.5" stroke-linecap="round"></path>
+<path class="header_hamb_line header_hamb_line--bottom" d="M16.5 15H4.47985C4.05512 15 3.61955 14.989 3.23996 14.7985C2.70259 14.5287 2 13.9134 2 12.5395C2 11.3095 2.5631 10.6634 3.06664 10.3314C3.53809 10.0206 4.12597 10 4.69065 10H10.5" stroke-linecap="round"></path>
+</svg>
