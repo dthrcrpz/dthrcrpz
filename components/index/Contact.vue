@@ -33,8 +33,8 @@
                             <transition name="fade"><span class="validation-errors" v-if="errors.length > 0">{{ properFormat(errors[0]) }}</span></transition>
                         </ValidationProvider>
                         <div class="buttons-group flex justify-end flex-row flex-wrap duration-500">
-                            <button type="button" class="button py-2 text-base max-w-[100px] ml-3 bg-red border border-red text-dark-blue dark:text-dark-blue hover:bg-transparent dark:hover:bg-dark-blue dark:hover:text-red" @click="resetForm()">Reset</button>
-                            <button type="submit" class="button py-2 text-base max-w-[100px] ml-3 bg-dark-blue border border-dark-blue text-teal dark:bg-yellow dark:border-yellow dark:text-dark-blue dark:hover:bg-dark-blue dark:hover:text-yellow">Submit</button>
+                            <button type="button" class="button py-2 text-base max-w-[100px] ml-3 bg-red border border-red text-dark-blue dark:text-dark-blue hover:bg-transparent hover:text-red dark:hover:bg-dark-blue dark:hover:text-red" @click="resetForm()">Reset</button>
+                            <button type="submit" class="button py-2 text-base max-w-[100px] ml-3 border bg-yellow border-yellow text-dark-blue hover:bg-dark-blue hover:text-yellow hover:border-yellow">Submit</button>
                         </div>
                     </form>
                 </ValidationObserver>
