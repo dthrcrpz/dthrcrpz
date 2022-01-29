@@ -2,7 +2,7 @@
     <section class="intro relative overflow-hidden h-screen">
         <div class="cntnr flex h-full items-center">
             <div class="header select-none translate-y-[-80px]">
-                <p class="subtle opacity-[0.03] text-[100px] md:text-[150px] font-montserrat font-bold duration-500 text-dark-blue dark:text-teal">HEHE!</p>
+                <p class="subtle opacity-0 text-[100px] md:text-[150px] font-montserrat font-bold duration-500 text-dark-blue dark:text-teal ">HEHE!</p>
                 <div class="typa-texts pl-0 md:pl-5 mt-[-56px] font-bold">
                     <h1 class="headers-container font-fira-code">
                         <p :class="`header-1 duration-500 mb-3 relative table text-dark-blue dark:text-teal ${(header1Typing) ? 'typing' : ''} after:bg-dark-blue dark:after:bg-teal`">
@@ -156,6 +156,10 @@
 </script>
 
 <style scoped lang="sass">
+	.subtle
+		&.ov
+			opacity: 0.02 !important
+
 	.typing
 		&::after
 			content: ''
