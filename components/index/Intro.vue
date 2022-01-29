@@ -155,18 +155,19 @@
     }
 </script>
 
-<style>
-	.typing::after {
-		content: '';
-		position: absolute;
-		height: 90%;
-		width: 10px;
-		right: -15px;
-		top: 0;
-		bottom: 0;
-		animation: blink .5s alternate infinite;
-	}
-	.wave-divider svg {
-		width: calc(117% + 1.3px);
-	}
+<style scoped lang="sass">
+	.typing
+		&::after
+			content: ''
+			position: absolute
+			height: 90%
+			width: 10px
+			right: -15px
+			top: 0
+			bottom: 0
+			animation: blink .5s alternate infinite
+
+	.wave-divider
+		svg
+			width: calc(117% + 1.3px)
 </style>

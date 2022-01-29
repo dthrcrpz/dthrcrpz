@@ -1,5 +1,5 @@
 export const state = () => ({
-    theme: 'light',
+    theme: 'dark',
     showModal: false,
     showSideNav: false,
     showLoading: false

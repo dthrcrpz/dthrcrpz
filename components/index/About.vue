@@ -16,10 +16,10 @@
                             A <i>self-proclaimed</i> highly skilled and creative Full Stack Web Developer
                         </p>
                         <p delay="1000" class="desc text-dark-blue text-lg mb-3 font-bold font-fira-code has-bash pl-6 duration-500 relative">
-                            Solid experience on developing user-centered websites using my preferred stacks.
+                            Solid experience on developing user-centered websites using my preferred stacks
                         </p>
                         <p delay="1000" class="desc text-dark-blue text-lg mb-3 font-bold font-fira-code has-bash pl-6 duration-500 relative">
-                            Developed responsive, optimized, and SEO-friendly websites for more than 4 years, using the best practices and latest UX trends for best user experience
+                            Developed responsive, optimized, and SEO-friendly websites for more than 4 years using the best practices and latest UX trends for best user experience
                         </p>
                         <p delay="1000" class="desc text-dark-blue text-lg mb-3 font-bold font-fira-code has-bash pl-6 duration-500 relative">
                             Extensive knowledge in developing web applications with multiple APIs and third-party integrations
@@ -82,70 +82,60 @@
     }
 </script>
 
-<style>
-    @keyframes shaking_weak {
-        from {
-            transform: rotate(-1deg);
-        }
-        to {
-            transform: rotate(1deg);
-        }
-    }
+<style scoped lang="sass">
+    @keyframes shaking_weak
+        from
+            transform: rotate(-1deg)
+        to
+            transform: rotate(1deg)
 
-    .has-bash::before {
-        content: '>_';
-        position: absolute;
-        left: 0;
-        font-family: Fira Code;
-        font-size: 14px;
-    }
+    .has-bash
+        &::before
+            content: '>_'
+            position: absolute
+            left: 0
+            font-family: Fira Code
+            font-size: 14px
 
-    #stacks .has-bash::before {
-        top: unset;
-        bottom: -5px;
-    }
+    #stacks .has-bash::before
+        top: unset
+        bottom: -5px
 
-    .dark #stacks .has-bash::before {
-        color: #FFCF43;
-    }
+    .dark #stacks .has-bash::before
+        color: #FFCF43
 
-    .egg {
-        border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
-        background-image: url('/me.jpg');
-        background-position: 50%;;
-        -webkit-animation: shaking_weak .3s infinite alternate;
-        animation: shaking_weak .3s infinite alternate;
-    }
+    .egg
+        border-radius: 50% 50% 50% 50%/60% 60% 40% 40%
+        background-image: url('/me.jpg')
+        background-position: 50%
+        -webkit-animation: shaking_weak .3s infinite alternate
+        animation: shaking_weak .3s infinite alternate
 
-    .col.left::after {
-        content: '';
-        position: absolute;
-        background-image: url('/images/about/right-wave.svg');
-        background-size: cover;
-        background-position: left;
-        background-repeat: no-repeat;
-        left: 100%;
-        width: 100px;
-        height: 100%;
-        top: 0px;
-    }
+    .col.left::after
+        content: ''
+        position: absolute
+        background-image: url('/images/about/right-wave.svg')
+        background-size: cover
+        background-position: left
+        background-repeat: no-repeat
+        left: 100%
+        width: 100px
+        height: 100%
+        top: 0px
 
-    .code img {
-        animation: dimming_shadow .4s infinite alternate;
-        box-shadow: 0 0 11px rgba(92, 224, 216, 0.8);
-    }
+    .code img
+        animation: dimming_shadow .4s infinite alternate
+        box-shadow: 0 0 11px rgba(92, 224, 216, 0.8)
 
-    ul {
-        column-count: 2;
-        list-style-type: disclosure-closed;
-    }
+    ul
+        column-count: 2
+        list-style-type: disclosure-closed
 
-    .columns-container::after {
-        content: '';
-        width: 50%;
-        height: 100%;
-        position: absolute;
-        top: 0px;
-        left: calc(50% + 300px);
-    }
+    .columns-container::after
+        content: ''
+        width: 50%
+        height: 100%
+        position: absolute
+        top: 0px
+        left: calc(50% + 300px)
 </style>

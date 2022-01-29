@@ -104,14 +104,12 @@
     }
 </script>
 
-<style scoped>
-    .curve svg {
-        width: calc(100% + 1.3px);
-    }
-    .curve svg .shape-fill {
-        fill: #22B4AB;
-    }
-    .box {
-        box-shadow: 0px 0px 4px rgba(92, 224, 216, 0.6);
-    }
+<style scoped lang="sass">
+    .curve svg
+        width: calc(100% + 1.3px)
+        .shape-fill
+            fill: #22B4AB
+            
+    .box
+        box-shadow: 0px 0px 4px rgba(92, 224, 216, 0.6)
 </style>

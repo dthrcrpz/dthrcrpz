@@ -3,10 +3,10 @@
         <div class="container">
             <div class="links-wrapper mt-10">
                 <template v-if="showIndexItems">
-                    <a :class="`${(link.class == activeAnchor) ? 'active' : ''} mt-0 mx-auto mb-5 text-center relative table text-dark-blue dark:text-dark-blue`" href="javascript:void(0)" v-for="(link, key) in navLinks" :key="key" @click="scrollTo(link)">{{ link.label }}</a>
+                    <a :class="`${(link.class == activeAnchor) ? 'active' : ''} mt-0 mx-auto mb-5 font-bold text-center relative table text-dark-blue dark:text-dark-blue`" href="javascript:void(0)" v-for="(link, key) in navLinks" :key="key" @click="scrollTo(link)">{{ link.label }}</a>
                     <div class="separator"></div>
                 </template>
-                <nuxt-link to="/blogs" class="mt-0 mx-auto mb-5 text-center relative table text-dark-blue dark:text-dark-blue">blogs</nuxt-link>
+                <nuxt-link to="/blogs" class="mt-0 mx-auto mb-5 text-center font-bold relative table text-dark-blue dark:text-dark-blue">blogs</nuxt-link>
             </div>
         </div>
     </div>
@@ -39,8 +39,8 @@
             scrollTo (link) {
                 this.$scrollTo(link.class, 500, {
                     onStart: () => {
-                        this.setShowSideNav(false)
                         this.activeAnchor = link.class
+                        this.setShowSideNav(false)
                     }
                 })
             },
@@ -48,26 +48,22 @@
     }
 </script>
 
-<style scoped>
-    .links-wrapper a::before, .links-wrapper a::after {
-        content: '';
-        position: absolute;
-        height: 2px;
-        background-color: #1A2238;
-        bottom: -5px;
-        transition: .4s;
-        width: 0%;
-    }
-    .links-wrapper a::before {
-        left: 50%;
-    }
-    .links-wrapper a::after {
-        right: 50%;
-    }
-    .links-wrapper a.active::before,
-    .links-wrapper a.active::after,
-    .links-wrapper a.nuxt-link-active::before,
-    .links-wrapper a.nuxt-link-active::after {
-        width: 50%;
-    }
+<style scoped lang="sass">
+    .links-wrapper
+        a
+            &::before, &::after
+                content: ''
+                position: absolute
+                height: 2px
+                background-color: #1A2238
+                bottom: -5px
+                transition: .4s
+                width: 0%
+            &::before
+                left: 50%
+            &::after
+                right: 50%
+            &.active, &.nuxt-link-active, &:hover
+                &::before, &::after
+                    width: 50%
 </style>
