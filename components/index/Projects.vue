@@ -1,7 +1,7 @@
 <template>
     <section class="projects pt-[70px] px-0 pb-[130px] relative">
         <div class="cntnr">
-            <h2 class="section-title" delay="1000">
+            <h2 class="section-title duration-500" delay="1000">
                 <span class="mr-4">
                     <font-awesome-icon icon="globe"/>
                 </span>
@@ -110,6 +110,18 @@
 </script>
 
 <style scoped lang="sass">
+    .section-title, .mini-title
+        opacity: 0
+        &.ov
+            opacity: 1
+    
+    .box
+        opacity: 0
+        transform: translateY(30px)
+        &.ov
+            opacity: 1
+            transform: translateY(0px)
+
     .waves svg
         width: calc(100% + 1.3px)
         .shape-fill
