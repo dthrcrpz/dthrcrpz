@@ -7,7 +7,7 @@
                 </span>
                 <span>projects</span>
             </h2>
-            <p class="mini-title dark:text-teal">Browse through the latest websites I developed which I consider "highlights"</p>
+            <p class="mini-title dark:text-teal duration-500">Browse through the latest websites I developed which I consider "highlights"</p>
             <div class="projects-wrapper flex justify-between flex-row flex-wrap mt-8 duration-500">
                 <div v-for="(project, key) in projects" :key="key" class="box flex-shrink-0 flex-grow-0 w-full md:w-1/2 py-4 px-0 md:px-4 duration-500">
                     <div class="real-box w-full flex flex-col py-5 px-5 h-full relative duration-500 shadow-teal hover:shadow-teal-glow group border border-dark-blue">

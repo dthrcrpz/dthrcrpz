@@ -29,7 +29,7 @@
                 <div class="col logs mt-8 w-full">
                     <div class="counter mb-3">Move count: {{ counter }}</div>
                     <div class="flex flex-row flex-wrap w-full">
-                        <button class="button mb-3 py-2 text-base max-w-[300px] mr-3 bg-dark-blue border border-dark-blue text-teal dark:bg-yellow dark:border-yellow dark:text-dark-blue dark:hover:bg-dark-blue dark:hover:text-yellow" @click="viewLogs ^= true">Toggle developer logs</button>
+                        <button class="button mb-3 py-2 text-base max-w-[300px] mr-3 bg-dark-blue border border-dark-blue text-teal dark:bg-yellow dark:border-yellow dark:text-dark-blue dark:hover:bg-dark-blue dark:hover:text-yellow" @click="viewLogs ^= true">{{ (viewLogs) ? 'Hide' : 'Show' }} developer logs</button>
                         <button class="button mb-3 py-2 text-base max-w-[100px] bg-red border border-red text-dark-blue dark:text-dark-blue hover:bg-transparent dark:hover:bg-dark-blue dark:hover:text-red" @click="resetPuzzle()">Reset</button>
                     </div>
                     <div class="logs-container mt-5 px-5 py-5 border border-dark-blue dark:border-yellow max-h-52 overflow-y-scroll flex flex-col-reverse" v-show="viewLogs">

@@ -2,13 +2,13 @@
     <section class="contact">
         <div class="top pt-[60px] px-0 pb-[150px] bg-dark-teal">
             <div class="cntnr">
-                <h2 class="section-title text-dark-blue">
+                <h2 class="section-title text-dark-blue duration-500">
                     <span class="mr-4">
                         <font-awesome-icon icon="id-card"/>
                     </span>
                     <span>contact</span>
                 </h2>
-                <p class="mini-title text-dark-blue">Wanna talk? Leave a message and I'll do my best to get back to you</p>
+                <p class="mini-title text-dark-blue duration-500">Wanna talk? Leave a message and I'll do my best to get back to you</p>
             </div>
         </div>
         <div class="bottom relative">
@@ -18,7 +18,7 @@
                 </svg>
             </div>
             <div class="box-wrapper py-0 px-5 md:px-0">
-                <ValidationObserver class="w-full mx-auto px-5 box pt-[30px] pb-[50px] max-w-3xl z-[2] relative bg-dark-blue bg-opacity-90 duration-500 translate-y-[-100px]" tag="div" ref="contactForm" v-slot="{ valid, handleSubmit }">
+                <ValidationObserver class="w-full mx-auto px-5 box pt-[30px] pb-[50px] max-w-3xl z-[2] relative bg-dark-blue bg-opacity-90 duration-500" tag="div" ref="contactForm" v-slot="{ valid, handleSubmit }">
                     <form class="forms-container max-w-[600px] w-full mt-5 mx-auto mb-0" @submit.prevent="handleSubmit(submit(valid))">
                         <ValidationProvider name="name" tag="div" class="form-group" v-slot="{ errors }" :rules="{ required: true }">
                             <input type="text" placeholder="Your Name" v-model="form.name" class="form-input">
@@ -95,8 +95,8 @@
         mounted () {
             let targets = [
                 `section.contact > div.top > div > h2`,
-                `.contact .top .container .mini-title`,
-                `section.contact > div.bottom > div > div.container.box`
+                `.contact .top .cntnr .mini-title`,
+                `section.contact .box`
             ]
 
             this.animateElements(targets)
@@ -105,6 +105,17 @@
 </script>
 
 <style scoped lang="sass">
+    .section-title, .mini-title
+        opacity: 0
+        &.ov
+            opacity: 1
+    .box
+        opacity: 0
+        transform: translateY(-70px)
+        &.ov
+            opacity: 1
+            transform: translateY(-100px)
+
     .curve svg
         width: calc(100% + 1.3px)
         .shape-fill
