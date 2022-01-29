@@ -136,7 +136,6 @@ export default {
           "'self'",
           "'unsafe-inline'",
           '*.google-analytics.com',
-          'cdn.contentful.com',
           'api.emailjs.com'
         ],
         'font-src': [
@@ -146,7 +145,6 @@ export default {
         'img-src': [
           "'self'",
           "'unsafe-inline'",
-          '*.ctfassets.net',
           '*.google-analytics.com'
         ],
         'script-src-elem': [
@@ -204,8 +202,6 @@ export default {
     emailJsUserId: process.env.EMAILJS_USER_ID,
     emailJsServiceId: process.env.EMAILJS_SERVICE_ID,
     emailJsTemplateId: process.env.EMAILJS_TEMPLATE_ID,
-    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
     websiteUrl: process.env.WEBSITE_URL
   },
 
