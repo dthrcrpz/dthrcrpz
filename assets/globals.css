@@ -86,9 +86,7 @@ img {
     width: 100%;
 }
 .section-title span {
-    font-family: Fira Code;
-    font-weight: 600;
-    font-size: 48px;
+    @apply font-fira-code font-semibold text-4xl md:text-5xl
 }
 
 .mini-title {

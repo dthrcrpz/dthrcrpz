@@ -8,7 +8,7 @@
         </div>
         <div class="columns-container relative w-full bg-dark-teal overflow-hidden after:duration-500 after:bg-gray-300 dark:after:bg-dark-blue after:hidden lg:after:block">
             <div class="cntnr flex justify-between flex-row flex-wrap">
-                <div class="col py-[60px] left relative pr-3 flex-[100%] md:flex-[45%]">
+                <div class="col pt-0 md:pt-[60px] pb-[60px] left relative pr-3 flex-[100%] md:flex-[45%]">
                     <div class="egg h-[280px] w-[230px] mt-0 mx-auto mb-[30px] bg-cover bg-no-repeat duration-500"></div>
                     <div class="texts duration-500">
                         <p delay="1000" class="title text-dark-blue font-fira-code font-bold text-3xl mb-5 duration-500 text-center">Who's this guy?</p>
