@@ -82,7 +82,6 @@ export default {
       directiveOnly: true,
       defaultImage: '/lazy-loader.svg'
     }],
-    '@layer0/nuxt/module',
     '@nuxtjs/google-gtag',
     'nuxt-helmet',
     '@nuxtjs/sitemap'
