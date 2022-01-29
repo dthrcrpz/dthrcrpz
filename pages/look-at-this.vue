@@ -6,8 +6,8 @@
 
 <script>
     export default {
-        asyncData ({ redirect }) {
-            redirect(302, 'https://youtu.be/dQw4w9WgXcQ')
+        mounted () {
+            location.href = `https://youtu.be/dQw4w9WgXcQ`
         },
         head () {
 			return {
@@ -53,12 +53,12 @@
                         .hole
                             width: 50px
                             height: 50px
-                            background-color: $yellow
-                            border: 1px solid $yellow
+                            background-color: #FFCF43
+                            border: 1px solid #FFCF43
                             margin-right: 10px
                             margin-bottom: 10px
                             cursor: pointer
-                            color: $blue
+                            color: #1A2238
                             text-align: center
                             display: flex
                             justify-content: center
@@ -66,14 +66,14 @@
                             font-weight: 600
                             transition: .4s
                             &:hover
-                                background-color: $blue
-                                color: $yellow
+                                background-color: #1A2238
+                                color: #FFCF43
                     .status
                         font-size: 25px
                         &.fail
-                            color: $red
+                            color: #ff5757
                         &.success
-                            color: $teal
+                            color: #5CE0D8
                 .logs
                     margin-top: 30px
                     .counter
@@ -86,7 +86,7 @@
                     .logs-container
                         margin-top: 20px
                         padding: 20px
-                        border: 1px solid $yellow
+                        border: 1px solid #FFCF43
                         max-height: 200px
                         overflow-y: scroll
                         display: flex
