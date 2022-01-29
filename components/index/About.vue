@@ -13,7 +13,7 @@
                     <div class="texts">
                         <p delay="1000" class="title text-dark-blue font-fira-code font-bold text-3xl mb-5 duration-500 text-center">Who's this guy?</p>
                         <p delay="1000" class="desc text-dark-blue text-lg mb-3 font-bold font-fira-code has-bash pl-6 duration-500 relative">
-                            A <i>self-proclaimed</i> highly skilled and creative Full Stack Web Developer
+                            A <i>self-proclaimed</i> enthusiastic, skilled, and creative Full Stack Web Developer
                         </p>
                         <p delay="1000" class="desc text-dark-blue text-lg mb-3 font-bold font-fira-code has-bash pl-6 duration-500 relative">
                             Solid experience on developing user-centered websites using my preferred stacks

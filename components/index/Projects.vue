@@ -109,14 +109,12 @@
     }
 </script>
 
-<style>
-    .waves svg {
-        width: calc(100% + 1.3px);
-    }
-    .waves svg .shape-fill {
-        fill: #22b4ab;
-    }
-    .agency {
-        bottom: calc(100% - 13px);
-    }
+<style scoped lang="sass">
+    .waves svg
+        width: calc(100% + 1.3px)
+        .shape-fill
+            fill: #22b4ab
+
+    .agency
+        bottom: calc(100% - 13px)
 </style>
