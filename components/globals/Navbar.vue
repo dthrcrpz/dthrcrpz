@@ -77,56 +77,9 @@
             toggleSideNav () {
                 this.setShowSideNav(!this.showSideNav)
             },
-            setScrollObserver () {
-                const me = this
-                let current_scroll = window.pageYOffset | document.body.scrollTop
-
-                me.scrolled = (current_scroll > 10) ? true : false
-
-                let targets = [
-                    `section.intro`,
-                    `section.about`,
-                    `section.projects`,
-                    `section.contact`,
-                ]
-
-                /**
-                * Observer (IntersectionObserver)
-                * @param {[array]} items [target elements] */
-                let observer = new IntersectionObserver((items) => {
-                    items.forEach((item, key) => {
-                        let bounding = item.target.getBoundingClientRect()
-                        if (bounding.bottom > 0 &&
-                            bounding.right > 0 &&
-                            bounding.left < (window.innerWidth || document.documentElement.clientWidth) &&
-                            bounding.top < (window.innerHeight || document.documentElement.clientHeight)) {
-                            me.activeAnchor = (!me.scrolling) ? `.${item.target.classList.item(0)}` : me.activeAnchor
-                        }
-                    })
-                })
-
-                /**
-                * Listing all the elements in order to observe */
-                targets.forEach((target, key) => {
-                    let element = document.querySelector(target)
-                    if (element) {
-                        observer.observe(element)
-                    }
-                })
-            },
             toggleTheme () {
                 this.setTheme((this.theme == 'dark') ? 'light' : 'dark')
             }
-        },
-        mounted () {
-            window.addEventListener('scroll', this.setScrollObserver)
-
-            setTimeout(() => {
-                this.setScrollObserver()
-            }, 200)
-        },
-        destroyed () {
-            window.removeEventListener('scroll', this.setScrollObserver)
         }
     }
 </script>
