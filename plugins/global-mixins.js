@@ -1,7 +1,12 @@
 import Vue from 'vue'
+import { mapMutations } from 'vuex'
 
 Vue.mixin({
     methods: {
+		...mapMutations({
+            toggleModal: 'globals/toggleModal',
+            setTheme: 'globals/setTheme'
+        }),
 		animateElements (targets) {
             /**
              * Observer (IntersectionObserver)
@@ -9,7 +14,7 @@ Vue.mixin({
             let observer = new IntersectionObserver((items) => {
                 items.forEach((item, key) => {
                     if (item.isIntersecting) {
-						let delay = (!item.target.hasAttribute('delay')) ? 500 : parseInt(item.target.getAttribute('delay'))
+						let delay = (!item.target.hasAttribute('delay')) ? 200 : parseInt(item.target.getAttribute('delay'))
 						setTimeout (() => {
 							item.target.classList.add('ov')
 							observer.unobserve(item.target)

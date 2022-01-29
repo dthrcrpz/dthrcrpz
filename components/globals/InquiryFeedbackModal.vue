@@ -1,15 +1,15 @@
 <template>
     <div class="modal-container">
-        <div class="modal" v-click-outside="close">
-            <div class="header">
-                <p class="centered-title">Thanks for messaging me!</p>
+        <div class="modal max-w-[600px]" v-click-outside="close">
+            <div class="header pt-10 px-10 pb-3">
+                <p class="centered-title text-2xl mx-auto my-auto text-center font-montserrat text-yellow">Thanks for messaging me!</p>
             </div>
-            <div class="body">
+            <div class="body overflow-auto pt-3 px-8 pb-8">
                 <p>I'll do my best to get back to you as soon as possible.</p>
             </div>
-            <div class="footer">
-                <div class="buttons">
-                    <button class="button teal" @click="close()">Yeah, sure</button>
+            <div class="footer w-full pt-0 px-5">
+                <div class="buttons flex justify-end">
+                    <button class="button ml-3 text-base max-w-[150px]" @click="close()">Yeah, sure</button>
                 </div>
             </div>
         </div>
@@ -31,31 +31,3 @@
         }
     }
 </script>
-
-<style scoped lang="sass">
-    .modal
-        max-width: 600px
-        .header
-            padding: 40px 40px 10px 40px
-            .centered-title
-                font-size: 25px
-                margin: auto
-                text-align: center
-                font-family: Montserrat
-                color: $yellow
-        .body
-            // max-height: 50px
-            overflow: auto
-            padding: 10px 30px 30px
-            text-align: center
-        .footer
-            width: 100%
-            padding: 0 20px 20px
-            .buttons
-                display: flex
-                justify-content: flex-end
-                .button
-                    margin-left: 10px
-                    font-size: 15px
-                    max-width: 150px
-</style>

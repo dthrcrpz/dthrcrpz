@@ -1,12 +1,12 @@
 <template>
-    <div :class="{ 'sidenav': true, 'show': showSideNav }">
+    <div :class="`fixed top-[62px] max-w-[300px] w-full h-screen pt-[62px] bg-gray-200 dark:bg-dark-teal select-none z-[9] duration-500 ${(showSideNav) ? 'right-0 opacity-1' : 'right-[-300px] opacity-0' } shadow-md`">
         <div class="container">
-            <div class="links-wrapper">
+            <div class="links-wrapper mt-10">
                 <template v-if="showIndexItems">
-                    <a :class="{ 'active': link.class == activeAnchor }" href="javascript:void(0)" v-for="(link, key) in navLinks" :key="key" @click="scrollTo(link)">{{ link.label }}</a>
+                    <a :class="`${(link.class == activeAnchor) ? 'active' : ''} mt-0 mx-auto mb-5 font-bold text-center relative table text-dark-blue dark:text-dark-blue`" href="javascript:void(0)" v-for="(link, key) in navLinks" :key="key" @click="scrollTo(link)">{{ link.label }}</a>
                     <div class="separator"></div>
                 </template>
-                <nuxt-link to="/blogs">blogs</nuxt-link>
+                <nuxt-link to="/blogs" class="mt-0 mx-auto mb-5 text-center font-bold relative table text-dark-blue dark:text-dark-blue">blogs</nuxt-link>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
     export default {
         computed: {
             ...mapGetters({
-                showSideNav: 'globals/getShowSideNav',
+                showSideNav: 'globals/showSideNav',
             }),
             showIndexItems () {
                 return this.$route.path == '/'
@@ -39,63 +39,78 @@
             scrollTo (link) {
                 this.$scrollTo(link.class, 500, {
                     onStart: () => {
-                        this.setShowSideNav(false)
                         this.activeAnchor = link.class
+                        this.setShowSideNav(false)
                     }
                 })
             },
+            setScrollObserver () {
+                const me = this
+                let current_scroll = window.pageYOffset | document.body.scrollTop
+
+                me.scrolled = (current_scroll > 10) ? true : false
+
+                let targets = [
+                    `section.intro`,
+                    `section.about`,
+                    `section.projects`,
+                    `section.contact`,
+                ]
+
+                /**
+                * Observer (IntersectionObserver)
+                * @param {[array]} items [target elements] */
+                let observer = new IntersectionObserver((items) => {
+                    items.forEach((item, key) => {
+                        let bounding = item.target.getBoundingClientRect()
+                        if (bounding.bottom > 0 &&
+                            bounding.right > 0 &&
+                            bounding.left < (window.innerWidth || document.documentElement.clientWidth) &&
+                            bounding.top < (window.innerHeight || document.documentElement.clientHeight)) {
+                            me.activeAnchor = (!me.scrolling) ? `.${item.target.classList.item(0)}` : me.activeAnchor
+                        }
+                    })
+                })
+
+                /**
+                * Listing all the elements in order to observe */
+                targets.forEach((target, key) => {
+                    let element = document.querySelector(target)
+                    if (element) {
+                        observer.observe(element)
+                    }
+                })
+            }
         },
+        mounted () {
+            window.addEventListener('scroll', this.setScrollObserver)
+
+            setTimeout(() => {
+                this.setScrollObserver()
+            }, 200)
+        },
+        destroyed () {
+            window.removeEventListener('scroll', this.setScrollObserver)
+        }
     }
 </script>
 
-<style lang="sass" scoped>
-    .sidenav
-        position: fixed
-        top: $navHeight
-        max-width: 300px
-        width: 100%
-        right: 0
-        height: calc(100% - #{$navHeight})
-        background-color: rgba(0, 18,32, 0.9)
-        user-select: none
-        z-index: 10
-        display: none
-        transition: .4s
-        right: -300px
-        opacity: 0
-        &.show
-            right: 0px
-            opacity: 1
-        @media (max-width: 768px)
-            display: block
-        .container
-            .links-wrapper
-                margin-top: 40px
-                a
-                    margin: 0 auto 20px
-                    text-align: center
-                    position: relative
-                    display: table
-                    &:hover, &.active, &.nuxt-link-active
-                        &:before, &:after
-                            width: 50%
-                    &:before, &:after
-                        content: ''
-                        position: absolute
-                        height: 2px
-                        background-color: $yellow
-                        bottom: -5px
-                        transition: .4s
-                        width: 0%
-                    &:before
-                        left: 50%
-                    &:after
-                        right: 50%
-                .separator
-                    width: 100%
-                    max-width: 100px
-                    height: 2px
-                    background-color: $teal
-                    display: block
-                    margin: 0 auto 20px
+<style scoped lang="sass">
+    .links-wrapper
+        a
+            &::before, &::after
+                content: ''
+                position: absolute
+                height: 2px
+                background-color: #1A2238
+                bottom: -5px
+                transition: .4s
+                width: 0%
+            &::before
+                left: 50%
+            &::after
+                right: 50%
+            &.active, &.nuxt-link-active, &:hover
+                &::before, &::after
+                    width: 50%
 </style>

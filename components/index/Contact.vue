@@ -1,40 +1,40 @@
 <template>
     <section class="contact">
-        <div class="top">
-            <div class="container">
-                <h2 class="section-title">
-                    <img src="/images/contact/icon.svg" alt="">
+        <div class="top pt-[60px] px-0 pb-[150px] bg-dark-teal">
+            <div class="cntnr">
+                <h2 class="section-title text-dark-blue duration-500">
+                    <span class="mr-4">
+                        <font-awesome-icon icon="id-card"/>
+                    </span>
                     <span>contact</span>
                 </h2>
-                <p class="mini-title">
-                    Wanna talk? Leave a message and I'll do my best to get back to you. And oh, I'm open for freelance projects at <a href="https://www.twine.net/dthrcrpz" class="twine" target="_blank">https://www.twine.net/dthrcrpz</a>
-                </p>
+                <p class="mini-title text-dark-blue duration-500">Wanna talk? Leave a message and I'll do my best to get back to you</p>
             </div>
         </div>
-        <div class="bottom">
-            <div class="curve">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <div class="bottom relative">
+            <div class="curve absolute top-0 left-0 w-full overflow-hidden leading-[0] z-[1]">
+                <svg class="relative block h-[56px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z" class="shape-fill"></path>
                 </svg>
             </div>
-            <div class="box-wrapper">
-                <ValidationObserver class="container box" tag="div" ref="contactForm" v-slot="{ valid, handleSubmit }">
-                    <form class="forms-container" @submit.prevent="handleSubmit(submit(valid))">
+            <div class="box-wrapper py-0 px-5 md:px-0">
+                <ValidationObserver class="w-full mx-auto px-5 box pt-[30px] pb-[50px] max-w-3xl z-[2] relative bg-dark-blue bg-opacity-90 duration-500" tag="div" ref="contactForm" v-slot="{ valid, handleSubmit }">
+                    <form class="forms-container max-w-[600px] w-full mt-5 mx-auto mb-0" @submit.prevent="handleSubmit(submit(valid))">
                         <ValidationProvider name="name" tag="div" class="form-group" v-slot="{ errors }" :rules="{ required: true }">
-                            <input type="text" placeholder="Your Name" v-model="form.name">
+                            <input type="text" placeholder="Your Name" v-model="form.name" class="form-input">
                             <transition name="fade"><span class="validation-errors" v-if="errors.length > 0">{{ properFormat(errors[0]) }}</span></transition>
                         </ValidationProvider>
                         <ValidationProvider name="email" tag="div" class="form-group" v-slot="{ errors }" :rules="{ required: true, email: true }">
-                            <input type="text" placeholder="Your Email" v-model="form.email">
+                            <input type="text" placeholder="Your Email" v-model="form.email" class="form-input">
                             <transition name="fade"><span class="validation-errors" v-if="errors.length > 0">{{ properFormat(errors[0]) }}</span></transition>
                         </ValidationProvider>
                         <ValidationProvider name="message" tag="div" class="form-group" v-slot="{ errors }" :rules="{ required: true }">
-                            <textarea name="message" id="" rows="7" placeholder="Your Message" v-model="form.message"></textarea>
+                            <textarea name="message" id="" rows="7" placeholder="Your Message" v-model="form.message" class="form-input"></textarea>
                             <transition name="fade"><span class="validation-errors" v-if="errors.length > 0">{{ properFormat(errors[0]) }}</span></transition>
                         </ValidationProvider>
-                        <div class="buttons-group">
-                            <button type="button" class="button red" @click="resetForm()">Reset</button>
-                            <button type="submit" class="button yellow">Submit</button>
+                        <div class="buttons-group flex justify-end flex-row flex-wrap duration-500">
+                            <button type="button" class="button py-2 text-base max-w-[100px] ml-3 bg-red border border-red text-dark-blue dark:text-dark-blue hover:bg-transparent hover:text-red dark:hover:bg-dark-blue dark:hover:text-red" @click="resetForm()">Reset</button>
+                            <button type="submit" class="button py-2 text-base max-w-[100px] ml-3 border bg-yellow border-yellow text-dark-blue hover:bg-dark-blue hover:text-yellow hover:border-yellow">Submit</button>
                         </div>
                     </form>
                 </ValidationObserver>
@@ -95,8 +95,8 @@
         mounted () {
             let targets = [
                 `section.contact > div.top > div > h2`,
-                `.contact .top .container .mini-title`,
-                `section.contact > div.bottom > div > div.container.box`
+                `.contact .top .cntnr .mini-title`,
+                `section.contact .box`
             ]
 
             this.animateElements(targets)
@@ -104,84 +104,23 @@
     }
 </script>
 
-<style lang="sass" scoped>
-    .contact
-        .top
-            padding: 60px 0 150px
-            background-color: #22b4ab
-            .container
-                .section-title
-                    transition: .8s
-                    opacity: 0
-                    &.ov
-                        opacity: 1
-                    img
-                        margin-right: 10px
-                        max-width: 60px
-                        width: 100%
-                    span
-                        color: $blue
-                .mini-title
-                    color: $blue
-                    font-size: 18px
-                    text-align: center
-                    font-family: Fira Code
-                    max-width: 500px
-                    width: 100%
-                    margin: 0 auto
-                    transition: .8s
-                    opacity: 0
-                    .twine
-                        color: #fff
-                    &.ov
-                        opacity: 1
-        .bottom
-            position: relative
-            .curve
-                position: absolute
-                top: 0
-                left: 0
-                width: 100%
-                overflow: hidden
-                line-height: 0
-                z-index: 1
-                svg
-                    position: relative
-                    display: block
-                    width: calc(100% + 1.3px)
-                    height: 56px
-                    .shape-fill
-                        fill: #22B4AB
-            .box-wrapper
-                @media (max-width: 1024px)
-                    padding: 0 20px
-                .box
-                    padding-top: 30px
-                    padding-bottom: 50px
-                    max-width: 768px
-                    z-index: 2
-                    position: relative
-                    background-color: rgba(0, 18, 32, 0.9)
-                    box-shadow: 0px 0px 4px rgba(92, 224, 216, 0.6)
-                    opacity: 0
-                    transition: .8s
-                    transform: translateY(-70px)
-                    &.ov
-                        opacity: 1
-                        transform: translateY(-100px)
-                    .forms-container
-                        max-width: 600px
-                        width: 100%
-                        margin: 20px auto 0
-                        .form-group
-                            input, textarea
-                                background-color: darken($blue, 1)
-                        .buttons-group
-                            display: flex
-                            flex-flow: row wrap
-                            justify-content: flex-end
-                            .button
-                                font-size: 16px
-                                flex: 0 0 100px
-                                margin-left: 10px
+<style scoped lang="sass">
+    .section-title, .mini-title
+        opacity: 0
+        &.ov
+            opacity: 1
+    .box
+        opacity: 0
+        transform: translateY(-70px)
+        &.ov
+            opacity: 1
+            transform: translateY(-100px)
+
+    .curve svg
+        width: calc(100% + 1.3px)
+        .shape-fill
+            fill: #22B4AB
+            
+    .box
+        box-shadow: 0px 0px 4px rgba(92, 224, 216, 0.6)
 </style>

@@ -1,10 +1,10 @@
 <template>
-    <div class="page-find-the-rabbit">
-        <div class="container">
-            <div class="header">
-                <h1>How Fast Can You Find the Rabbit?</h1>
+    <div class="page-find-the-rabbit py-[100px] px-0">
+        <div class="cntnr">
+            <div class="header mb-8">
+                <h1 class="mb-5 text-3xl font-bold">How Fast Can You Find the Rabbit?</h1>
                 <p class="description">
-                    I found <a href="https://youtu.be/XEt09iK8IXs?t=1259" target="_blank">this Youtube video</a> and I want to know the fastest pattern/algorithm people can make to find the rabbit.
+                    I found <a href="https://youtu.be/XEt09iK8IXs?t=1259" class="text-red dark:text-yellow" target="_blank">this Youtube video</a> and I want to know the fastest pattern/algorithm people can make to find the rabbit.
                     <br><br>
                     In this puzzle, there are 20 holes. <br>
                     A rabbit is hidden in a random hole. <br>
@@ -17,21 +17,23 @@
                     Find the rabbit's <b>CURRENT</b> position.
                 </p>
             </div>
-            <h2>Let's get started</h2>
-            <div class="puzzle-container">
+            <h2 class="font-bold text-2xl">Let's get started</h2>
+            <div class="puzzle-container mt-5 flex flex-row flex-wrap justify-between">
                 <div class="col game">
-                    <div class="holes-container">
-                        <div class="hole" v-for="(n, key) in 20" :key="key" @click="pickHole(n)">{{ n }}</div>
+                    <div class="holes-container mb-3 flex-row flex-wrap flex">
+                        <div class="hole w-12 h-12 bg-yellow border border-yellow mr-3 mb-3 cursor-pointer text-dark-blue flex justify-center items-center font-semibold duration-500 hover:bg-dark-blue hover:text-yellow" v-for="(n, key) in 20" :key="key" @click="pickHole(n)">{{ n }}</div>
                     </div>
-                    <p class="status success" v-if="success == true">Found the rabbit!</p>
-                    <p class="status fail" v-if="success == false">Wrong hole!</p>
+                    <p class="status text-2xl text-dark-blue dark:text-teal" v-if="success == true">Found the rabbit!</p>
+                    <p class="status text-2xl text-red" v-if="success == false">Wrong hole!</p>
                 </div>
-                <div class="col logs">
-                    <div class="counter">Move count: {{ counter }}</div>
-                    <button class="button" @click="viewLogs ^= true">Toggle developer logs</button>
-                    <button class="button reset" @click="resetPuzzle()">Reset</button>
-                    <div class="logs-container" v-show="viewLogs">
-                        <p v-for="(log, key) in logs" :key="key">{{ log }}</p>
+                <div class="col logs mt-8 w-full">
+                    <div class="counter mb-3">Move count: {{ counter }}</div>
+                    <div class="flex flex-row flex-wrap w-full">
+                        <button class="button mb-3 py-2 text-base max-w-[300px] mr-3 bg-dark-blue border border-dark-blue text-teal dark:bg-yellow dark:border-yellow dark:text-dark-blue dark:hover:bg-dark-blue dark:hover:text-yellow" @click="viewLogs ^= true">{{ (viewLogs) ? 'Hide' : 'Show' }} developer logs</button>
+                        <button class="button mb-3 py-2 text-base max-w-[100px] bg-red border border-red text-dark-blue dark:text-dark-blue hover:bg-transparent dark:hover:bg-dark-blue dark:hover:text-red" @click="resetPuzzle()">Reset</button>
+                    </div>
+                    <div class="logs-container mt-5 px-5 py-5 border border-dark-blue dark:border-yellow max-h-52 overflow-y-scroll flex flex-col-reverse" v-show="viewLogs">
+                        <p v-for="(log, key) in logs" :key="key" class="block mb-1 text-sm">{{ log }}</p>
                     </div>
                 </div>
             </div>
@@ -46,10 +48,14 @@
             rabbitPosition: null,
             logs: [],
             viewLogs: true,
-            counter: 0
+            counter: 0,
+            resetCount: 0
         }),
         methods: {
             pickHole (hole) {
+                if (this.success) {
+                    return false
+                }
                 this.counter += 1
                 if (hole == this.rabbitPosition) {
                     this.log(`Congrats! You found the rabbit at hole ${hole}!`)
@@ -83,8 +89,9 @@
                 this.log(`Rabbit is in hole ${this.rabbitPosition}`)
             },
             resetPuzzle () {
+                this.resetCount += 1
                 this.logs = []
-                this.log(`Puzle has been reset`)
+                this.log(`Puzle has been reset [${this.resetCount}]`)
                 this.counter = 0
                 this.setInitialRabbitPosition()
             }
@@ -113,69 +120,6 @@
     }
 </script>
 
-<style lang="sass" scoped>
-    .page-find-the-rabbit
-        padding: 100px 0
-        .container
-            .header
-                margin-bottom: 30px
-                h1
-                    margin-bottom: 20px
-            .puzzle-container
-                margin-top: 20px
-                display: flex
-                flex-flow: row wrap
-                justify-content: space-between
-                .col
-                    flex: 0 0 100%
-                .game
-                    .holes-container
-                        display: flex
-                        margin-bottom: 10px
-                        flex-flow: row wrap
-                        .hole
-                            width: 50px
-                            height: 50px
-                            background-color: $yellow
-                            border: 1px solid $yellow
-                            margin-right: 10px
-                            margin-bottom: 10px
-                            cursor: pointer
-                            color: $blue
-                            text-align: center
-                            display: flex
-                            justify-content: center
-                            align-items: center
-                            font-weight: 600
-                            transition: .4s
-                            &:hover
-                                background-color: $blue
-                                color: $yellow
-                    .status
-                        font-size: 25px
-                        &.fail
-                            color: $red
-                        &.success
-                            color: $teal
-                .logs
-                    margin-top: 30px
-                    .counter
-                        margin-bottom: 10px
-                    .button
-                        max-width: 300px
-                        margin-bottom: 10px
-                        &.reset
-                            max-width: 100px
-                    .logs-container
-                        margin-top: 20px
-                        padding: 20px
-                        border: 1px solid $yellow
-                        max-height: 200px
-                        overflow-y: scroll
-                        display: flex
-                        flex-direction: column-reverse
-                        p
-                            display: block
-                            margin-bottom: 5px
-                            font-size: 14px
+<style scoped>
+
 </style>
