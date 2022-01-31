@@ -84,7 +84,8 @@ export default {
     }],
     '@nuxtjs/google-gtag',
     'nuxt-helmet',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
 
   'google-gtag':{
