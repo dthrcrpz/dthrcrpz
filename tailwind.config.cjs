@@ -10,8 +10,7 @@ module.exports = {
         'red': '#ff5757'
       },
       fontFamily: {
-        'fira-code': ['Fira Code', 'sans-serif'],
-        'montserrat': ['Montserrat', 'sans-serif']
+        'ubuntu': ['Ubuntu', 'sans-serif']
       },
       boxShadow: {
         'teal': '0px 0px 7px rgba(92, 224, 216, 0.3)',
@@ -19,5 +18,6 @@ module.exports = {
       }
     },
   },
+  darkMode: 'class',
   plugins: [],
 }

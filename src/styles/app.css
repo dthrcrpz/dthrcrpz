@@ -27,19 +27,19 @@
 /** animations */
 @keyframes blink {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes dimming_shadow {
   from {
-      box-shadow: 0 0 20px rgba(92, 224, 216, 0.8);
+    box-shadow: 0 0 20px rgba(92, 224, 216, 0.8);
   }
   to {
-      box-shadow: 0 0 30px rgba(92, 224, 216, 0.8);
+    box-shadow: 0 0 30px rgba(92, 224, 216, 0.8);
   }
 }
 
@@ -59,7 +59,7 @@
 }
 
 body {
-  @apply text-dark-blue dark:text-teal font-montserrat min-h-screen bg-gray-300 dark:bg-dark-blue duration-500
+  @apply text-dark-blue dark:text-teal min-h-screen bg-gray-300 dark:bg-dark-blue duration-500 font-ubuntu
 }
 
 .cntnr {
@@ -86,15 +86,15 @@ img {
   width: 100%;
 }
 .section-title span {
-  @apply font-fira-code font-semibold text-4xl md:text-5xl
+  @apply font-semibold text-4xl md:text-5xl
 }
 
 .mini-title {
-  @apply text-dark-blue text-lg text-center font-fira-code max-w-[500px] w-full my-0 mx-auto duration-500
+  @apply text-dark-blue text-lg text-center max-w-[500px] w-full my-0 mx-auto duration-500
 }
 
 .button {
-  @apply w-full duration-500 pt-3 py-3 font-fira-code select-none font-bold
+  @apply w-full duration-500 pt-3 py-3 select-none font-bold
 }
 
 .form-group {
@@ -103,7 +103,7 @@ img {
 
 .form-input {
   box-shadow: 0px 0px 4px rgba(92, 224, 216, 0.6);
-  @apply w-full text-lg px-[10px] py-[10px] font-fira-code text-teal bg-gray-600 dark:bg-[#000f1b] duration-500 border dark:border-transparent outline-none resize-none
+  @apply w-full text-lg px-[10px] py-[10px] text-teal bg-gray-600 dark:bg-[#000f1b] duration-500 border dark:border-transparent outline-none resize-none
 }
 .form-input:focus {
   box-shadow: 0px 0px 6px rgba(255, 207, 67, 0.8);
