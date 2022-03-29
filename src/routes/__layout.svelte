@@ -4,7 +4,11 @@
 </div>
 
 <script>
+  /* css files */
   import '../styles/app.css'
+  import '../styles/buttons.css'
+  import '../styles/forms.css'
+  
   import Navbar from "../components/global/Navbar.svelte"
   import { theme } from '../stores/global'
   import { onMount } from 'svelte'

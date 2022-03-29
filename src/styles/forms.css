@@ -1,0 +1,26 @@
+.form-group {
+  @apply mb-5
+}
+.form-group label {
+  @apply block mb-2
+}
+.form-group label span {
+  @apply text-tertiary
+}
+
+.form-control {
+  @apply w-full px-5 py-3 rounded-full text-black outline-none font-semibold border-4 border-slate-800
+  appearance-none
+  transition-colors duration-300
+  focus:border-primary
+}
+select.form-control {
+  background-image: url('/images/icons/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  background-size: 15px;
+  @apply pr-8
+}
+.form-control.invalid {
+  @apply border-danger
+}
