@@ -1,5 +1,5 @@
 <nav class="fixed top-0 left-0 py-4 w-full shadow-sm duration-300 transition-[background-color] bg-white dark:bg-slate-800">
-  <div class="container mx-auto px-5 flex justify-between align-middle">
+  <div class="container flex justify-between align-middle">
     <div>
       <a href="/" class="text-2xl font-bold font-fira-code text-slate-800 dark:text-white duration-300 transition-colors">dthrcrpz</a>
     </div>

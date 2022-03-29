@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/** variables */
-/* $navHeight: 62.8px */
-
 ::-webkit-scrollbar {
   width: 7px;
 }
@@ -40,4 +37,8 @@ img {
   -khtml-user-select: none;
   -moz-user-select: none;
   -o-user-select: none;
+}
+
+.container {
+  @apply px-5 mx-auto
 }
