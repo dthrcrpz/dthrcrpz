@@ -1,5 +1,5 @@
 <Navbar theme={theme}/>
-<div class="pt-[64px]">
+<div class="pt-[75.92px]">
   <slot></slot>
 </div>
 
