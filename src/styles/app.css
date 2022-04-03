@@ -8,17 +8,18 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #1A2238;
+  background: #1e293b;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #5CE0D8;
+  background: #06b6d4;
+  border-radius: 25px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #5CE0D8;
+  background: #06b6d4;
 }
 
 body {
@@ -40,5 +41,5 @@ img {
 }
 
 .container {
-  @apply px-5 mx-auto
+  @apply px-5 mx-auto max-w-7xl
 }
