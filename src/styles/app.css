@@ -24,7 +24,7 @@
 body {
   @apply text-black min-h-screen font-montserrat bg-white
   transition-colors duration-300
-  dark:bg-slate-800 dark:text-white
+  dark:bg-dark dark:text-white
 }
 
 img {

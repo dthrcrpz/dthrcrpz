@@ -9,7 +9,7 @@
 }
 
 .form-control {
-  @apply w-full px-5 py-3 rounded-full text-black outline-none font-semibold border-4 border-slate-800
+  @apply w-full px-5 py-3 rounded-full text-black outline-none font-semibold border-4 border-dark
   appearance-none
   transition-colors duration-300
   focus:border-primary

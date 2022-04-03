@@ -1,7 +1,7 @@
-<nav class="fixed top-0 left-0 py-4 w-full shadow-sm duration-300 transition-[background-color] bg-white dark:bg-slate-800">
+<nav class="fixed top-0 left-0 py-4 w-full shadow-sm duration-300 transition-[background-color] bg-white dark:bg-dark">
   <div class="container flex justify-between align-middle">
     <div>
-      <a href="/" class="text-2xl font-bold font-fira-code text-slate-800 dark:text-white duration-300 transition-colors">dthrcrpz</a>
+      <a href="/" class="text-2xl font-bold font-fira-code text-dark dark:text-white duration-300 transition-colors">dthrcrpz</a>
     </div>
     <div class="flex items-center">
       <a href={'javascript:void(0)'} class="mr-5 text-black dark:text-white hover:text-primary dark:hover:text-primary duration-300 transition-colors">connect</a>
