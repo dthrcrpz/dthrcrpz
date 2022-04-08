@@ -41,7 +41,7 @@ img {
 }
 
 .container {
-  @apply px-5 mx-auto max-w-7xl
+  @apply px-5 mx-auto max-w-[1366px]
 }
 
 p, h1 {
