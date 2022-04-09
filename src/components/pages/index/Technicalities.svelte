@@ -41,16 +41,19 @@
       <p>List of skills, tools, and tech stacks I use</p>
     </div>
 
-    {#each techStacks as techStack,key}
-      <div class="mt-10 flex flex-row flex-wrap justify-between">
+    {#each techStacks as techStack}
+      <div class="mt-10 md:mt-20 flex flex-row flex-wrap justify-between">
         <div class="w-full md:w-[35%] mb-5">
           <h2 class="text-3xl md:text-4xl font-bold text-tertiary select-none mb-2">{ techStack.type }</h2>
-          <p class="text-dark dark:text-white">{ techStack.description }</p>
+          <p class="text-dark dark:text-white text-sm xl:text-base">{ techStack.description }</p>
         </div>
         <div class="flex flex-row flex-wrap w-full md:w-3/5">
-          {#each techStack.stacks as stack,key}
+          {#each techStack.stacks as stack}
             <div class="stack">
-              <div class="icon w-[40px] h-[40px] flex justify-center items-end mb-5 transition-transform duration-300 {(stack.bg == true) ? 'bg-white px-1 py-1' : null }">
+              <div class="icon w-[40px] h-[40px] flex justify-center items-end mb-5 transition-transform duration-300 {(stack.bg) ? 'bg-white px-1 py-1' : null } relative">
+                {#if stack.learning}
+                  <small class="absolute px-2 py-1 bg-danger text-xs rounded-xl bg-opacity-70 top-0 -rotate-12 text-white">LEARNING</small>
+                {/if}
                 <img class="w-full" src="/images/techs/{ techStack.prefix }/{ stack.filename }" alt={stack.name}>
               </div>
               <p class="text-dark font-fira-code text-sm dark:text-white">{ stack.name }</p>
@@ -67,7 +70,7 @@
     {
       type: 'Front-end',
       prefix: 'frontend',
-      description: `Programming languages, markup languages, and frameworks used to create visual elements of a website that users interact with.`,
+      description: `Programming languages, markup languages, and frameworks used to create visual elements of a website that users can interact with.`,
       stacks: [
         { name: 'HTML', filename: 'html-5.svg' },
         { name: 'CSS', filename: 'css-3.svg' },
@@ -78,12 +81,14 @@
         { name: 'SvelteKit', filename: 'svelte.svg' },
         { name: 'TailwindCSS', filename: 'tailwindcss.svg' },
         { name: 'SASS/SCSS', filename: 'sass.svg' },
+        { name: 'Typescript', filename: 'typescript.svg', learning: true },
+        { name: 'React', filename: 'react.svg', learning: true },
       ]
     },
     {
       type: 'Back-end',
       prefix: 'backend',
-      description: `Lorem`,
+      description: `Programming languages and frameworks that focus on the part of a website that users can't see. It handles all of the server-side logic such as storing of data, user authentication, file storage, and more. APIs are also written in the backend.`,
       stacks: [
         { name: 'Laravel', filename: 'laravel.svg' },
         { name: 'PHP', filename: 'php.svg' },
@@ -93,17 +98,26 @@
       ]
     },
     {
-      type: 'Others',
-      prefix: 'others',
+      type: 'Server and hosting',
+      prefix: 'server-and-hosting',
       description: `Lorem`,
       stacks: [
         { name: 'Ubuntu', filename: 'ubuntu.svg' },
         { name: 'CentOS', filename: 'centos.svg' },
         { name: 'NginX', filename: 'nginx.svg' },
         { name: 'AWS', filename: 'aws.svg', bg: true },
-        { name: 'Git', filename: 'git.svg' },
+        { name: 'Firebase', filename: 'firebase.svg' },
+      ]
+    },
+    {
+      type: 'Tools',
+      prefix: 'tools',
+      description: `Lorem`,
+      stacks: [
         { name: 'VSCode', filename: 'vscode.svg' },
+        { name: 'Git', filename: 'git.svg' },
         { name: 'Postman', filename: 'postman.svg' },
+        { name: 'THE INTERNET', filename: 'edge.svg' },
       ]
     }
   ]
