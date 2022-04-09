@@ -44,6 +44,13 @@ img {
   @apply px-5 mx-auto max-w-[1366px]
 }
 
-p, h1 {
+p, h1, h2 {
   @apply transition-colors duration-300
+}
+
+.stack {
+  @apply flex flex-col items-center mr-5 md:mr-10 mb-5
+}
+.stack:hover .icon {
+  @apply scale-125
 }
