@@ -1,36 +1,18 @@
-<div class="technicalities relative rounded-b-3xl overflow-hidden shadow-sm">
-  <!-- <svg class="absolute left-0 right-0 top-0 bottom-0 opacity-5 object-cover" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1440" height="560" preserveAspectRatio="none" viewBox="0 0 1440 560">
-    <g mask="url(&quot;#SvgjsMask1342&quot;)" fill="none">
-      <g mask="url(&quot;#SvgjsMask1343&quot;)">
-          <path d="M448.5 292.5L487.5 292.5M292.5 292.5L331.5 253.5L370.5 253.5L409.5 253.5L448.5 253.5L487.5 214.5M565.5 253.5L604.5 214.5L643.5 214.5L682.5 214.5M760.5 214.5L799.5 253.5M682.5 253.5L721.5 292.5M838.5 214.5L877.5 175.5L916.5 175.5L955.5 175.5L994.5 136.5L1033.5 136.5M-19.5 292.5L19.5 292.5L58.5 292.5L97.5 292.5L136.5 292.5L175.5 292.5L214.5 292.5L253.5 292.5L292.5 292.5L331.5 292.5L370.5 292.5L409.5 292.5L448.5 292.5L487.5 253.5L526.5 253.5L565.5 253.5L604.5 253.5L643.5 253.5L682.5 253.5L721.5 253.5L760.5 214.5L799.5 214.5L838.5 214.5L877.5 214.5" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="6.5"></path>
-          <path d="M867.75 214.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM477.75 292.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM477.75 214.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM672.75 214.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM789.75 253.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM711.75 292.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM1023.75 136.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0z" class="fill-dark dark:fill-primary transition-colors duration-300"></path>
-          <path d="M-19.5 253.5L19.5 253.5L58.5 253.5L97.5 253.5L136.5 253.5L175.5 253.5L214.5 253.5L253.5 253.5" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="6.5"></path>
-          <path d="M243.75 253.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0z" class="fill-dark dark:fill-primary transition-colors duration-300"></path>
-          <path d="M214.5 331.5L253.5 370.5M487.5 331.5L526.5 370.5L565.5 409.5L604.5 409.5M292.5 331.5L331.5 370.5L370.5 370.5L409.5 370.5L448.5 370.5M526.5 331.5L565.5 292.5L604.5 292.5M-19.5 331.5L19.5 331.5L58.5 331.5L97.5 331.5L136.5 331.5L175.5 331.5L214.5 331.5L253.5 331.5L292.5 331.5L331.5 331.5L370.5 331.5L409.5 331.5L448.5 331.5L487.5 331.5L526.5 331.5L565.5 331.5" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="6.5"></path>
-          <path d="M555.75 331.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM243.75 370.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM594.75 409.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM438.75 370.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM594.75 292.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0z" class="fill-dark dark:fill-primary transition-colors duration-300"></path>
-          <path d="M136.5 214.5L175.5 175.5L214.5 175.5L253.5 136.5L292.5 136.5M253.5 214.5L292.5 175.5L331.5 175.5L370.5 175.5M-19.5 214.5L19.5 214.5L58.5 214.5L97.5 214.5L136.5 214.5L175.5 214.5L214.5 214.5L253.5 214.5L292.5 214.5L331.5 214.5" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="6.5"></path>
-          <path d="M321.75 214.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM282.75 136.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM360.75 175.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0z" class="fill-dark dark:fill-primary transition-colors duration-300"></path>
-          <path d="M331.5 409.5L370.5 448.5L409.5 448.5L448.5 448.5L487.5 448.5M214.5 409.5L253.5 448.5L292.5 448.5L331.5 448.5L370.5 487.5M526.5 448.5L565.5 487.5L604.5 487.5L643.5 487.5L682.5 487.5M97.5 409.5L136.5 370.5M-19.5 370.5L19.5 370.5L58.5 370.5L97.5 409.5L136.5 409.5L175.5 409.5L214.5 409.5L253.5 409.5L292.5 409.5L331.5 409.5L370.5 409.5L409.5 409.5L448.5 409.5L487.5 409.5L526.5 448.5L565.5 448.5L604.5 448.5L643.5 448.5" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="6.5"></path>
-          <path d="M633.75 448.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM477.75 448.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM360.75 487.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM672.75 487.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM126.75 370.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0z" class="fill-dark dark:fill-primary transition-colors duration-300"></path>
-          <path d="M19.5 175.5L58.5 136.5M-19.5 175.5L19.5 175.5L58.5 175.5L97.5 175.5" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="6.5"></path>
-          <path d="M87.75 175.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0zM48.75 136.5 a9.75 9.75 0 1 0 19.5 0 a9.75 9.75 0 1 0 -19.5 0z" class="fill-dark dark:fill-primary transition-colors duration-300"></path>
-      </g>
+<div class="technicalities relative rounded-b-3xl overflow-hidden shadow-sm transition-colors duration-300 border-white dark:border-primary border-b border-opacity-10 dark:border-opacity-10">
+  <svg class="absolute left-0 bottom-0 opacity-10 2xl:w-full 2xl:h-full" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="1366" preserveAspectRatio="none" viewBox="0 0 1366 1366">
+    <g mask="url(&quot;#SvgjsMask1031&quot;)" fill="none">
+      <path d="M1620.35 1160.71C1409.81 1126.47 1337.83 746.64 965.04 614.31 592.24 481.98 790.39 36.34 637.38-79.26" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="2"></path>
+      <path d="M1469.49 771.41C1311.45 699.79 1362.72 282.29 1078.92 197.69 795.13 113.09 812.63-100.03 688.36-119.09" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="2"></path>
+      <path d="M1383.1 1061.84C1267.41 1058.76 1167.96 891.09 952.81 891.09 737.67 891.09 829.36 1146.21 522.53 1061.84 215.69 977.47 306.47 159.33 92.24-46.82" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="2"></path>
+      <path d="M1390.53 160.96C1212.09 184.99 1113.91 600.52 818.15 598.08 522.4 595.64 464.6-57.5 245.78-137.65" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="2"></path>
+      <path d="M1431.99 647.56C1253.57 661.39 1184.5 1051.96 818.48 1016.38 452.46 980.8 481.65 20.68 204.97-163.76" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="2"></path>
     </g>
     <defs>
-      <mask id="SvgjsMask1342">
-        <rect width="1440" height="560" fill="#ffffff"></rect>
-      </mask>
-      <mask id="SvgjsMask1343">
-        <rect width="1440" height="560" fill="white"></rect>
-        <path d="M872.62 214.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM482.62 292.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM482.62 214.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM677.62 214.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM794.62 253.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM716.62 292.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM1028.62 136.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0z" fill="black"></path>
-        <path d="M248.62 253.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0z" fill="black"></path>
-        <path d="M560.62 331.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM248.62 370.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM599.62 409.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM443.62 370.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM599.62 292.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0z" fill="black"></path>
-        <path d="M326.62 214.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM287.62 136.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM365.62 175.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0z" fill="black"></path>
-        <path d="M638.62 448.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM482.62 448.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM365.62 487.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM677.62 487.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM131.62 370.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0z" fill="black"></path>
-        <path d="M92.62 175.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0zM53.62 136.5 a4.88 4.88 0 1 0 9.76 0 a4.88 4.88 0 1 0 -9.76 0z" fill="black"></path>
+      <mask id="SvgjsMask1031">
+        <rect width="1366" height="1366" fill="#ffffff"></rect>
       </mask>
     </defs>
-  </svg> -->
+  </svg>
 
   <div class="container py-10 lg:py-20 relative">
     <div class="heading">
@@ -44,7 +26,7 @@
     {#each techStacks as techStack}
       <div class="mt-10 md:mt-20 flex flex-row flex-wrap justify-between">
         <div class="w-full md:w-[35%] mb-5">
-          <h2 class="text-3xl md:text-4xl font-bold text-tertiary select-none mb-2">{ techStack.type }</h2>
+          <h2 class="text-2xl md:text-4xl font-bold text-tertiary select-none mb-2">{ techStack.type }</h2>
           <p class="text-dark dark:text-white text-sm xl:text-base">{ techStack.description }</p>
         </div>
         <div class="flex flex-row flex-wrap w-full md:w-3/5">
@@ -52,7 +34,7 @@
             <div class="stack">
               <div class="icon w-[40px] h-[40px] flex justify-center items-end mb-5 transition-transform duration-300 {(stack.bg) ? 'bg-white px-1 py-1' : null } relative">
                 {#if stack.learning}
-                  <small class="absolute px-2 py-1 bg-danger text-xs rounded-xl bg-opacity-70 top-0 -rotate-12 text-white">LEARNING</small>
+                  <small class="absolute px-2 py-1 bg-danger text-[10px] rounded-xl bg-opacity-70 top-0 -rotate-12 text-white">LEARNING</small>
                 {/if}
                 <img class="w-full" src="/images/techs/{ techStack.prefix }/{ stack.filename }" alt={stack.name}>
               </div>
@@ -88,19 +70,19 @@
     {
       type: 'Back-end',
       prefix: 'backend',
-      description: `Programming languages and frameworks that focus on the part of a website that users can't see. It handles all of the server-side logic such as storing of data, user authentication, file storage, and more. APIs are also written in the backend.`,
+      description: `Programming languages and frameworks that focus on the part of a website that users can't directly see. It handles all of the server-side logic such as storing of data, user authentication, file storage, and more. APIs are also written in the backend.`,
       stacks: [
         { name: 'Laravel', filename: 'laravel.svg' },
         { name: 'PHP', filename: 'php.svg' },
         { name: 'MySQL', filename: 'mysql.svg' },
-        { name: 'OctoberCMS', filename: 'octobercms.svg' },
         { name: 'AdonisJS', filename: 'adonis.svg' },
+        { name: 'OctoberCMS', filename: 'octobercms.svg', learning: true },
       ]
     },
     {
       type: 'Server and hosting',
       prefix: 'server-and-hosting',
-      description: `Lorem`,
+      description: `These are the Operating Systems, Applications, and Web Services used to host a website and make it accessible in the internet.`,
       stacks: [
         { name: 'Ubuntu', filename: 'ubuntu.svg' },
         { name: 'CentOS', filename: 'centos.svg' },
@@ -112,12 +94,13 @@
     {
       type: 'Tools',
       prefix: 'tools',
-      description: `Lorem`,
+      description: `Applications that are used to build, run, test, and deploy a website. These are used to cast magic spells and start all of the cooking.`,
       stacks: [
         { name: 'VSCode', filename: 'vscode.svg' },
+        { name: 'Terminal', filename: 'terminal.svg' },
         { name: 'Git', filename: 'git.svg' },
         { name: 'Postman', filename: 'postman.svg' },
-        { name: 'THE INTERNET', filename: 'edge.svg' },
+        { name: 'INTERNET', filename: 'edge.svg' },
       ]
     }
   ]
