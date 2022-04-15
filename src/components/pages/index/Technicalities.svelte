@@ -75,6 +75,7 @@
         { name: 'Laravel', filename: 'laravel.svg' },
         { name: 'PHP', filename: 'php.svg' },
         { name: 'MySQL', filename: 'mysql.svg' },
+        { name: 'Redis', filename: 'redis.svg' },
         { name: 'AdonisJS', filename: 'adonis.svg' },
         { name: 'OctoberCMS', filename: 'octobercms.svg', learning: true },
       ]
