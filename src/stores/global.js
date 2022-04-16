@@ -21,7 +21,6 @@ function createThemeStore() {
   return {
     subscribe,
     setTheme: (payload) => {
-      console.log('gagu');
       update(n => payload)
       localStorage.dcTheme = payload
 

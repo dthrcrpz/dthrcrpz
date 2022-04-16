@@ -39,7 +39,13 @@
                 {#if stack.onQueue}
                   <small class="absolute px-2 py-1 bg-danger text-[10px] rounded-xl bg-opacity-50 top-full -rotate-6 text-white">QUEUED</small>
                 {/if}
-                <img class="w-full" src="/images/techs/{ techStack.prefix }/{ stack.filename }" alt={stack.name}>
+                <!-- <img class="w-full" src="/images/techs/{ techStack.prefix }/{ stack.filename }" alt={stack.name}> -->
+                <LazyImage
+                  src="/images/techs/{ techStack.prefix }/{ stack.filename }"
+                  placeholder="/images/extras/100.png"
+                  alt={stack.name}
+                  class="w-full"
+                />
               </div>
               <p class="text-dark font-fira-code text-sm dark:text-white">{ stack.name }</p>
             </div>
@@ -51,6 +57,8 @@
 </div>
 
 <script>
+  import { LazyImage  } from 'svelte-lazy-image'
+
   let techStacks = [
     {
       type: 'Front-end',

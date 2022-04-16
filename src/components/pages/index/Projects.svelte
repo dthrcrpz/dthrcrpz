@@ -12,10 +12,19 @@
         <div class="w-full md:w-1/2 xl:w-1/3 py-4 px-0 md:px-4">
           <div class="rounded-2xl relative group flex-col transition-shadow duration-300 shadow-[0px_1px_8px_0px_#00000020] dark:shadow-[0px_1px_8px_0px_#06b6d430]">
             <a href="google.com" target="_blank" class="agency absolute max-w-[120px] w-full shadow-sm hover:shadow-md hover:shadow-primary shadow-primary transition-all duration-300 opacity-1 xl:opacity-0 group-hover:opacity-100 bg-dark px-3 py-2 rounded-xl z-[2] top-0 left-5 -translate-y-1/2">
-              <img src="https://dthrcrpz.dev/images/projects/agencies/designblue.svg" alt="designblue">
+              <LazyImage
+                src="/images/projects/agencies/designblue.svg"
+                placeholder="/images/extras/100.png"
+                alt="designblue"
+              />
             </a>
             <div class="pt-[60%] xl:pt-[70%] relative w-full rounded-t-2xl xl:rounded-b-2xl overflow-hidden">
-              <img src="https://dthrcrpz.dev/images/projects/websites/kogs.webp" alt="kogs" class="image-cover">
+              <LazyImage
+                src="/images/projects/websites/kogs.png"
+                placeholder="/images/extras/100.png"
+                alt="Lorem Ipsum"
+                class="image-cover"
+              />
             </div>
             <div class="flex flex-col p-5 xl:hidden">
               <p class="font-semibold mb-5 text-lg text-dark dark:text-white">Ride Revolution</p>
@@ -37,3 +46,7 @@
     </div>
   </div>
 </div>
+
+<script>
+  import { LazyImage  } from 'svelte-lazy-image'
+</script>
