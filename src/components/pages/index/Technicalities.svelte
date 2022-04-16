@@ -73,7 +73,7 @@
     {
       type: 'Back-end',
       prefix: 'backend',
-      description: `Programming languages and frameworks that focus on the part of a website that users can't directly see. It handles all of the server-side logic such as storing of data, user authentication, file storage, and more. APIs are also written in the backend.`,
+      description: `Programming languages and frameworks that focus on the part of a website that users can't directly see. It handles all of the server-side logic such as storing of data, user authentication, file storage, and more. APIs are also written at the backend.`,
       stacks: [
         { name: 'Laravel', filename: 'laravel.svg' },
         { name: 'PHP', filename: 'php.svg' },

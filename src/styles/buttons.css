@@ -1,5 +1,5 @@
 .btn {
-  @apply mb-5 font-semibold shadow-md px-5 py-3 rounded-full outline-none
+  @apply font-semibold shadow-md px-5 py-3 rounded-full outline-none text-sm md:text-base
   duration-300 transition-shadow
 }
 

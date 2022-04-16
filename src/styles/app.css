@@ -54,3 +54,7 @@ p, h1, h2 {
 .stack:hover .icon {
   @apply scale-125
 }
+
+.image-cover {
+  @apply absolute top-0 bottom-0 left-0 right-0 m-auto object-cover w-full h-full
+}
