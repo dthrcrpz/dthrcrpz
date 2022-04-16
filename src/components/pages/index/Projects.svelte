@@ -10,13 +10,23 @@
     <div class="flex justify-start flex-wrap mt-5 xl:mt-10">
       {#each { length: 5 } as item}
         <div class="w-full md:w-1/2 xl:w-1/3 py-4 px-0 md:px-4">
-          <div class="rounded-2xl overflow-hidden flex-col transition-shadow duration-300 shadow-[0px_1px_8px_0px_#00000020] dark:shadow-[0px_1px_8px_0px_#06b6d430]">
-            <div class="pt-[60%] xl:pt-[70%] relative w-full">
+          <div class="rounded-2xl relative group flex-col transition-shadow duration-300 shadow-[0px_1px_8px_0px_#00000020] dark:shadow-[0px_1px_8px_0px_#06b6d430]">
+            <a href="google.com" target="_blank" class="agency absolute max-w-[120px] w-full shadow-sm hover:shadow-md hover:shadow-primary shadow-primary transition-all duration-300 opacity-1 xl:opacity-0 group-hover:opacity-100 bg-dark px-3 py-2 rounded-xl z-[2] top-0 left-5 -translate-y-1/2">
+              <img src="https://dthrcrpz.dev/images/projects/agencies/designblue.svg" alt="designblue">
+            </a>
+            <div class="pt-[60%] xl:pt-[70%] relative w-full rounded-t-2xl xl:rounded-b-2xl overflow-hidden">
               <img src="https://dthrcrpz.dev/images/projects/websites/kogs.webp" alt="kogs" class="image-cover">
             </div>
             <div class="flex flex-col p-5 xl:hidden">
               <p class="font-semibold mb-5 text-lg text-dark dark:text-white">Ride Revolution</p>
               <a href="https://google.com" target="_blank" class="btn btn-primary has-image">
+                <span>VISIT WEBSITE</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-white"><path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg>
+              </a>
+            </div>
+            <div class="overlay absolute hidden xl:flex flex-col justify-center items-center w-full h-full top-0 left-0 m-auto transition-colors duration-300 bg-dark rounded-2xl bg-opacity-0 group-hover:bg-opacity-80">
+              <p class="text-white font-bold text-2xl mb-3 text-center max-w-[300px] w-full transition-all duration-300 -translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">Project Name</p>
+              <a href="https://google.com" target="_blank" class="btn btn-primary has-image transition-all translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
                 <span>VISIT WEBSITE</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-white"><path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></svg>
               </a>
