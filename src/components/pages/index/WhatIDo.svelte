@@ -47,7 +47,7 @@
             <div>
               <p class="font-bold text-2xl text-tertiary mb-2">As a freelancer</p>
               <p class="text-sm md:text-base text-dark dark:text-white mb-2">I help businesses grow by building them a strong online presence so they can communicate quality information to their customers.</p>
-              <p class="text-sm md:text-base text-dark dark:text-white">I also like working with eCommerce websites so if you're selling products and you want the customers to avail them online but outside of social media, hit me up!</p>
+              <p class="text-sm md:text-base text-dark dark:text-white">I also like working with eCommerce websites so if you want to sell your products online BUT outside of social media, hit me up!</p>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@
             <div>
               <p class="font-bold text-2xl text-tertiary mb-2">As a human being</p>
               <p class="text-sm md:text-base text-dark dark:text-white mb-2">I play lots of video games. I'm a huge fan of Pokemon, Witcher, Legend of Zelda, and DotA.</p>
-              <p class="text-sm md:text-base text-dark dark:text-white mb-2">I drink a lot and I like getting wasted.</p>
+              <p class="text-sm md:text-base text-dark dark:text-white mb-2">I drink a lot during parties/celebrations and I like getting wasted.</p>
               <p class="text-sm md:text-base text-dark dark:text-white">Since technology never stops growing, I always keep myself updated by trying out new tech stacks every month.</p>
             </div>
           </div>

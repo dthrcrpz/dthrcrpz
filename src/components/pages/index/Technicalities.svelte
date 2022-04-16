@@ -32,9 +32,12 @@
         <div class="flex flex-row flex-wrap w-full md:w-3/5">
           {#each techStack.stacks as stack}
             <div class="stack">
-              <div class="icon w-[40px] h-[40px] flex justify-center items-end mb-5 transition-transform duration-300 {(stack.bg) ? 'bg-white px-1 py-1' : null } relative">
+              <div class="icon w-[40px] h-[40px] flex justify-center items-end mb-5 transition-transform duration-300 {(stack.bg) ? 'bg-white px-1 py-1 rounded-md' : null } relative">
                 {#if stack.learning}
-                  <small class="absolute px-2 py-1 bg-danger text-[10px] rounded-xl bg-opacity-70 top-0 -rotate-12 text-white">LEARNING</small>
+                  <small class="absolute px-2 py-1 bg-secondary text-[10px] rounded-xl bg-opacity-50 top-full -rotate-6 text-white">LEARNING</small>
+                {/if}
+                {#if stack.onQueue}
+                  <small class="absolute px-2 py-1 bg-danger text-[10px] rounded-xl bg-opacity-50 top-full -rotate-6 text-white">QUEUED</small>
                 {/if}
                 <img class="w-full" src="/images/techs/{ techStack.prefix }/{ stack.filename }" alt={stack.name}>
               </div>
@@ -57,14 +60,14 @@
         { name: 'HTML', filename: 'html-5.svg' },
         { name: 'CSS', filename: 'css-3.svg' },
         { name: 'Javascript', filename: 'javascript.svg' },
+        { name: 'SASS/SCSS', filename: 'sass.svg' },
         { name: 'VueJS', filename: 'vue.svg' },
         { name: 'NuxtJS', filename: 'nuxt.svg' },
-        { name: 'Svelte', filename: 'svelte.svg' },
-        { name: 'SvelteKit', filename: 'svelte.svg' },
         { name: 'TailwindCSS', filename: 'tailwindcss.svg' },
-        { name: 'SASS/SCSS', filename: 'sass.svg' },
-        { name: 'Typescript', filename: 'typescript.svg', learning: true },
-        { name: 'React', filename: 'react.svg', learning: true },
+        { name: 'Svelte', filename: 'svelte.svg' },
+        { name: 'Astro', filename: 'astro.svg', bg:true, learning: true },
+        { name: 'Typescript', filename: 'typescript.svg', onQueue: true },
+        { name: 'React', filename: 'react.svg', onQueue: true },
       ]
     },
     {
