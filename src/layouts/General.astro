@@ -50,6 +50,16 @@ const canonicalUrl = Astro.canonicalURL
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KPE51N98R"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-5KPE51N98R');
+		</script>
 	</head>
 	<body>
     <Navbar client:load/>
