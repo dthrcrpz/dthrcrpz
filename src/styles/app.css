@@ -59,3 +59,11 @@ p, h1, h2 {
 .image-cover {
   @apply absolute top-0 bottom-0 left-0 right-0 m-auto object-cover w-full h-full
 }
+
+.loading {
+  @apply fixed top-0 left-0 right-0 bottom-0 m-auto h-full w-full flex bg-black z-50 bg-opacity-60 cursor-progress;
+  background-image: url('/images/extras/loading.svg');
+  background-size: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+}

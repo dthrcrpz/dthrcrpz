@@ -14,7 +14,7 @@
           <label class="block mb-2" for="first-name">First Name: <span class="text-tertiary">*</span></label>
           <input type="text" id="first-name" name="first_name" placeholder="Your first name" class="form-control">
           {#if $errors.first_name}
-            <span class="validation-errors" transition:fade= {{ duration: 300 }}>{ $errors.first_name }</span>
+            <span class="validation-errors" transition:fade={{ duration: 300 }}>{ $errors.first_name }</span>
           {/if}
         </div>
         
@@ -22,7 +22,7 @@
           <label class="block mb-2" for="last-name">Last Name: <span class="text-tertiary">*</span></label>
           <input type="text" id="last-name" name="last_name" placeholder="Your last name" class="form-control">
           {#if $errors.last_name}
-            <span class="validation-errors" transition:fade>{ $errors.last_name }</span>
+            <span class="validation-errors" transition:fade={{ duration: 300 }}>{ $errors.last_name }</span>
           {/if}
         </div>
       </div>
@@ -32,7 +32,7 @@
           <label class="block mb-2" for="email">Email: <span class="text-tertiary">*</span></label>
           <input type="text" id="email" name="email" placeholder="Your email" class="form-control">
           {#if $errors.email}
-            <span class="validation-errors" transition:fade>{ $errors.email }</span>
+            <span class="validation-errors" transition:fade={{ duration: 300 }}>{ $errors.email }</span>
           {/if}
         </div>
       </div>
@@ -41,7 +41,7 @@
         <label class="block mb-2" for="message">Message: <span class="text-tertiary">*</span></label>
         <textarea id="message" name="message" placeholder="Your message" rows="6" class="form-control"></textarea>
         {#if $errors.message}
-          <span class="validation-errors" transition:fade>{ $errors.message }</span>
+          <span class="validation-errors" transition:fade={{ duration: 300 }}>{ $errors.message }</span>
         {/if}
       </div>
 
@@ -53,6 +53,10 @@
       </div>
     </form>
   </div>
+
+  {#if loading}
+    <div class="loading" transition:fade={{ duration: 300 }}></div>
+  {/if}
 </section>
 
 <style>
@@ -94,6 +98,8 @@
   import Inquiry from '../../../services/Inquiry'
 
   /* data */
+  let loading = false
+
   const schema = yup.object({
     first_name: yup.string().required('First name is required'),
     last_name: yup.string().required('Last name is required'),
@@ -101,20 +107,22 @@
     message: yup.string().required('Message is required')
   })
 
-  const { form, errors, isValid } = createForm({
+  const { form, errors, isValid, reset } = createForm({
     initialValues: {
-      first_name: 'asdasd',
-      last_name: 'asdas',
-      email: 'asdad@dddd.ddd',
-      message: 'asdasd'
+      first_name: '',
+      last_name: '',
+      email: '',
+      message: ''
     },
     extend: validator({ schema }),
     onSubmit(values, context) {
-      console.log(values)
+      loading = true
       Inquiry.add(values).then(res => {
-        console.log(res.data)
+        reset()
       }).catch(err => {
         console.log(err)
+      }).then(() => {
+        loading = false
       })
     }
   })
