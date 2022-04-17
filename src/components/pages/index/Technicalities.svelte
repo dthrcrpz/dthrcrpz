@@ -42,7 +42,7 @@
                 <!-- <img class="w-full" src="/images/techs/{ techStack.prefix }/{ stack.filename }" alt={stack.name}> -->
                 <LazyImage
                   src="/images/techs/{ techStack.prefix }/{ stack.filename }"
-                  placeholder="/images/extras/100.png"
+                  placeholder="/images/extras/loading.svg"
                   alt={stack.name}
                   class="w-full"
                 />
