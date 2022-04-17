@@ -14,7 +14,7 @@
           <label class="block mb-2" for="first-name">First Name: <span class="text-tertiary">*</span></label>
           <input type="text" id="first-name" name="first_name" placeholder="Your first name" class="form-control">
           {#if $errors.first_name}
-            <span class="validation-errors" transition:fade>{ $errors.first_name }</span>
+            <span class="validation-errors" transition:fade= {{ duration: 300 }}>{ $errors.first_name }</span>
           {/if}
         </div>
         
@@ -45,9 +45,10 @@
         {/if}
       </div>
 
-      <div class="flex">
-        <button class="btn btn-primary" on:click={handleSubmit}>
+      <div class="flex justify-end">
+        <button class="submit btn btn-primary has-image" on:click={handleSubmit}>
           <span>Submit</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="fill-white" width="24" height="24" viewBox="0 0 24 24"><path d="M0 12l11 3.1 7-8.1-8.156 5.672-4.312-1.202 15.362-7.68-3.974 14.57-3.75-3.339-2.17 2.925v-.769l-2-.56v7.383l4.473-6.031 4.527 4.031 6-22z"/></svg>
         </button>
       </div>
     </form>
@@ -62,7 +63,7 @@
   .validation-errors {
     top: calc(100% + -4px);
     box-shadow: 0 2px 9px rgba(0, 0, 0, 0.4);
-    @apply absolute bg-danger text-white text-sm z-[3] py-1 px-4 rounded-sm select-none left-[10px] duration-500;
+    @apply absolute bg-danger text-white text-sm z-[3] py-1 px-4 rounded-lg select-none left-[10px] duration-500;
   }
 
   .validation-errors::before {
@@ -72,6 +73,11 @@
     border-right: 7px solid transparent;
     border-bottom: 7px solid #be123c;
     @apply absolute w-0 h-0 left-[17px] z-[1];
+  }
+
+  .submit {
+    max-width: 150px;
+    width: 100%;
   }
 </style>
 
