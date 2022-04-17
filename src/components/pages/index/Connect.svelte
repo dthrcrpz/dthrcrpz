@@ -91,6 +91,7 @@
   import { validator } from '@felte/validator-yup'
   import * as yup from 'yup'
   import { fade } from 'svelte/transition';
+  import Inquiry from '../../../services/Inquiry'
 
   /* data */
   const schema = yup.object({
@@ -102,15 +103,19 @@
 
   const { form, errors, isValid } = createForm({
     initialValues: {
-      first_name: '',
-      last_name: '',
-      email: '',
-      message: ''
+      first_name: 'asdasd',
+      last_name: 'asdas',
+      email: 'asdad@dddd.ddd',
+      message: 'asdasd'
     },
     extend: validator({ schema }),
     onSubmit(values, context) {
       console.log(values)
-      // call api here
+      Inquiry.add(values).then(res => {
+        console.log(res.data)
+      }).catch(err => {
+        console.log(err)
+      })
     }
   })
 
