@@ -1,4 +1,4 @@
-<div class="connect relative rounded-b-3xl overflow-hidden shadow-sm transition-colors duration-300 border-white dark:border-primary border-b border-opacity-10 dark:border-opacity-10">
+<section class="connect relative rounded-b-3xl overflow-hidden shadow-sm transition-colors duration-300 border-white dark:border-primary border-b border-opacity-10 dark:border-opacity-10">
   <div class="container py-10 lg:py-20 relative">
     <div class="heading">
       <h1>
@@ -8,4 +8,4 @@
       <p>Wanna talk? Message me and I'll get back to you <br> as soon as I can</p>
     </div>
   </div>
-</div>
+</section>

@@ -1,4 +1,4 @@
-<div class="what-i-do relative rounded-b-3xl overflow-hidden shadow-sm transition-colors duration-300 border-white dark:border-primary border-b border-opacity-10 dark:border-opacity-10">
+<section class="what-i-do relative rounded-b-3xl overflow-hidden shadow-sm transition-colors duration-300 border-white dark:border-primary border-b border-opacity-10 dark:border-opacity-10">
   <svg class="absolute left-0 right-0 top-0 bottom-0 opacity-10 xl:w-full xl:h-full" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="560" preserveAspectRatio="none" viewBox="0 0 1440 560">
     <g mask="url(&quot;#SvgjsMask1185&quot;)" fill="none">
       <path d="M -218.33805086830733,173 C -146.34,234.2 -2.34,496 141.66194913169267,479 C 285.66,462 357.66,103.4 501.66194913169267,88 C 645.66,72.6 717.66,413.6 861.6619491316926,402 C 1005.66,390.4 1077.66,6 1221.6619491316926,30 C 1365.66,54 1537.99,486.2 1581.6619491316926,522 C 1625.33,557.8 1468.33,271.6 1440,209" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="2"></path>
@@ -70,4 +70,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>

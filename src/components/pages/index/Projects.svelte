@@ -1,4 +1,4 @@
-<div class="projects relative rounded-b-3xl overflow-hidden shadow-sm transition-colors duration-300 border-white dark:border-primary border-b border-opacity-10 dark:border-opacity-10">
+<section class="projects relative overflow-hidden shadow-sm transition-colors duration-300 border-white dark:border-primary border-b border-opacity-10 dark:border-opacity-10">
   <svg class="absolute left-0 bottom-0 opacity-10 2xl:w-full 2xl:h-full" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="1366" preserveAspectRatio="none" viewBox="0 0 1366 1366">
       <g fill="none">
           <path d="M577.15-10.32C379.09 168.88 432.82 936.31 173.01 978.68-86.8 1021.05-104.39 682.24-231.13 664.5" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="2"></path>
@@ -60,7 +60,7 @@
       {/each}
     </div>
   </div>
-</div>
+</section>
 
 <script>
   import { LazyImage  } from 'svelte-lazy-image'
