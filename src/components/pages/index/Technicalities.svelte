@@ -34,10 +34,10 @@
             <div class="stack">
               <div class="icon w-[40px] h-[40px] flex justify-center items-end mb-5 transition-transform duration-300 {(stack.bg) ? 'bg-white px-1 py-1 rounded-md' : null } relative">
                 {#if stack.learning}
-                  <small class="absolute px-2 py-1 bg-secondary text-[10px] rounded-xl bg-opacity-50 top-full -rotate-6 text-white">LEARNING</small>
+                  <small class="absolute px-2 py-1 bg-secondary text-[10px] rounded-xl bg-opacity-50 top-0 -rotate-6 text-white">LEARNING</small>
                 {/if}
                 {#if stack.onQueue}
-                  <small class="absolute px-2 py-1 bg-danger text-[10px] rounded-xl bg-opacity-50 top-full -rotate-6 text-white">QUEUED</small>
+                  <small class="absolute px-2 py-1 bg-danger text-[10px] rounded-xl bg-opacity-50 top-0 -rotate-6 text-white">QUEUED</small>
                 {/if}
                 <!-- <img class="w-full" src="/images/techs/{ techStack.prefix }/{ stack.filename }" alt={stack.name}> -->
                 <LazyImage
