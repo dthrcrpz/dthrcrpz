@@ -73,7 +73,7 @@
         { name: 'NuxtJS', filename: 'nuxt.svg' },
         { name: 'TailwindCSS', filename: 'tailwindcss.svg' },
         { name: 'Svelte', filename: 'svelte.svg' },
-        { name: 'Astro', filename: 'astro.svg', bg:true, learning: true },
+        { name: 'Astro', filename: 'astro.svg' },
         { name: 'Typescript', filename: 'typescript.svg', onQueue: true },
         { name: 'React', filename: 'react.svg', onQueue: true },
       ]

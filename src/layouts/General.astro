@@ -5,6 +5,7 @@ import '../styles/forms.css'
 import '../styles/types.css'
 
 import Navbar from '../components/global/Navbar.svelte'
+import Footer from '../components/global/Footer.astro'
 const { title } = Astro.props
 const canonicalUrl = Astro.canonicalURL
 ---
@@ -55,5 +56,6 @@ const canonicalUrl = Astro.canonicalURL
 		<div class="pt-[75.92px]">
 			<slot></slot>
 		</div>
+		<Footer/>
 	</body>
 </html>

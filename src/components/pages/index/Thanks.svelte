@@ -67,11 +67,11 @@
     <p class="text-lg lg:text-xl font-semibold text-dark dark:text-white">Thank you for coming this far!</p>
       <h3 class="text-3xl lg:text-5xl font-bold mt-0 lg:mt-2 text-primary">What can I do for you?</h3>
       <div class="mt-5 flex flex-wrap lg:flex-nowrap">
-        <button class="btn btn-primary has-image mr-2 mb-3 lg:mb-0">
+        <button class="btn btn-primary has-image mr-2 mb-3 lg:mb-0" on:click={scrollToConnect}>
           <span>I'm recruiting</span>
           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="fill-white" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 22.917h-24v-13.275l2-1.456v-7.269h20v7.272l2 1.453v13.275zm-21-10.472v-10.528h18v10.526l-9 5.474-9-5.472zm6-8.916l1.305 2.41 2.695.496-1.888 1.986.36 2.717-2.472-1.183-2.472 1.183.36-2.717-1.888-1.986 2.695-.496 1.305-2.41zm8 6.471v1h-3v-1h3zm2-2v1h-5v-1h5zm0-2v1h-5v-1h5zm0-2v1h-5v-1h5z"/></svg>
         </button>
-        <button class="btn btn-secondary has-image mr-2 mb-3 lg:mb-0">
+        <button class="btn btn-secondary has-image mr-2 mb-3 lg:mb-0" on:click={scrollToConnect}>
           <span>I want a website</span>
           <svg width="24" height="24" class="fill-white" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12m2.557 16h-5.115c.546 2.46 1.441 4.114 2.558 5.744 1.194-1.741 2.041-3.41 2.557-5.744m-7.157 0h-4.567c1.236 2.825 3.704 4.972 6.755 5.716-1.048-1.733-1.783-3.658-2.188-5.716m13.767 0h-4.567c-.391 1.988-1.095 3.887-2.175 5.694 3.012-.763 5.517-2.895 6.742-5.694m-14.005-6h-4.962c-.267 1.313-.267 2.685 0 4h4.915c-.119-1.329-.101-2.672.047-4m7.661 0h-5.647c-.165 1.326-.185 2.672-.053 4h5.753c.133-1.328.111-2.673-.053-4m6.977 0h-4.963c.148 1.328.166 2.671.048 4h4.915c.26-1.285.273-2.648 0-4m-12.156-7.729c-3.077.732-5.567 2.886-6.811 5.729h4.653c.435-2.042 1.178-3.985 2.158-5.729m2.355-.048c-1.089 1.77-1.91 3.453-2.463 5.777h4.927c-.534-2.246-1.337-3.948-2.464-5.777m2.368.069c1.013 1.812 1.733 3.76 2.146 5.708h4.654c-1.232-2.816-3.762-4.958-6.8-5.708"/></svg>
         </button>
@@ -83,3 +83,11 @@
     </div>
   </div>
 </div>
+
+<script>
+  function scrollToConnect() {
+    document.querySelector('#connect').scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+</script>
