@@ -9,7 +9,7 @@
     </div>
 
     <form class="mt-10" use:form>
-      <div class="flex two-cols justify-between">
+      <div class="flex two-cols flex-wrap justify-between">
         <div class="form-group">
           <label class="block mb-2" for="first-name">First Name: <span class="text-tertiary">*</span></label>
           <input type="text" id="first-name" name="first_name" placeholder="Your first name" class="form-control">
@@ -27,7 +27,7 @@
         </div>
       </div>
 
-      <div class="flex two-cols justify-between">
+      <div class="flex two-cols flex-wrap justify-between">
         <div class="form-group">
           <label class="block mb-2" for="email">Email: <span class="text-tertiary">*</span></label>
           <input type="text" id="email" name="email" placeholder="Your email" class="form-control">
@@ -57,7 +57,12 @@
 
 <style>
   .two-cols .form-group {
-    @apply w-[49%];
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    .two-cols .form-group {
+      width: 49%;
+    }
   }
 
   .validation-errors {

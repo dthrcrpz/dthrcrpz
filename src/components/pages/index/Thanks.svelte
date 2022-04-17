@@ -1,5 +1,5 @@
 <div class="bg-gray-200 py-10 transition-colors duration-300 dark:bg-slate-900 relative">
-  <svg class="absolute right-0 top-0 bottom-0 opacity-10" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1000" height="300" preserveAspectRatio="none" viewBox="0 0 1000 300">
+  <svg class="absolute right-0 top-0 bottom-0 opacity-10 hidden lg:block z-[1]" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1000" height="300" preserveAspectRatio="none" viewBox="0 0 1000 300">
     <g mask="url(&quot;#SvgjsMask1421&quot;)" fill="none">
         <g mask="url(&quot;#SvgjsMask1422&quot;)">
             <path d="M635.5 77.5L604.5 108.5L573.5 108.5M883.5 108.5L852.5 139.5M449.5 108.5L418.5 77.5L387.5 77.5M263.5 108.5L232.5 77.5L201.5 77.5L170.5 77.5L139.5 77.5L108.5 77.5L77.5 77.5M1007.5 139.5L976.5 139.5L945.5 139.5L914.5 139.5L883.5 139.5L852.5 170.5L821.5 170.5M697.5 77.5L666.5 108.5L635.5 108.5L604.5 139.5L573.5 139.5L542.5 139.5M511.5 108.5L480.5 139.5L449.5 139.5L418.5 139.5M1038.5 139.5L1007.5 139.5L976.5 108.5L945.5 108.5L914.5 108.5L883.5 108.5L852.5 108.5L821.5 108.5L790.5 108.5L759.5 108.5L728.5 77.5L697.5 77.5L666.5 77.5L635.5 77.5L604.5 77.5L573.5 77.5L542.5 77.5L511.5 108.5L480.5 108.5L449.5 108.5L418.5 108.5L387.5 108.5L356.5 108.5L325.5 108.5L294.5 108.5L263.5 108.5L232.5 108.5L201.5 108.5L170.5 108.5" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="5.17"></path>
@@ -26,7 +26,7 @@
     </defs>
   </svg>
 
-  <div class="container flex items-center flex-col md:flex-row">
+  <div class="container flex items-center flex-col md:flex-row relative z-[2]">
 
     <div class="mr-10 mb-10 lg:mb-0">
       <svg width="291" height="216" viewBox="0 0 291 216" fill="none" xmlns="http://www.w3.org/2000/svg">
