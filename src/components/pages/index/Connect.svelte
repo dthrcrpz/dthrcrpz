@@ -1,4 +1,4 @@
-<section class="connect relative rounded-b-3xl overflow-hidden shadow-sm transition-colors duration-300 border-white dark:border-primary border-b border-opacity-10 dark:border-opacity-10">
+<section id="connect" class="connect relative rounded-b-3xl overflow-hidden shadow-sm transition-colors duration-300 border-white dark:border-primary border-b border-opacity-10 dark:border-opacity-10">
   <div class="container py-10 lg:py-20 relative">
     <div class="heading">
       <h1>
@@ -7,5 +7,111 @@
       </h1>
       <p>Wanna talk? Message me and I'll get back to you <br> as soon as I can</p>
     </div>
+
+    <form class="mt-10" use:form>
+      <div class="flex two-cols justify-between">
+        <div class="form-group">
+          <label class="block mb-2" for="first-name">First Name: <span class="text-tertiary">*</span></label>
+          <input type="text" id="first-name" name="first_name" placeholder="Your first name" class="form-control">
+          {#if $errors.first_name}
+            <span class="validation-errors" transition:fade>{ $errors.first_name }</span>
+          {/if}
+        </div>
+        
+        <div class="form-group">
+          <label class="block mb-2" for="last-name">Last Name: <span class="text-tertiary">*</span></label>
+          <input type="text" id="last-name" name="last_name" placeholder="Your last name" class="form-control">
+          {#if $errors.last_name}
+            <span class="validation-errors" transition:fade>{ $errors.last_name }</span>
+          {/if}
+        </div>
+      </div>
+
+      <div class="flex two-cols justify-between">
+        <div class="form-group">
+          <label class="block mb-2" for="email">Email: <span class="text-tertiary">*</span></label>
+          <input type="text" id="email" name="email" placeholder="Your email" class="form-control">
+          {#if $errors.email}
+            <span class="validation-errors" transition:fade>{ $errors.email }</span>
+          {/if}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="block mb-2" for="message">Message: <span class="text-tertiary">*</span></label>
+        <textarea id="message" name="message" placeholder="Your message" rows="6" class="form-control"></textarea>
+        {#if $errors.message}
+          <span class="validation-errors" transition:fade>{ $errors.message }</span>
+        {/if}
+      </div>
+
+      <div class="flex">
+        <button class="btn btn-primary" on:click={handleSubmit}>
+          <span>Submit</span>
+        </button>
+      </div>
+    </form>
   </div>
 </section>
+
+<style>
+  .two-cols .form-group {
+    @apply w-[49%];
+  }
+
+  .validation-errors {
+    top: calc(100% + -4px);
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.4);
+    @apply absolute bg-danger text-white text-sm z-[3] py-1 px-4 rounded-sm select-none left-[10px] duration-500;
+  }
+
+  .validation-errors::before {
+    content: "";
+    bottom: calc(100% - 1px);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #be123c;
+    @apply absolute w-0 h-0 left-[17px] z-[1];
+  }
+</style>
+
+<script>
+  import { createForm } from 'felte'
+  import { validator } from '@felte/validator-yup'
+  import * as yup from 'yup'
+  import { fade } from 'svelte/transition';
+
+  /* data */
+  const schema = yup.object({
+    first_name: yup.string().required('First name is required'),
+    last_name: yup.string().required('Last name is required'),
+    email: yup.string().required('Email is required').email('Invalid email address'),
+    message: yup.string().required('Message is required')
+  })
+
+  const { form, errors, isValid } = createForm({
+    initialValues: {
+      first_name: '',
+      last_name: '',
+      email: '',
+      message: ''
+    },
+    extend: validator({ schema }),
+    onSubmit(values, context) {
+      console.log(values)
+      // call api here
+    }
+  })
+
+  function handleSubmit () {
+    if (!$isValid) {
+      setTimeout(() => {
+        if (document.querySelectorAll('[aria-invalid="true"]').length > 0) {
+          document.querySelector('[aria-invalid="true"]').scrollIntoView({
+            behavior: 'smooth'
+          })
+        }
+      }, 200)
+    }
+  }
+</script>

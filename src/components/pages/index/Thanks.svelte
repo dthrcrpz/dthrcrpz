@@ -37,8 +37,8 @@
     </div>
 
     <div>
-      <h3 class="text-3xl lg:text-5xl font-bold mb-2 text-primary">Thank you for coming this far!</h3>
-      <p class="text-xl font-semibold text-dark dark:text-white">Now, what can I do for you?</p>
+    <p class="text-lg lg:text-xl font-semibold text-dark dark:text-white">Thank you for coming this far!</p>
+      <h3 class="text-3xl lg:text-5xl font-bold mt-0 lg:mt-2 text-primary">What can I do for you?</h3>
       <div class="mt-5 flex flex-wrap lg:flex-nowrap">
         <button class="btn btn-primary has-image mr-2 mb-3 lg:mb-0">
           <span>I'm recruiting</span>

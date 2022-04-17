@@ -1,18 +1,25 @@
 .form-group {
-  @apply mb-5
+  @apply mb-5 relative
 }
 .form-group label {
-  @apply block mb-2
+  @apply block mb-2 transition-colors duration-300 text-dark dark:text-white
 }
 .form-group label span {
   @apply text-tertiary
 }
 
 .form-control {
-  @apply w-full px-5 py-3 rounded-full text-black outline-none font-semibold border-4 border-dark
+  @apply w-full px-5 py-3 rounded-3xl text-black outline-none font-semibold border-2 border-dark
   appearance-none
   transition-colors duration-300
   focus:border-primary
+}
+.form-control[aria-invalid="true"] {
+  @apply border-danger border-2
+}
+
+textarea.form-control {
+  @apply rounded-3xl resize-none
 }
 select.form-control {
   background-image: url('/images/icons/arrow-down.svg');

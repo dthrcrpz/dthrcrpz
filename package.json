@@ -15,6 +15,9 @@
     "svelte": "^3.46.4"
   },
   "dependencies": {
-    "svelte-lazy-image": "^0.5.1"
+    "@felte/validator-yup": "^1.0.5",
+    "felte": "^1.1.7",
+    "svelte-lazy-image": "^0.5.1",
+    "yup": "^0.32.11"
   }
 }
