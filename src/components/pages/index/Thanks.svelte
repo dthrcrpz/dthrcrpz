@@ -1,7 +1,7 @@
 <div class="bg-gray-200 py-10 transition-colors duration-300 dark:bg-slate-900">
-  <div class="container flex items-center">
+  <div class="container flex items-center flex-col md:flex-row">
 
-    <div class="mr-10">
+    <div class="mr-10 mb-10 lg:mb-0">
       <svg width="291" height="216" viewBox="0 0 291 216" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Evil Face">
           <g id="eyes and glasses">
@@ -37,18 +37,18 @@
     </div>
 
     <div>
-      <h3 class="text-5xl font-bold mb-2 text-primary">Thank you for coming this far!</h3>
+      <h3 class="text-3xl lg:text-5xl font-bold mb-2 text-primary">Thank you for coming this far!</h3>
       <p class="text-xl font-semibold text-dark dark:text-white">Now, what can I do for you?</p>
-      <div class="mt-5 flex">
-        <button class="btn btn-primary has-image mr-2 mb-2">
+      <div class="mt-5 flex flex-wrap lg:flex-nowrap">
+        <button class="btn btn-primary has-image mr-2 mb-3 lg:mb-0">
           <span>I'm recruiting</span>
           <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="fill-white" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 22.917h-24v-13.275l2-1.456v-7.269h20v7.272l2 1.453v13.275zm-21-10.472v-10.528h18v10.526l-9 5.474-9-5.472zm6-8.916l1.305 2.41 2.695.496-1.888 1.986.36 2.717-2.472-1.183-2.472 1.183.36-2.717-1.888-1.986 2.695-.496 1.305-2.41zm8 6.471v1h-3v-1h3zm2-2v1h-5v-1h5zm0-2v1h-5v-1h5zm0-2v1h-5v-1h5z"/></svg>
         </button>
-        <button class="btn btn-secondary has-image mr-2 mb-2">
+        <button class="btn btn-secondary has-image mr-2 mb-3 lg:mb-0">
           <span>I want a website</span>
           <svg width="24" height="24" class="fill-white" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12m2.557 16h-5.115c.546 2.46 1.441 4.114 2.558 5.744 1.194-1.741 2.041-3.41 2.557-5.744m-7.157 0h-4.567c1.236 2.825 3.704 4.972 6.755 5.716-1.048-1.733-1.783-3.658-2.188-5.716m13.767 0h-4.567c-.391 1.988-1.095 3.887-2.175 5.694 3.012-.763 5.517-2.895 6.742-5.694m-14.005-6h-4.962c-.267 1.313-.267 2.685 0 4h4.915c-.119-1.329-.101-2.672.047-4m7.661 0h-5.647c-.165 1.326-.185 2.672-.053 4h5.753c.133-1.328.111-2.673-.053-4m6.977 0h-4.963c.148 1.328.166 2.671.048 4h4.915c.26-1.285.273-2.648 0-4m-12.156-7.729c-3.077.732-5.567 2.886-6.811 5.729h4.653c.435-2.042 1.178-3.985 2.158-5.729m2.355-.048c-1.089 1.77-1.91 3.453-2.463 5.777h4.927c-.534-2.246-1.337-3.948-2.464-5.777m2.368.069c1.013 1.812 1.733 3.76 2.146 5.708h4.654c-1.232-2.816-3.762-4.958-6.8-5.708"/></svg>
         </button>
-        <button class="btn btn-danger has-image mr-2 mb-2">
+        <button class="btn btn-danger has-image mr-2 mb-3 lg:mb-0">
           <span>Nah, just browsing</span>
           <svg xmlns="http://www.w3.org/2000/svg" class="fill-white" width="24" height="24" viewBox="0 0 24 24"><path d="M12.015 7c4.751 0 8.063 3.012 9.504 4.636-1.401 1.837-4.713 5.364-9.504 5.364-4.42 0-7.93-3.536-9.478-5.407 1.493-1.647 4.817-4.593 9.478-4.593zm0-2c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 7l-3.36-2.171c-.405.625-.64 1.371-.64 2.171 0 2.209 1.791 4 4 4s4-1.791 4-4-1.791-4-4-4c-.742 0-1.438.202-2.033.554l2.033 3.446z"/></svg>
         </button>
