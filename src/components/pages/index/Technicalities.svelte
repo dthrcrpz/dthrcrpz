@@ -37,7 +37,7 @@
                   <small class="absolute px-2 py-1 bg-secondary text-[10px] rounded-xl bg-opacity-50 top-0 -rotate-6 text-white">LEARNING</small>
                 {/if}
                 {#if stack.onQueue}
-                  <small class="absolute px-2 py-1 bg-danger text-[10px] rounded-xl bg-opacity-50 top-0 -rotate-6 text-white">QUEUED</small>
+                  <small class="absolute px-2 py-1 bg-tertiary text-[10px] rounded-xl bg-opacity-50 top-0 -rotate-6 text-white">QUEUED</small>
                 {/if}
                 <!-- <img class="w-full" src="/images/techs/{ techStack.prefix }/{ stack.filename }" alt={stack.name}> -->
                 <LazyImage
@@ -89,6 +89,7 @@
         { name: 'Redis', filename: 'redis.svg' },
         { name: 'AdonisJS', filename: 'adonis.svg' },
         { name: 'OctoberCMS', filename: 'octobercms.svg', learning: true },
+        { name: 'NestJS', filename: 'nestjs.svg', learning: true },
       ]
     },
     {
