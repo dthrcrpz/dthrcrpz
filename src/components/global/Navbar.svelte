@@ -1,4 +1,4 @@
-<nav class="fixed top-0 left-0 py-4 w-full shadow-sm duration-300 transition-[background-color] bg-white dark:bg-dark z-50">
+<nav class="fixed top-0 left-0 py-4 w-full shadow-sm duration-300 transition-[background-color] bg-gray-100 dark:bg-dark z-50">
   <div class="container flex justify-between align-middle">
     <div>
       <a href="/">

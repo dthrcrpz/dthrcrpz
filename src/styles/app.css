@@ -23,7 +23,7 @@
 }
 
 body {
-  @apply text-black min-h-screen font-rubik bg-white
+  @apply text-black min-h-screen font-rubik bg-gray-100
   transition-colors duration-300
   dark:bg-dark dark:text-white
 }
