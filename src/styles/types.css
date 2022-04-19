@@ -1,5 +1,5 @@
 .heading h1 {
-  @apply font-fira-code text-3xl md:text-5xl font-semibold text-dark dark:text-primary flex justify-center items-center
+  @apply font-ubuntu-mono text-3xl md:text-5xl font-semibold text-dark dark:text-primary flex justify-center items-center
 }
 .heading svg {
   @apply mr-3 transition-colors duration-300 fill-dark dark:fill-primary w-[50px]

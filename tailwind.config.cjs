@@ -10,8 +10,8 @@ module.exports = {
         'dark': '#1e293b'
       },
       fontFamily: {
-        'fira-code': ['Fira Code', 'sans-serif'],
-        'montserrat': ['Montserrat', 'sans-serif'],
+        'ubuntu-mono': ['Ubuntu Mono', 'monospace'],
+        'rubik': ['Rubik', 'sans-serif'],
       },
     },
   },

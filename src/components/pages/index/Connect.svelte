@@ -1,4 +1,4 @@
-<section id="connect" class="connect relative rounded-b-3xl overflow-hidden shadow-sm transition-colors duration-300 border-white dark:border-primary border-b border-opacity-10 dark:border-opacity-10">
+<section id="connect" class="connect relative rounded-b-3xl overflow-hidden">
   <div class="container py-10 lg:py-20 relative">
     <div class="heading">
       <h1>

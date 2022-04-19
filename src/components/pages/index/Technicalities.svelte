@@ -1,4 +1,4 @@
-<section class="technicalities relative rounded-b-3xl overflow-hidden shadow-sm transition-colors duration-300 border-white dark:border-primary border-b border-opacity-10 dark:border-opacity-10">
+<section class="technicalities relative rounded-b-3xl overflow-hidden">
   <svg class="absolute left-0 bottom-0 opacity-10 2xl:w-full 2xl:h-full" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="1366" preserveAspectRatio="none" viewBox="0 0 1366 1366">
     <g mask="url(&quot;#SvgjsMask1031&quot;)" fill="none">
       <path d="M1620.35 1160.71C1409.81 1126.47 1337.83 746.64 965.04 614.31 592.24 481.98 790.39 36.34 637.38-79.26" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="2"></path>
@@ -26,7 +26,7 @@
     {#each techStacks as techStack}
       <div class="mt-10 md:mt-20 flex flex-row flex-wrap justify-between">
         <div class="w-full md:w-[35%] mb-5">
-          <h2 class="text-2xl md:text-4xl font-bold text-tertiary select-none mb-2">{ techStack.type }</h2>
+          <h2 class="text-2xl md:text-4xl font-bold text-tertiary mb-2">{ techStack.type }</h2>
           <p class="text-dark dark:text-white text-sm xl:text-base">{ techStack.description }</p>
         </div>
         <div class="flex flex-row flex-wrap w-full md:w-3/5">
@@ -47,7 +47,7 @@
                   class="w-full"
                 />
               </div>
-              <p class="text-dark font-fira-code text-sm dark:text-white">{ stack.name }</p>
+              <p class="text-dark font-ubuntu-mono text-sm dark:text-white">{ stack.name }</p>
             </div>
           {/each}
         </div>
