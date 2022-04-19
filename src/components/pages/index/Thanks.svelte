@@ -29,36 +29,39 @@
   <div class="container flex items-center flex-col md:flex-row relative z-[2]">
 
     <div class="mr-10 mb-10 lg:mb-0">
-      <svg width="291" height="216" viewBox="0 0 291 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="274" height="208" viewBox="0 0 274 208" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Evil Face">
-          <g id="eyes and glasses">
-            <g id="eyes">
-              <path id="eye-right" d="M168.109 90.0174C168.109 90.0174 210.261 79.5584 223.925 72.3547C237.589 65.151 245.17 47.8916 245.17 47.8916C245.17 47.8916 213.572 54.0851 200.838 61.6339C188.103 69.1828 168.109 90.0174 168.109 90.0174Z" class="fill-primary dark:fill-tertiary transition-colors duration-300"/>
-              <path id="eye-left" d="M113.02 93.7911C113.02 93.7911 62.652 84.5882 47.3562 75.9617C32.0604 67.3352 27.1577 42.9225 27.1577 42.9225C27.1577 42.9225 65.3598 47.3841 79.3898 56.6597C93.4198 65.9353 113.02 93.7911 113.02 93.7911Z" class="fill-primary dark:fill-tertiary transition-colors duration-300"/>
-            </g>
-            <g id="glasses" filter="url(#filter0_d_28_3)">
-              <path id="glass-left" d="M137.684 64.3904C132.79 65.2828 24.6557 51.3335 19.0092 54.4567C13.3627 57.58 15.7954 94.5866 25.1904 109.243C34.5854 123.899 87.0694 130.746 112.001 122.396C136.932 114.046 142.577 63.4981 137.684 64.3904Z" class="transition-colors duration-300 stroke-dark dark:stroke-primary" stroke-width="8"/>
-              <path id="glass-right" d="M152.316 64.3904C157.21 65.2828 265.344 51.3335 270.991 54.4567C276.637 57.58 274.205 94.5866 264.81 109.243C255.415 123.899 202.931 130.746 177.999 122.396C153.068 114.046 147.423 63.4981 152.316 64.3904Z" class="transition-colors duration-300 stroke-dark dark:stroke-primary" stroke-width="8"/>
-              <path id="glass-middle" d="M150.825 64.5225H140.018C138.088 64.5225 141.562 74.2933 141.562 74.2933C141.562 74.2933 144.32 73.5417 145.823 73.5417C147.326 73.5417 149.667 74.2933 149.667 74.2933C149.667 74.2933 152.755 64.5225 150.825 64.5225Z" class="fill-dark stroke-dark transition-colors duration-300 dark:fill-primary dark:stroke-primary" stroke-width="8"/>
-            </g>
-          </g>
-          <g id="eyebrows">
-            <path id="left" d="M60.8856 17.771C65.917 21.6208 122.342 83.4081 122.342 83.4081C122.342 83.4081 76.548 15.9283 71.9541 12.1269C67.3602 8.32549 42.4886 10.1373 42.4886 10.1373C42.4886 10.1373 55.8542 13.9212 60.8856 17.771Z" class="fill-dark stroke-dark transition-colors duration-300 dark:fill-primary dark:stroke-primary"/>
-            <path id="right" d="M230.282 17.0026C223.664 20.4939 157.989 86.3772 157.989 86.3772C157.989 86.3772 206.309 17.0153 217.199 10.7274C228.09 4.43962 254.235 13.4766 254.235 13.4766C254.235 13.4766 236.9 13.5113 230.282 17.0026Z" class="fill-dark stroke-dark transition-colors duration-300 dark:fill-primary dark:stroke-primary"/>
-          </g>
-          <path id="mouth" d="M64.5 144.277C28.2089 136.79 3 117.5 3 117.5C3 117.5 6.5 141.5 18 158C29.5 174.5 49.512 187.791 59 191.5M64.5 144.277C90.6471 149.671 120.99 154.128 148 153.5C160.213 153.216 172.731 152.107 185 150.497M64.5 144.277L59 191.5M59 191.5C76.5658 198.367 100.075 207.498 118.5 210.909M118.5 153.5V210.909M118.5 210.909C129.756 212.993 140.048 214.142 148 214C158.964 213.804 173.57 210.848 188.5 206.604M185 150.497L188.5 206.604M185 150.497C200.807 148.421 216.201 145.513 230 142.46M188.5 206.604C206.454 201.499 224.877 194.531 238 188.257M230 142.46C262.056 135.368 287.5 117.5 287.5 117.5C287.5 117.5 275.5 150.497 265.5 163C255.5 175.503 241.833 186.424 238 188.257M230 142.46L238 188.257" class="stroke-dark transition-colors duration-300 dark:stroke-primary" stroke-width="3"/>
+        <g id="eyes and glasses">
+        <g id="eyes">
+        <path id="eye-left" d="M107.354 90.0174C107.354 90.0174 65.2018 79.5584 51.5383 72.3547C37.8748 65.151 30.2929 47.8916 30.2929 47.8916C30.2929 47.8916 61.891 54.085 74.6254 61.6339C87.3598 69.1827 107.354 90.0174 107.354 90.0174Z" class="fill-primary transition-colors duration-300 dark:fill-tertiary"/>
+        <path id="eye-right" d="M160.11 90.7911C160.11 90.7911 210.478 81.5882 225.774 72.9617C241.07 64.3352 245.972 39.9225 245.972 39.9225C245.972 39.9225 207.77 44.3841 193.74 53.6597C179.71 62.9353 160.11 90.7911 160.11 90.7911Z" class="fill-primary transition-colors duration-300 dark:fill-tertiary"/>
+        </g>
+        <g id="glasses" filter="url(#filter0_d_28_3)">
+        <path id="glass-left" d="M129.684 64.3904C124.79 65.2828 16.6556 51.3335 11.0092 54.4567C5.36268 57.58 7.79537 94.5866 17.1904 109.243C26.5854 123.899 79.0693 130.746 104.001 122.396C128.932 114.046 134.577 63.4981 129.684 64.3904Z" class="stroke-dark transition-colors duration-300 dark:stroke-primary" stroke-width="8"/>
+        <path id="glass-right" d="M144.316 64.3904C149.21 65.2828 257.344 51.3335 262.991 54.4567C268.637 57.58 266.205 94.5866 256.81 109.243C247.415 123.899 194.931 130.746 169.999 122.396C145.068 114.046 139.423 63.4981 144.316 64.3904Z" class="stroke-dark transition-colors duration-300 dark:stroke-primary" stroke-width="8"/>
+        <path id="glass-middle" d="M142.825 64.5225H132.018C130.088 64.5225 133.562 74.2933 133.562 74.2933C133.562 74.2933 136.32 73.5417 137.823 73.5417C139.326 73.5417 141.667 74.2933 141.667 74.2933C141.667 74.2933 144.755 64.5225 142.825 64.5225Z" class="fill-dark stroke-dark transition-colors duration-300 dark:fill-primary dark:stroke-primary" stroke-width="8"/>
+        </g>
+        </g>
+        <g id="eyebrows">
+        <path id="left" d="M52.8856 17.771C57.9169 21.6208 114.342 83.4081 114.342 83.4081C114.342 83.4081 68.5479 15.9283 63.9541 12.1269C59.3602 8.32549 34.4885 10.1373 34.4885 10.1373C34.4885 10.1373 47.8542 13.9212 52.8856 17.771Z" class="fill-dark stroke-dark transition-colors duration-300 dark:fill-primary dark:stroke-primary"/>
+        <path id="right" d="M222.282 17.0026C215.664 20.4939 149.989 86.3772 149.989 86.3772C149.989 86.3772 198.309 17.0153 209.199 10.7274C220.09 4.43962 246.235 13.4766 246.235 13.4766C246.235 13.4766 228.9 13.5113 222.282 17.0026Z" class="fill-dark stroke-dark transition-colors duration-300 dark:fill-primary dark:stroke-primary"/>
+        </g>
+        <g id="mouth">
+        <path id="Ellipse 1" d="M4.63053 128.517C4.75295 128.577 4.88002 128.64 5.01172 128.705C6.78328 129.579 9.39092 130.824 12.7489 132.316C19.4645 135.3 29.1842 139.275 41.2221 143.248C65.2906 151.194 98.6667 159.148 135.849 159.148C173.03 159.148 206.931 151.194 231.522 143.251C243.821 139.279 253.803 135.305 260.714 132.322C264.17 130.831 266.859 129.586 268.688 128.714C268.86 128.631 269.025 128.552 269.183 128.476C268.502 135.359 265.055 143.194 259.136 151.245C252.514 160.253 242.888 169.404 230.933 177.604C207.021 194.004 173.933 206.5 137.291 206.5C100.647 206.5 67.3642 194.003 43.2568 177.6C31.2038 169.4 21.4816 160.247 14.7873 151.238C8.81619 143.203 5.32886 135.385 4.63053 128.517Z" class="stroke-dark transition-colors duration-300 dark:stroke-primary" stroke-width="3" stroke-linejoin="round"/>
+        <path id="Vector 1" d="M58.3539 147.842L51.9349 182.798M112.653 157.648L106.208 203.486M173.279 155.865L178.721 201.229M219.671 146.504L228.101 179.413" class="stroke-dark transition-colors duration-300 dark:stroke-primary" stroke-width="3"/>
+        </g>
         </g>
         <defs>
-          <filter id="filter0_d_28_3" x="8.00002" y="50" width="274" height="88.008" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset dy="4"/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_28_3"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_28_3" result="shape"/>
-          </filter>
+        <filter id="filter0_d_28_3" x="-1.52588e-05" y="50" width="274" height="88.008" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="4"/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_28_3"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_28_3" result="shape"/>
+        </filter>
         </defs>
       </svg>
     </div>
