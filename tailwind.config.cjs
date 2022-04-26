@@ -10,7 +10,7 @@ module.exports = {
         'dark': '#1e293b'
       },
       fontFamily: {
-        'ubuntu-mono': ['Ubuntu Mono', 'monospace'],
+        'comic-code': ['Comic Code Ligatures', 'monospace'],
         'rubik': ['Rubik', 'sans-serif'],
       },
     },

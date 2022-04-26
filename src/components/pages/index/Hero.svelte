@@ -1,9 +1,9 @@
 <section class="hero relative flex items-center">
   <div class="banner container flex py-10 md:py-20 items-center relative justify-center lg:justify-between flex-wrap flex-row">
-    <div class="self-center font-ubuntu-mono text-center lg:text-left mb-10 lg:mb-0 w-full lg:w-auto max-w-xl">
-      <p class="text-xl lg:text-2xl text-dark dark:text-white font-bold">Cookies, burgers, breadcrumbs, meatballs, kebabs, and many more.</p>
+    <div class="self-center font-comic-code text-center lg:text-left mb-10 lg:mb-0 w-full lg:w-auto max-w-xl">
+      <p class="text-xl lg:text-2xl text-dark dark:text-white">Cookies, burgers, breadcrumbs, meatballs, kebabs, and many more.</p>
       <p class="text-2xl lg:text-6xl font-bold text-primary">I use them all.</p>
-      <p class="text-2xl lg:text-4xl text-dark dark:text-white font-bold">I'm a Web Developer.</p>
+      <p class="text-2xl lg:text-4xl text-dark dark:text-white font-semibold">I'm a Web Developer.</p>
     </div>
     <div class="self-center my-auto max-w-[200px] lg:max-w-sm w-full">
       <svg class="w-full" width="100%" height="100%" viewBox="0 0 377 506" fill="none" xmlns="http://www.w3.org/2000/svg">

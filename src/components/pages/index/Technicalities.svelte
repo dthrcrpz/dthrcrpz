@@ -47,7 +47,7 @@
                   class="w-full"
                 />
               </div>
-              <p class="text-dark font-ubuntu-mono text-sm dark:text-white">{ stack.name }</p>
+              <p class="text-dark font-comic-code text-sm dark:text-white">{ stack.name }</p>
             </div>
           {/each}
         </div>
