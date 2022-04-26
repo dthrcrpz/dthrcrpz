@@ -73,6 +73,6 @@
 
 <style>
   .hero {
-    min-height: calc(100vh - 75.92px);
+    min-height: calc(100vh - 67.92px);
   }
 </style>
