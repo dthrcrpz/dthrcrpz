@@ -28,7 +28,7 @@
 }
 
 .btn.has-image {
-  @apply flex justify-center
+  @apply flex justify-center items-center
 }
 .btn.has-image span {
   @apply mr-3
