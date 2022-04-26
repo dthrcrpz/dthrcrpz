@@ -1,0 +1,7 @@
+{
+    "hosting": {
+        "site": "v5-dthrcrpz",
+        "public": "dist",
+        "ignore": []
+    }
+}
