@@ -22,7 +22,7 @@ function createThemeStore() {
     subscribe,
     setTheme: (payload) => {
       update(n => payload)
-      localStorage.dcTheme = payload
+      localStorage.dthrcrpzTheme = payload
 
       if (payload == 'dark') {
         document.documentElement.classList.add('dark')

@@ -43,10 +43,10 @@
 
   /* methods */
   function setSiteTheme() {
-    if (localStorage.dcTheme === 'light' || localStorage.dcTheme == undefined) {
-      theme.setTheme('light')
-    } else {
+    if (localStorage.dthrcrpzTheme === 'dark' || localStorage.dthrcrpzTheme == undefined) {
       theme.setTheme('dark')
+    } else {
+      theme.setTheme('light')
     }
   }
 
