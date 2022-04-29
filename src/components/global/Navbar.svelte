@@ -39,6 +39,7 @@
 
 <script>
   import { theme } from '../../stores/global'
+  import { onMount } from 'svelte'
 
   /* methods */
   function setSiteTheme() {
@@ -48,4 +49,9 @@
       theme.setTheme('light')
     }
   }
+
+  /* lifecycle */
+  onMount(() => {
+    setSiteTheme()
+  })
 </script>
