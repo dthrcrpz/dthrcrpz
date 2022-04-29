@@ -15,6 +15,7 @@
     "svelte": "^3.46.4"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^0.1.0",
     "@felte/validator-yup": "^1.0.5",
     "aos": "^2.3.4",
     "axios": "^0.26.1",
