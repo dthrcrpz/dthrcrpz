@@ -23,6 +23,11 @@
     </div>
   </div>
 </nav>
+{#if showUnderConstruction}
+  <div transition:fade={{ duration: 300 }}>
+    <UnderReconstruction on:close={() => showUnderConstruction = false}/>
+  </div>
+{/if}
 
 <style>
   .link-wrapper::after {
@@ -40,6 +45,11 @@
 <script>
   import { theme } from '../../stores/global'
   import { onMount } from 'svelte'
+  import UnderReconstruction from './UnderReconstruction.svelte'
+  import { fade } from 'svelte/transition'
+
+  /* data */
+  let showUnderConstruction = false
 
   /* methods */
   function setSiteTheme() {
@@ -53,5 +63,9 @@
   /* lifecycle */
   onMount(() => {
     setSiteTheme()
+
+    setTimeout(() => {
+      showUnderConstruction = true
+    }, 1000)
   })
 </script>
