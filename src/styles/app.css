@@ -80,7 +80,6 @@ img {
 
 .container {
   @apply px-5 mx-auto;
-  max-width: 1366px !important
 }
 
 p, h1, h2 {
