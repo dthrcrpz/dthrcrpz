@@ -1,7 +1,14 @@
 {
-    "hosting": {
-        "site": "dthrcrpz",
-        "public": "dist",
-        "ignore": []
-    }
+    "hosting": [
+        {
+            "site": "dthrcrpz",
+            "public": "dist",
+            "ignore": []
+        },
+        {
+            "site": "v5-dthrcrpz",
+            "public": "dist",
+            "ignore": []
+        }
+    ]
 }
