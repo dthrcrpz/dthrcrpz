@@ -1,5 +1,10 @@
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,svelte,ts,css}'],
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}"
+  ],
 	theme: {
     extend: {
       colors: {

@@ -1,6 +1,6 @@
 .btn {
   @apply font-semibold shadow-md px-5 py-3 rounded-full outline-none text-sm md:text-base
-  duration-300 transition-shadow
+  duration-300 transition-all
 }
 
 .btn-primary {
