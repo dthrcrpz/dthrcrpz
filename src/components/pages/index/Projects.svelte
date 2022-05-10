@@ -24,22 +24,13 @@
     </div>
     <div class="flex justify-start flex-wrap mt-5 xl:mt-10">
       {#each projects as project}
-        <div class="w-full md:w-1/2 py-4 px-0 md:px-4">
+        <div class="project-box w-full md:w-1/2 py-4 px-0 md:px-4">
           <div class="rounded-2xl relative group flex-col transition-shadow duration-300 shadow-[0px_1px_8px_0px_#00000020] dark:shadow-[0px_1px_8px_0px_#06b6d430]">
             <a href={project.agency.url} target="_blank" class="agency absolute max-w-[85px] md:max-w-[120px] w-full shadow-sm hover:shadow-md hover:shadow-primary shadow-primary transition-all duration-300 opacity-1 xl:opacity-0 group-hover:opacity-100 bg-dark px-3 py-2 rounded-xl z-[2] top-0 left-5 -translate-y-1/2">
-              <LazyImage
-                src="/images/projects/agencies/{ project.agency.logo }"
-                placeholder="/images/extras/loading.svg"
-                alt="designblue"
-              />
+              <img class="lazy" src="/images/extras/loading.svg" data-src="/images/projects/agencies/{ project.agency.logo }" data-srcset="/images/projects/agencies/{ project.agency.logo }" alt="designblue">
             </a>
             <div class="pt-[60%] xl:pt-[70%] relative w-full rounded-t-2xl xl:rounded-b-2xl overflow-hidden">
-              <LazyImage
-                src="/images/projects/websites/{ project.id }.png"
-                placeholder="/images/extras/loading.svg"
-                alt={ project.name }
-                class="image-cover"
-              />
+              <img class="lazy image-cover" src="/images/extras/loading.svg" data-src="/images/projects/websites/{ project.id }.png" data-srcset="/images/projects/websites/{ project.id }.png" alt={ project.name }>
             </div>
             <div class="flex flex-col p-5 xl:hidden bg-white dark:bg-dark rounded-b-xl">
               <p class="font-semibold mb-5 text-lg text-dark dark:text-white">{ project.name }</p>
@@ -63,8 +54,6 @@
 </section>
 
 <script>
-  import { LazyImage  } from 'svelte-lazy-image'
-
   /* data */
   let projects = [
     {
@@ -107,5 +96,5 @@
         url: 'https://designbluemanila.com/'
       }
     },
-]
+  ]
 </script>

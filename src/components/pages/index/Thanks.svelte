@@ -1,4 +1,4 @@
-<div class="bg-gray-200 py-10 transition-colors duration-300 dark:bg-slate-900 relative">
+<div class="thanks bg-gray-200 py-10 transition-colors duration-300 dark:bg-slate-900 relative">
   <svg class="absolute right-0 top-0 bottom-0 opacity-10 hidden lg:block z-[1]" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1000" height="300" preserveAspectRatio="none" viewBox="0 0 1000 300">
     <g mask="url(&quot;#SvgjsMask1421&quot;)" fill="none">
         <g mask="url(&quot;#SvgjsMask1422&quot;)">
@@ -28,7 +28,7 @@
 
   <div class="container flex items-center flex-col md:flex-row relative z-[2]">
 
-    <div class="mr-10 mb-10 lg:mb-0">
+    <div class="smirking-face mr-10 mb-10 lg:mb-0">
       <svg width="274" height="208" viewBox="0 0 274 208" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Evil Face">
         <g id="eyes and glasses">
@@ -66,8 +66,8 @@
       </svg>
     </div>
 
-    <div>
-    <p class="text-lg lg:text-xl font-semibold text-dark dark:text-white">Thank you for coming this far!</p>
+    <div class="texts">
+      <p class="text-lg lg:text-xl font-semibold text-dark dark:text-white">Thank you for coming this far!</p>
       <h3 class="text-3xl lg:text-5xl font-bold mt-0 lg:mt-2 text-primary">What can I do for you?</h3>
       <div class="mt-5 flex flex-wrap lg:flex-nowrap">
         <button class="btn btn-primary has-image mr-2 mb-3 lg:mb-0" on:click={() => scrollInto('#connect')}>

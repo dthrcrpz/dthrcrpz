@@ -25,7 +25,7 @@
 
     {#each techStacks as techStack}
       <div class="mt-10 md:mt-20 flex flex-row flex-wrap justify-between">
-        <div class="w-full md:w-[35%] mb-5">
+        <div class="stack-description w-full md:w-[35%] mb-5">
           <h2 class="text-2xl md:text-4xl font-bold text-tertiary mb-2">{ techStack.type }</h2>
           <p class="text-dark dark:text-white text-sm xl:text-base">{ techStack.description }</p>
         </div>
@@ -39,13 +39,7 @@
                 {#if stack.onQueue}
                   <small class="absolute px-2 py-1 bg-tertiary text-[10px] rounded-xl bg-opacity-50 top-0 -rotate-6 text-white">QUEUED</small>
                 {/if}
-                <!-- <img class="w-full" src="/images/techs/{ techStack.prefix }/{ stack.filename }" alt={stack.name}> -->
-                <LazyImage
-                  src="/images/techs/{ techStack.prefix }/{ stack.filename }"
-                  placeholder="/images/extras/loading.svg"
-                  alt={stack.name}
-                  class="w-full"
-                />
+                <img class="lazy w-full" src="/images/extras/loading.svg" data-src="/images/techs/{ techStack.prefix }/{ stack.filename }" data-srcset="/images/techs/{ techStack.prefix }/{ stack.filename }" alt={stack.name}>
               </div>
               <p class="text-dark font-comic-code text-sm dark:text-white">{ stack.name }</p>
             </div>
@@ -57,8 +51,6 @@
 </section>
 
 <script>
-  import { LazyImage  } from 'svelte-lazy-image'
-
   let techStacks = [
     {
       type: 'Front-end',

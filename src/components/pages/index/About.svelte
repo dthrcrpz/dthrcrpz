@@ -1,4 +1,4 @@
-<section class="what-i-do relative rounded-b-3xl overflow-hidden">
+<section class="about relative rounded-b-3xl overflow-hidden">
   <svg class="absolute left-0 right-0 top-0 bottom-0 opacity-10 xl:w-full xl:h-full" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="560" preserveAspectRatio="none" viewBox="0 0 1440 560">
     <g mask="url(&quot;#SvgjsMask1185&quot;)" fill="none">
       <path d="M -218.33805086830733,173 C -146.34,234.2 -2.34,496 141.66194913169267,479 C 285.66,462 357.66,103.4 501.66194913169267,88 C 645.66,72.6 717.66,413.6 861.6619491316926,402 C 1005.66,390.4 1077.66,6 1221.6619491316926,30 C 1365.66,54 1537.99,486.2 1581.6619491316926,522 C 1625.33,557.8 1468.33,271.6 1440,209" class="stroke-dark dark:stroke-primary transition-colors duration-300" stroke-width="2"></path>
@@ -22,7 +22,7 @@
       <p>A summary of what I do</p>
     </div>
     <div class="flex flex-row flex-wrap justify-center mt-10">
-      <div class="w-full xl:w-1/3 px-0 md:px-3 py-3">
+      <div class="box w-full xl:w-1/3 px-0 md:px-3 py-3">
         <div class="h-full transition-all bg-white dark:bg-dark duration-300 rounded-2xl px-5 py-10 shadow-[0px_1px_8px_0px_#00000020] dark:shadow-[0px_1px_8px_0px_#06b6d430]">
           <div class="flex flex-row items-start flex-grow-0">
             <div class="w-[50px] mr-5 flex-shrink-0">
@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      <div class="w-full xl:w-1/3 px-0 md:px-3 py-3">
+      <div class="box w-full xl:w-1/3 px-0 md:px-3 py-3">
         <div class="h-full transition-all bg-white dark:bg-dark duration-300 rounded-2xl px-5 py-10 shadow-[0px_1px_8px_0px_#00000020] dark:shadow-[0px_1px_8px_0px_#06b6d430]">
           <div class="flex flex-row items-start flex-grow-0">
             <div class="w-[50px] mr-5 flex-shrink-0">
@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <div class="w-full xl:w-1/3 px-0 md:px-3 py-3">
+      <div class="box w-full xl:w-1/3 px-0 md:px-3 py-3">
         <div class="h-full transition-all bg-white dark:bg-dark duration-300 rounded-2xl px-5 py-10 shadow-[0px_1px_8px_0px_#00000020] dark:shadow-[0px_1px_8px_0px_#06b6d430]">
           <div class="flex flex-row items-start flex-grow-0">
             <div class="w-[50px] mr-5 flex-shrink-0">

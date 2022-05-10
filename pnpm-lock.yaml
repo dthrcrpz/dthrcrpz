@@ -10,7 +10,6 @@ specifiers:
   axios: ^0.26.1
   felte: ^1.1.7
   svelte: ^3.46.4
-  svelte-lazy-image: ^0.5.1
   yup: ^0.32.11
 
 dependencies:
@@ -19,7 +18,6 @@ dependencies:
   aos: 2.3.4
   axios: 0.26.1
   felte: 1.1.7_svelte@3.47.0
-  svelte-lazy-image: 0.5.1
   yup: 0.32.11
 
 devDependencies:
@@ -3538,10 +3536,6 @@ packages:
     dependencies:
       svelte: 3.47.0
     dev: true
-
-  /svelte-lazy-image/0.5.1:
-    resolution: {integrity: sha512-BDwywMngYjrEtL73N2ZKYYnWlNBWSnw31y1Mb3kNeXVc/9iDir6Ew3bfuDtuEyi3evBFXF0jixkCMFuTseWjWQ==}
-    dev: false
 
   /svelte-preprocess/4.10.6_752b810ab855973626d4335cb0788eac:
     resolution: {integrity: sha512-I2SV1w/AveMvgIQlUF/ZOO3PYVnhxfcpNyGt8pxpUVhPfyfL/CZBkkw/KPfuFix5FJ9TnnNYMhACK3DtSaYVVQ==}

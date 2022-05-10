@@ -53,5 +53,54 @@
   /* lifecycle */
   onMount(() => {
     setSiteTheme()
+
+    /* scroll reveal */
+    ScrollReveal({
+      reset: true,
+      distance: '20px',
+    })
+    ScrollReveal().reveal('.hero p', { delay: 100, interval: 200, duration: 1000, origin: 'left' })
+    ScrollReveal().reveal('.hero p', { delay: 100, interval: 200, duration: 1000, origin: 'left' })
+    ScrollReveal().reveal('.hero .image', { delay: 100, duration: 1000, origin: 'right' })
+
+    ScrollReveal().reveal('.about .heading', { delay: 200, duration: 1000, interval: 200, origin: 'top' })
+    ScrollReveal().reveal('.about .box', { delay: 200, duration: 1000, interval: 200, origin: 'bottom' })
+
+    ScrollReveal().reveal('.technicalities .heading', { delay: 200, duration: 1000, interval: 200, origin: 'top' })
+    ScrollReveal().reveal('.technicalities .stack-description', { delay: 200, duration: 1000, interval: 200, origin: 'left' })
+    ScrollReveal().reveal('.technicalities .stack', { delay: 200, duration: 1000, interval: 30, origin: 'right' })
+
+    ScrollReveal().reveal('.projects .heading', { delay: 200, duration: 1000, origin: 'top' })
+    ScrollReveal().reveal('.projects .project-box', { delay: 200, duration: 1000, interval: 200, origin: 'left' })
+
+    ScrollReveal().reveal('.thanks .smirking-face', { delay: 200, duration: 1000, origin: 'bottom' })
+    ScrollReveal().reveal('.thanks p', { delay: 200, duration: 1000, origin: 'right' })
+    ScrollReveal().reveal('.thanks h3', { delay: 200, duration: 1000, origin: 'right' })
+    ScrollReveal().reveal('.thanks button', { delay: 200, duration: 1000, interval: 200, origin: 'right' })
+
+    ScrollReveal().reveal('footer .logo-and-links', { delay: 200, duration: 1000, origin: 'left' })
+    ScrollReveal().reveal('footer .powered-by', { delay: 200, duration: 1000, origin: 'bottom' })
+    ScrollReveal().reveal('footer .copyright', { delay: 200, duration: 1000, origin: 'right' })
+
+    /* image lazy loading */
+    let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+    if ("IntersectionObserver" in window) {
+      let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            let lazyImage = entry.target
+            lazyImage.src = lazyImage.dataset.src
+            lazyImage.srcset = lazyImage.dataset.srcset
+            lazyImage.classList.remove("lazy")
+            lazyImageObserver.unobserve(lazyImage)
+          }
+        });
+      });
+
+      lazyImages.forEach(function(lazyImage) {
+        lazyImageObserver.observe(lazyImage)
+      })
+    }
   })
 </script>
