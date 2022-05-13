@@ -3,7 +3,18 @@
         {
             "site": "dthrcrpz",
             "public": "dist",
-            "ignore": []
+            "ignore": [],
+            "headers": [
+                {
+                    "source": "**/*.@(js|css|svg|png|jpeg|jpg|webp|eot|otf|ttf|ttc|woff|woff2|font.css)",
+                    "headers": [
+                        {
+                            "key": "Cache-Control",
+                            "value": "max-age=604800000"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "site": "v5-dthrcrpz",
