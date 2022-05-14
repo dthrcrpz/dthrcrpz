@@ -9,7 +9,7 @@
     </div>
     <div class="flex items-center">
       <!-- <div class="link-wrapper relative mr-5">
-        <a href="/posts" class="mr-5 text-black dark:text-white hover:text-primary dark:hover:text-primary duration-300 transition-colors">posts</a>
+        <a href="/blogs" class="mr-5 text-black dark:text-white hover:text-primary dark:hover:text-primary duration-300 transition-colors">blogs</a>
       </div> -->
       {#if $theme == 'dark'}
         <button class="cursor-pointer" on:click={() => theme.setTheme('light')} aria-label="toggle-theme">

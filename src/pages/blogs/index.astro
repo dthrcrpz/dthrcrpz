@@ -1,0 +1,19 @@
+---
+import General from '../../layouts/General.astro'
+import Banner from '../../components/blogs/Banner.svelte'
+import Breadcrumbs from '../../components/global/Breadcrumbs.svelte'
+
+let urls = [
+  {
+    label: 'blogs',
+    url: '/blogs',
+  }
+]
+---
+
+<General title="blogs • dthrcrpz">
+  <div class="page-blogs">
+    <Banner/>
+    <Breadcrumbs urls={urls}/>
+  </div>
+</General>
