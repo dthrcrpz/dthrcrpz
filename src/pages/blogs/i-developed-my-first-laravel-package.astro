@@ -1,0 +1,44 @@
+---
+import General from '../../layouts/General.astro'
+import Banner from '../../components/blogs/Banner.svelte'
+import Breadcrumbs from '../../components/global/Breadcrumbs.svelte'
+
+let urls = [
+  {
+    label: 'Blogs',
+    url: '/blogs',
+  },
+  {
+    label: 'I Developed My First Laravel Package',
+    url: '/blogs/i-developed-my-first-laravel-package',
+  }
+]
+---
+
+<General
+    title="I Developed My First Laravel Package • blogs • dthrcrpz"
+    image="https://dthrcrpz.dev/images/blogs/laravel-package.png"
+  >
+  <div class="page-blogs">
+    <Banner
+      title="I Developed My First Laravel Package"
+    />
+    <Breadcrumbs urls={urls}/>
+
+    <section class="content mt-10 pb-10">
+      <div class="container">
+        <p class="max-w-5xl w-full text-dark dark:text-white">
+          Oooooh yeahhhh I've done it in a single day! <br>
+          Every time I work on a new Laravel project, I have always copy-pasted my <b>File Manager</b> module from my previous projects. <br>
+          The problem is, if my colleagues use it, there would be lots of back and forth as they're not used to it yet since there's no documentation and it's hard to locate the right files/codes to copy.
+          <br>
+          I also wanted to challenge myself and expand my knowledge on how Laravel works behind the scenes so I read Laravel's documentation <a href="https://laravel.com/docs/8.x/packages" target="_blank" class="a-link">here</a>.
+          <br>
+          So... after playing around for a day, I managed to get it done and publish it on Github and Packagist. The repository is at <a href="https://github.com/dthrcrpz/laravel-file-library" target="_blank" class="a-link">dthrcrpz/laravel-file-library (github.com)</a>. Documentation is included.
+          <br>
+          It's a very simple package and there's a lot lot lot lot of room for improvement.
+        </p>
+      </div>
+    </section>
+  </div>
+</General>

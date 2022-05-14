@@ -8,16 +8,17 @@ let urls = [
   {
     label: 'Blogs',
     url: '/blogs',
+  },
+  {
+    label: 'Find the Rabbit',
+    url: '/blogs/find-the-rabbit',
   }
 ]
 ---
 
-<General title="blogs • dthrcrpz">
+<General title="Find the Rabbit • blogs • dthrcrpz">
   <div class="page-blogs">
-    <Banner
-      title="blogs"
-      description="Just some stories and thoughts I wanna share"
-    />
+    <Banner/>
     <Breadcrumbs urls={urls}/>
     <Blogs/>
   </div>

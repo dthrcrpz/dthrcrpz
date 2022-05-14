@@ -19,17 +19,17 @@
 <script>
   /* data */
   let blogs = [
+    // {
+    //   title: 'Find the Rabbit',
+    //   slug: 'find-the-rabbit',
+    //   date: 'Dec 03, 2021',
+    //   image: 'rabbit.jpg'
+    // },
     {
       title: 'I Developed My First Laravel Package',
       slug: 'i-developed-my-first-laravel-package',
       date: 'Nov 23, 2021',
       image: 'laravel-package.png'
-    },
-    {
-      title: 'Find the Rabbit',
-      slug: 'find-the-rabbit',
-      date: 'Dec 03, 2021',
-      image: 'rabbit.jpg'
-    },
+    }
   ]
 </script>
