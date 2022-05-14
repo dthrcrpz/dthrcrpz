@@ -20,7 +20,7 @@ const canonicalUrl = Astro.canonicalURL
 		<meta name="description" content="Deither Corpuz's portfolio website">
 
 		<!-- OG / Facebook -->
-		<meta property="og:title" content="dthrcrpz">
+		<meta property="og:title" content={ (title) ? title : 'dthrcrpz' }>
 		<meta property="og:type" content="website">
 		<meta property="og:image" content={ (image) ? image : 'https://dthrcrpz.dev/images/dthrcrpz-mask.png' }>
 		<meta property="og:url" content={ canonicalUrl }>
@@ -36,7 +36,7 @@ const canonicalUrl = Astro.canonicalURL
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image">
 		<meta property="twitter:url" content={ canonicalUrl }>
-		<meta property="twitter:title" content="dthrcrpz">
+		<meta property="twitter:title" content={ (title) ? title : 'dthrcrpz' }>
 		<meta property="twitter:description" content="Deither Corpuz's portfolio website">
 		<meta property="twitter:image" content={ (image) ? image : 'https://dthrcrpz.dev/images/dthrcrpz-mask.png' }>
 
