@@ -2,6 +2,7 @@
 import General from '../../layouts/General.astro'
 import Banner from '../../components/blogs/Banner.svelte'
 import Breadcrumbs from '../../components/global/Breadcrumbs.svelte'
+import Blogs from '../../components/blogs/Blogs.svelte'
 
 let urls = [
   {
@@ -15,5 +16,6 @@ let urls = [
   <div class="page-blogs">
     <Banner/>
     <Breadcrumbs urls={urls}/>
+    <Blogs/>
   </div>
 </General>
