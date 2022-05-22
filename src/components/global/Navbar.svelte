@@ -1,4 +1,4 @@
-<nav class="fixed top-0 left-0 py-3 w-full shadow-sm duration-300 transition-[background-color] bg-gray-100 dark:bg-dark z-50">
+<header class="fixed top-0 left-0 py-3 w-full shadow-sm duration-300 transition-[background-color] bg-gray-100 dark:bg-dark z-50">
   <div class="container flex justify-between align-middle">
     <div>
       <a href="/">
@@ -22,7 +22,7 @@
       {/if}
     </div>
   </div>
-</nav>
+</header>
 
 <style>
   .link-wrapper::after {
