@@ -30,9 +30,7 @@
             </div>
             <div>
               <p class="font-bold text-2xl text-tertiary mb-2">As an employed programmer</p>
-              <p class="text-sm md:text-base text-dark dark:text-white mb-2">I collaborate with my teammates to create our clients' websites.</p>
-              <p class="text-sm md:text-base text-dark dark:text-white mb-2">I usually work with designers, project managers, and fellow developers. Everyone has a very important role to play.</p>
-              <p class="text-sm md:text-base text-dark dark:text-white">Depending on the project, I might be assigned to different developer roles such as Back-end, Front-end, or Full-stack.</p>
+              <p class="text-sm md:text-base text-dark dark:text-white mb-2">I thrive in a collaborative environment, working closely with my teammates to deliver high-quality websites that meet our client's expectations.</p>
             </div>
           </div>
         </div>
@@ -46,8 +44,7 @@
             </div>
             <div>
               <p class="font-bold text-2xl text-tertiary mb-2">As a freelancer</p>
-              <p class="text-sm md:text-base text-dark dark:text-white mb-2">I help businesses grow by building them a strong online presence so they can communicate quality information to their customers.</p>
-              <p class="text-sm md:text-base text-dark dark:text-white">I also like working with eCommerce websites so if you want to sell your products online BUT outside of social media, hit me up!</p>
+              <p class="text-sm md:text-base text-dark dark:text-white mb-2">My passion lies in helping businesses flourish by establishing a robust online presence for them. By creating modern, secure, and compelling websites, I help enable businesses to effectively communicate valuable information to their customers, thereby fostering growth and success.</p>
             </div>
           </div>
         </div>
@@ -63,7 +60,7 @@
               <p class="font-bold text-2xl text-tertiary mb-2">As a human being</p>
               <p class="text-sm md:text-base text-dark dark:text-white mb-2">I play lots of video games. I'm a huge fan of Pokemon, Witcher, Legend of Zelda, and DotA.</p>
               <p class="text-sm md:text-base text-dark dark:text-white mb-2">I drink a lot during parties/celebrations and I like getting wasted.</p>
-              <p class="text-sm md:text-base text-dark dark:text-white">Since technology never stops growing, I always keep myself updated by trying out new tech stacks every month.</p>
+              <p class="text-sm md:text-base text-dark dark:text-white">Since technology never stops evolving, I always keep myself updated by trying out new tech stacks every now and then.</p>
             </div>
           </div>
         </div>
